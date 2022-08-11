@@ -1,0 +1,10 @@
+↓getDateRangeEnd [ngx.components.UICustomAction-1660222705207]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+          		var date = page[''c8oprj_lib_tui_tui_calendar''].calendar.getDateRangeEnd().toDate().toLocaleString();
+          		resolve(date);
+          '

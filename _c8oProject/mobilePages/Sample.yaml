@@ -71,19 +71,31 @@ title: First page
             tagName: ion-buttons
             ↓buttonToday [ngx.components.UIDynamicElement-1660146128291]: 
               beanData: '{"ionBean":"Button"}'
-              isEnabled: false
               tagName: ion-button
               ↓Event [ngx.components.UIControlEvent-1660146128294]: 
-                ↓todayDate [ngx.components.UICustomAction-1660146128297]: 
-                  actionValue: 
-                    - xmlizable: 
-                      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
-                      - com.twinsoft.convertigo.beans.common.FormatedContent: 
-                        →: |
-                          '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
-                          		this.calendar.today();
-                          		resolve();
-                          '
+                ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1660222477139]: 
+                  beanData: '{"ionBean":"InvokeAction"}'
+                  stack: c8oprj_lib_tui.Application.NgxApp.today
+                  ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1660223036659]: 
+                    beanData: '{"ionBean":"InvokeAction"}'
+                    stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeStart
+                    ↓SetGlobal [ngx.components.UIDynamicAction-1660223036662]: 
+                      beanData: |
+                        '{
+                         "ionBean": "SetGlobalAction",
+                         "Property": "plain:dateRangeStart",
+                         "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1660223036659}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                        }'
+                  ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1660223036665]: 
+                    beanData: '{"ionBean":"InvokeAction"}'
+                    stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeEnd
+                    ↓SetGlobal [ngx.components.UIDynamicAction-1660223036668]: 
+                      beanData: |
+                        '{
+                         "ionBean": "SetGlobalAction",
+                         "Property": "plain:dateRangeEnd",
+                         "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1660223036665}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                        }'
               ↓Text [ngx.components.UIText-1660146128300]: 
                 textValue: 
                   - xmlizable: 
@@ -96,6 +108,26 @@ title: First page
                 ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1660146175881]: 
                   beanData: '{"ionBean":"InvokeAction"}'
                   stack: c8oprj_lib_tui.Application.NgxApp.movePrev
+                  ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1660223024949]: 
+                    beanData: '{"ionBean":"InvokeAction"}'
+                    stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeStart
+                    ↓SetGlobal [ngx.components.UIDynamicAction-1660223024952]: 
+                      beanData: |
+                        '{
+                         "ionBean": "SetGlobalAction",
+                         "Property": "plain:dateRangeStart",
+                         "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1660223024949}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                        }'
+                  ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1660223024955]: 
+                    beanData: '{"ionBean":"InvokeAction"}'
+                    stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeEnd
+                    ↓SetGlobal [ngx.components.UIDynamicAction-1660223024958]: 
+                      beanData: |
+                        '{
+                         "ionBean": "SetGlobalAction",
+                         "Property": "plain:dateRangeEnd",
+                         "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1660223024955}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                        }'
               ↓Icon [ngx.components.UIDynamicElement-1660146128312]: 
                 beanData: '{"ionBean":"Icon","IconName":"plain:caret-back-circle-outline"}'
                 tagName: ion-icon
@@ -106,9 +138,44 @@ title: First page
                 ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1660146183992]: 
                   beanData: '{"ionBean":"InvokeAction"}'
                   stack: c8oprj_lib_tui.Application.NgxApp.moveNext
+                  ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1660223010542]: 
+                    beanData: '{"ionBean":"InvokeAction"}'
+                    stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeStart
+                    ↓SetGlobal [ngx.components.UIDynamicAction-1660223010545]: 
+                      beanData: |
+                        '{
+                         "ionBean": "SetGlobalAction",
+                         "Property": "plain:dateRangeStart",
+                         "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1660223010542}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                        }'
+                  ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1660223010548]: 
+                    beanData: '{"ionBean":"InvokeAction"}'
+                    stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeEnd
+                    ↓SetGlobal [ngx.components.UIDynamicAction-1660223010551]: 
+                      beanData: |
+                        '{
+                         "ionBean": "SetGlobalAction",
+                         "Property": "plain:dateRangeEnd",
+                         "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1660223010548}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                        }'
               ↓Icon [ngx.components.UIDynamicElement-1660146128324]: 
                 beanData: '{"ionBean":"Icon","IconName":"plain:caret-forward-circle-outline"}'
                 tagName: ion-icon
+            ↓Text1 [ngx.components.UIText-1660222925578]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Global","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.dateRangeStart","prefix":"","suffix":"","custom":"","useCustom":false}}
+            ↓Text [ngx.components.UIText-1660222961732]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: 'plain: - '
+            ↓Text2 [ngx.components.UIText-1660222949965]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Global","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.dateRangeEnd","prefix":"","suffix":"","custom":"","useCustom":false}}
     ↓rowCalendar [ngx.components.UIDynamicElement-1660139866218]: 
       beanData: '{"ionBean":"GridRow","Height":"plain"}'
       tagName: ion-row
@@ -154,3 +221,24 @@ title: First page
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Action 2
+↓PageEvent [ngx.components.UIPageEvent-1660222811465]: 
+  ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1660222820248]: 
+    beanData: '{"ionBean":"InvokeAction"}'
+    stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeStart
+    ↓SetGlobal [ngx.components.UIDynamicAction-1660222833626]: 
+      beanData: |
+        '{
+         "ionBean": "SetGlobalAction",
+         "Property": "plain:dateRangeStart",
+         "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1660222820248}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+        }'
+  ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1660222826805]: 
+    beanData: '{"ionBean":"InvokeAction"}'
+    stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeEnd
+    ↓SetGlobal [ngx.components.UIDynamicAction-1660222862005]: 
+      beanData: |
+        '{
+         "ionBean": "SetGlobalAction",
+         "Property": "plain:dateRangeEnd",
+         "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1660222826805}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+        }'

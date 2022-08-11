@@ -1,0 +1,10 @@
+↓today [ngx.components.UICustomAction-1660222405957]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+          		page[''c8oprj_lib_tui_tui_calendar''].calendar.today()
+          		resolve();
+          '
