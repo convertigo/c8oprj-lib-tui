@@ -1,0 +1,27 @@
+↓options [ngx.components.UIStackVariable-1660223284602]: 
+↓setOptions [ngx.components.UICustomAction-1660223327299]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+          		var options = vars.options;
+          		var silent = vars.silent;
+          		if(silent.length <= 0) {
+          			silent = false
+          		}
+          		page[''c8oprj_lib_tui_tui_calendar''].calendar.setOptions(options, silent)
+          		resolve();
+          '
+  ↓options [ngx.components.UIControlVariable-1660223345528]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660223264877}],"path":"?.in?.vars?.options","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓silent [ngx.components.UIControlVariable-1660223347123]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660223264877}],"path":"?.in?.vars?.silent","prefix":"","suffix":"","custom":"","useCustom":false}}
+↓silent [ngx.components.UIStackVariable-1660223295883]: 

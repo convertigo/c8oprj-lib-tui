@@ -64,11 +64,13 @@ componentScriptContent:
         '
 tplProjectName: mobilebuilder_tpl_8_0_0_ngx
 ↓Menu [ngx.components.UIDynamicMenu-1500890597895]: 🗏 mobileMenus/Menu.yaml
+↓changeView [ngx.components.UIActionStack-1660223678336]: 🗏 mobileSharedActions/changeView.yaml
 ↓moveNext [ngx.components.UIActionStack-1660144765523]: 🗏 mobileSharedActions/moveNext.yaml
 ↓movePrev [ngx.components.UIActionStack-1660146044852]: 🗏 mobileSharedActions/movePrev.yaml
 ↓today [ngx.components.UIActionStack-1660222396378]: 🗏 mobileSharedActions/today.yaml
 ↓getDateRangeStart [ngx.components.UIActionStack-1660222588223]: 🗏 mobileSharedActions/getDateRangeStart.yaml
 ↓getDateRangeEnd [ngx.components.UIActionStack-1660222705202]: 🗏 mobileSharedActions/getDateRangeEnd.yaml
+↓setOptions [ngx.components.UIActionStack-1660223264877]: 🗏 mobileSharedActions/setOptions.yaml
 ↓tui_calendar [ngx.components.UISharedRegularComponent-1660134716658]: 🗏 mobileSharedComponents/tui_calendar.yaml
 ↓Sample [ngx.components.PageComponent-1500538678074]: 🗏 mobilePages/Sample.yaml
 ↓Style [ngx.components.UIStyle-1491635462437]: 

@@ -37,6 +37,44 @@ My First Page as root page
 <details><summary><span style="color:DarkGoldenRod"><i>Shared Actions</i></span></summary><blockquote><p>
 
 
+<details><summary><b>changeView</b></summary><blockquote><p>
+
+
+### ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/uiactionstack_color_16x16.png?raw=true "UIActionStack") changeView
+
+
+
+<span style="color:DarkGoldenRod">Variables</span>
+
+<table>
+<tr>
+<th>
+name
+</th>
+<th>
+comment
+</th>
+</tr>
+<tr>
+<td>
+<img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/uistackvariable_color_16x16.png?raw=true "  alt="UIStackVariable" >&nbsp;force
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/uistackvariable_color_16x16.png?raw=true "  alt="UIStackVariable" >&nbsp;newViewName
+</td>
+<td>
+
+</td>
+</tr>
+</table>
+
+</p></blockquote></details>
+
 <details><summary><b>getDateRangeEnd</b></summary><blockquote><p>
 
 
@@ -66,6 +104,44 @@ My First Page as root page
 
 ### ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/uiactionstack_color_16x16.png?raw=true "UIActionStack") movePrev
 
+
+</p></blockquote></details>
+
+<details><summary><b>setOptions</b></summary><blockquote><p>
+
+
+### ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/uiactionstack_color_16x16.png?raw=true "UIActionStack") setOptions
+
+
+
+<span style="color:DarkGoldenRod">Variables</span>
+
+<table>
+<tr>
+<th>
+name
+</th>
+<th>
+comment
+</th>
+</tr>
+<tr>
+<td>
+<img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/uistackvariable_color_16x16.png?raw=true "  alt="UIStackVariable" >&nbsp;options
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/uistackvariable_color_16x16.png?raw=true "  alt="UIStackVariable" >&nbsp;silent
+</td>
+<td>
+
+</td>
+</tr>
+</table>
 
 </p></blockquote></details>
 
