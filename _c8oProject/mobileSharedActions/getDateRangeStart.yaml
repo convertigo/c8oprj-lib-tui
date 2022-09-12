@@ -5,6 +5,13 @@
       - com.twinsoft.convertigo.beans.common.FormatedContent: 
         →: |
           '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
-          		var date = page[''c8oprj_lib_tui_tui_calendar''].calendar.getDateRangeStart().toDate().toLocaleString();
+          		var identifier = vars.identifier;
+          		var date = page[identifier].calendar.getDateRangeStart().toDate().toLocaleString();
           		resolve(date);
           '
+  ↓identifier [ngx.components.UIControlVariable-1662992518982]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660222588223}],"path":"?.in?.vars?.identifier","prefix":"","suffix":"","custom":"","useCustom":false}}
+↓identifier [ngx.components.UIStackVariable-1662992561113]: 

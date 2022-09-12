@@ -126,6 +126,7 @@ scriptContent:
         	/*End_c8o_CompFunction*/
         '
 ↓SharedComponent_Event [ngx.components.UISharedComponentEvent-1660134738059]: 
+  componentEvent: onInit
   ↓importTuiCalendar [ngx.components.UICustomAction-1660134756760]: 
     package_dependencies: 
       - xmlizable: 
@@ -219,8 +220,8 @@ scriptContent:
           - com.twinsoft.convertigo.beans.common.FormatedContent: 
             →: |
               '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
-              		let calendarDomElement = document.getElementById("calendar");
-              		var calendar = new Calendar("#calendar", {
+              		let calendarDomElement = document.getElementById(vars.containerId);
+              		var calendar = new Calendar("#"+vars.containerId, {
               		   defaultView: ''week'', // set ''week'' or ''day''
               		   taskView: [''task''],  // e.g. true, false, or [''task'', ''milestone'']
               		   scheduleView: true, // e.g. true, false, or [''allday'', ''time'']
@@ -241,7 +242,7 @@ scriptContent:
               			},
               			calendars: []
               		 })
-              		
+              		 
                		this.setCalendar(calendar);
               //		this.calendar.createSchedules([
               //{
@@ -287,6 +288,11 @@ scriptContent:
               
               		resolve();
               '
+      ↓containerId [ngx.components.UIControlVariable-1660315727059]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.containerId","prefix":"","suffix":"","custom":"","useCustom":false}}
 ↓tuiCalendar [ngx.components.UIStyle-1660138817946]: 
   styleContent: 
     - xmlizable: 
@@ -4518,4 +4524,23 @@ scriptContent:
     attrValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-        - MobileSmartSourceType: plain:calendar
+        - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.containerId","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓Event [ngx.components.UIControlEvent-1660316747905]: 
+    attrName: (beforeCreateSchedule)
+    eventName: (beforeCreateSchedule)
+    ↓CustomAction [ngx.components.UICustomAction-1660316840156]: 
+      actionValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+          - com.twinsoft.convertigo.beans.common.FormatedContent: 
+            →: |
+              '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+              		console.log("event", vars.t)
+              		resolve();
+              '
+      ↓t [ngx.components.UIControlVariable-1660316848486]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:parent.out
+↓containerId [ngx.components.UICompVariable-1660315688168]: 

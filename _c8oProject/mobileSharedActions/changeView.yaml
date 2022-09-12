@@ -7,11 +7,12 @@
           '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
           		var newViewName = vars.newViewName;
           		var force = vars.force;
+          		var identifier = vars.identifier;
           
           		if(force.length <= 0)
           			force = false
           
-          		page[''c8oprj_lib_tui_tui_calendar''].calendar.changeView(newViewName, force)
+          		page[identifier].calendar.changeView(newViewName, force)
           		resolve();
           '
   ↓newViewName [ngx.components.UIControlVariable-1660228032143]: 
@@ -24,5 +25,11 @@
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
         - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660223678336}],"path":"?.in?.vars?.force","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓identifier [ngx.components.UIControlVariable-1662993879828]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660223678336}],"path":"?.in?.vars?.identifier","prefix":"","suffix":"","custom":"","useCustom":false}}
 ↓newViewName [ngx.components.UIStackVariable-1660227961255]: 
 ↓force [ngx.components.UIStackVariable-1660227963563]: 
+↓identifier [ngx.components.UIStackVariable-1662993835350]: 
