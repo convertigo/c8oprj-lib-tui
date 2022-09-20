@@ -1,0 +1,33 @@
+↓identifier [ngx.components.UIStackVariable-1663682776228]: 
+↓silent [ngx.components.UIStackVariable-1663682800907]: 
+↓schedules [ngx.components.UIStackVariable-1663682811844]: 
+  comment: array of object
+↓createSchedules [ngx.components.UICustomAction-1663682845861]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+          		var identifier = vars.identifier;
+          		var silent = vars.silent;
+          		var schedules = vars.schedules;
+          		
+          		page[identifier].calendar.createSchedules(schedules, (silent) ? silent : false);
+          		resolve();
+          '
+  ↓identifier [ngx.components.UIControlVariable-1663682888804]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1663682721061}],"path":"?.in?.vars?.identifier","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓silent [ngx.components.UIControlVariable-1663682900992]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1663682721061}],"path":"?.in?.vars?.silent","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓schedules [ngx.components.UIControlVariable-1663682902149]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1663682721061}],"path":"?.in?.vars?.schedules","prefix":"","suffix":"","custom":"","useCustom":false}}

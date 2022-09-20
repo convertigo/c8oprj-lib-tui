@@ -567,6 +567,31 @@ title: First page
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:this.workWeek
+          ↓Button [ngx.components.UIDynamicElement-1662996840755]: 
+            beanData: '{"ionBean":"Button"}'
+            tagName: ion-button
+            ↓Label [ngx.components.UIDynamicElement-1662996840757]: 
+              beanData: '{"ionBean":"Label"}'
+              tagName: ion-label
+              ↓Text [ngx.components.UIText-1662996840759]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                    - MobileSmartSourceType: plain:Clear
+            ↓Event [ngx.components.UIControlEvent-1662996840761]: 
+              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1662996944628]: 
+                beanData: '{"ionBean":"InvokeAction"}'
+                stack: c8oprj_lib_tui.Application.NgxApp.clear
+                ↓identifier [ngx.components.UIControlVariable-1662996960983]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: script:'calendar'
+                ↓immediately [ngx.components.UIControlVariable-1662996960985]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: script:'false'
     ↓rowCalendar [ngx.components.UIDynamicElement-1660139866218]: 
       beanData: '{"ionBean":"GridRow","Height":"plain"}'
       tagName: ion-row
@@ -581,6 +606,63 @@ title: First page
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: script:'calendar'
+          ↓Event [ngx.components.UIControlEvent-1662996203280]: 
+            attrName: (beforeCreateSchedule)
+            eventName: beforeCreateSchedule
+            ↓prepareScheduleObject [ngx.components.UICustomAction-1662996212080]: 
+              actionValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                  - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                    →: |
+                      '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+                      		var event = vars.event;
+                      		var startTime = event.start;
+                      	    var endTime = event.end;
+                      	    var isAllDay = event.isAllDay;
+                      	    var location = event.location;
+                      	    var state = event.state;
+                      	    // var guide = event.guide;
+                      	    var title = event.title;
+                      	    var triggerEventName = event.triggerEventName;
+                      	    var schedule;
+                      	    
+                      	    schedule = {
+                      			id: '''',
+                      			calendarId: '''',
+                      			title: title,
+                      			body: '''',
+                      			start: startTime,
+                      			endTime: endTime,
+                      			goingDuration: '''', 
+                      			comingDuration: '''', 
+                      			isAllDay: isAllDay,
+                      			category: '''',
+                      			dueDateClass: '''',
+                      			location: location,
+                      			attendees: [],
+                      			recurrenceRule: '''', 
+                      			isPending: '''', // boolean
+                      			isFocused: '''', // boolean
+                      			isVisible: '''', // boolean
+                      			isReadOnly: '''', // boolean
+                      			color: '''', // The schedule text color
+                      			bgColor: '''', // The schedule background color
+                      			dragBgColor: '''', // The schedule background color when dragging it
+                      			borderColor: '''', // The schedule left border color
+                      			customStyle: '''', // The schedule''s custom css class
+                      			raw: '''', // The user data
+                      			state: state // The schedule''s state (''busy'', ''free'')
+                      		}
+                      		
+                      		console.log("c8o event beforeCreateSchedule", vars.event)
+                      		resolve();
+                      '
+              ↓event [ngx.components.UIControlVariable-1662996222341]: 
+                varValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                    - MobileSmartSourceType: script:parent.out
       ↓Style [ngx.components.UIStyle-1660141591135]: 
         styleContent: 
           - xmlizable: 

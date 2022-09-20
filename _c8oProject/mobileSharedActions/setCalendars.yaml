@@ -1,0 +1,26 @@
+↓identifier [ngx.components.UIStackVariable-1663687241401]: 
+↓calendars [ngx.components.UIStackVariable-1663687265693]: 
+  comment: Array of objects
+↓setCalendars [ngx.components.UICustomAction-1663687277950]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+          		var identifier = vars.identifier;
+          		var calendars = vars.calendars;
+          		
+          		page[identifier].calendar.setCalendars(calendars);
+          		resolve();
+          '
+  ↓identifier [ngx.components.UIControlVariable-1663687298343]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1663687227004}],"path":"?.in?.vars?.identifier","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓calendars [ngx.components.UIControlVariable-1663687315262]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1663687227004}],"path":"?.in?.vars?.calendars","prefix":"","suffix":"","custom":"","useCustom":false}}

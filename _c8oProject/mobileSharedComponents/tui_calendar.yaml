@@ -225,7 +225,7 @@ scriptContent:
               		   defaultView: ''week'', // set ''week'' or ''day''
               		   taskView: [''task''],  // e.g. true, false, or [''task'', ''milestone'']
               		   scheduleView: true, // e.g. true, false, or [''allday'', ''time'']
-              			useCreationPopup: false,
+              			useCreationPopup: true,
               			useDetailPopup: false,
               			usageStatistics: false,
               			disableClick: true,
@@ -261,8 +261,8 @@ scriptContent:
               
               // this.setDateRange();
               this.calendar.on(''beforeCreateSchedule'',function(event) {
-              	page.getInstance(Events).publish("beforeCreateSchedule", event);
-              	console.log(''event'', event)
+              	// page.getInstance(Events).publish("beforeCreateSchedule", event);
+              	page.actionBeans.EmitEventAction(page, { event: ''beforeCreateSchedule'', data: event }, {})
               })
               this.calendar.on(''beforeUpdateSchedule'', function(event) {
                   var schedule = event.schedule;
@@ -4535,7 +4535,7 @@ scriptContent:
           - com.twinsoft.convertigo.beans.common.FormatedContent: 
             →: |
               '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
-              		console.log("event", vars.t)
+              		console.log("c8o event beforeCreateSchedule", vars.t)
               		resolve();
               '
       ↓t [ngx.components.UIControlVariable-1660316848486]: 
@@ -4543,4 +4543,13 @@ scriptContent:
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
             - MobileSmartSourceType: script:parent.out
+    ↓EmitEvent [ngx.components.UIDynamicEmit-1662996171931]: 
+      beanData: |
+        '{
+         "ionBean": "EmitEventAction",
+         "event": "plain:c8oprj_lib_tui.Application.NgxApp.tui_calendar.beforeCreateSchedule",
+         "data": "script:event"
+        }'
 ↓containerId [ngx.components.UICompVariable-1660315688168]: 
+↓beforeCreateSchedule [ngx.components.UICompEvent-1662996106232]: 
+  attrName: beforeCreateSchedule

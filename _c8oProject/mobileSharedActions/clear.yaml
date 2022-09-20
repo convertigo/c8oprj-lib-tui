@@ -1,0 +1,25 @@
+↓identifier [ngx.components.UIStackVariable-1662996426163]: 
+↓clear [ngx.components.UICustomAction-1662996432450]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+          		var identifier = vars.identifier;
+          		var immediately = vars.immediately;
+          		
+          		page[identifier].calendar.clear((immediately) ? immediately : false);
+          		resolve();
+          '
+  ↓identifier [ngx.components.UIControlVariable-1662996450008]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1662996403734}],"path":"?.in?.vars?.identifier","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓immediately [ngx.components.UIControlVariable-1662996728970]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1662996403734}],"path":"?.in?.vars?.immediately","prefix":"","suffix":"","custom":"","useCustom":false}}
+↓immediately [ngx.components.UIStackVariable-1662996684029]: 
