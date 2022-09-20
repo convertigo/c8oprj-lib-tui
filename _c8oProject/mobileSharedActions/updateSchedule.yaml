@@ -1,0 +1,47 @@
+↓identifier [ngx.components.UIStackVariable-1663688293408]: 
+↓scheduleId [ngx.components.UIStackVariable-1663688319033]: 
+↓calendarId [ngx.components.UIStackVariable-1663688343510]: 
+↓changes [ngx.components.UIStackVariable-1663688374014]: 
+  comment: object of changes
+↓silent [ngx.components.UIStackVariable-1663688426469]: 
+↓updateSchedule [ngx.components.UICustomAction-1663688434884]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+          		var identifier = vars.identifier;
+          		var scheduleId = vars.scheduleId;
+          		var calendarId = vars.calendarId;
+          		var changes = vars.changes;
+          		var silent = vars.silent;
+          		
+          		page[identifier].calendar.updateSchedule(scheduleId, calendarId, changes, (silent) ? silent : false);
+          		resolve();
+          '
+  ↓identifier [ngx.components.UIControlVariable-1663688458363]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1663688237548}],"path":"?.in?.vars?.identifier","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓scheduleId [ngx.components.UIControlVariable-1663688470150]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1663688237548}],"path":"?.in?.vars?.scheduleId","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓calendarId [ngx.components.UIControlVariable-1663688471118]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1663688237548}],"path":"?.in?.vars?.calendarId","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓changes [ngx.components.UIControlVariable-1663688472093]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1663688237548}],"path":"?.in?.vars?.changes","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓silent [ngx.components.UIControlVariable-1663688475715]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1663688237548}],"path":"?.in?.vars?.silent","prefix":"","suffix":"","custom":"","useCustom":false}}

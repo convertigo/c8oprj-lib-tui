@@ -2,7 +2,7 @@
 ↓c8oprj_lib_tui [core.Project]: 
   comment: Convertigo Mobile builder Project
   corsOrigin: =Origin
-  version: 0.0.1
+  version: 0.0.2
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓CouchDb_schema [references.ImportXsdSchemaReference]: 
     urlpath: http://localhost:18080/convertigo/xsd/couchdb/CouchDb.xsd
