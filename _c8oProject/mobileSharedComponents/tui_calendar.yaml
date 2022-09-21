@@ -213,86 +213,143 @@ scriptContent:
                 - ↑value: '* as jQuery'
               - java.lang.String: 
                 - ↑value: jquery
-    ↓initTuiCalendar [ngx.components.UICustomAction-1660134756764]: 
-      actionValue: 
+    ↓importMomentJS [ngx.components.UICustomAction-1663749400262]: 
+      package_dependencies: 
         - xmlizable: 
-          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
-          - com.twinsoft.convertigo.beans.common.FormatedContent: 
-            →: |
-              '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
-              		let calendarDomElement = document.getElementById(vars.containerId);
-              		var calendar = new Calendar("#"+vars.containerId, {
-              		   defaultView: ''week'', // set ''week'' or ''day''
-              		   taskView: [''task''],  // e.g. true, false, or [''task'', ''milestone'']
-              		   scheduleView: true, // e.g. true, false, or [''allday'', ''time'']
-              			useCreationPopup: true,
-              			useDetailPopup: false,
-              			usageStatistics: false,
-              			disableClick: true,
-              			isReadOnly: false,
-              			week: {
-              				showTimezoneCollapseButton: true
-              			},
-              			template: {
-              			    monthMoreTitleDate: function(date, dayname) {
-                          		var day = date.split(''.'')[2];
-              
-                          		return ''<span class="tui-full-calendar-month-more-title-day">'' + day + ''</span> <span class="tui-full-calendar-month-more-title-day-label">'' + dayname + ''</span>'';
-                      		}
-              			},
-              			calendars: []
-              		 })
-              		 
-               		this.setCalendar(calendar);
-              //		this.calendar.createSchedules([
-              //{
-              //    "id": "1639955526333",
-              //    "calendarId": "1639950472765",
-              //    "title": "toto2",
-              //    "body": "<p>ff</p>\n",
-              //    "start": "2021-12-20T00:00:00.000Z",
-              //    "end": "2021-12-20T00:30:00.000Z",
-              //    "isAllDay": false,
-              //    "category": "time",
-              //    "location": "",
-              //    "state": "busy"
-              //}
-              //]);
-              
-              // this.setDateRange();
-              this.calendar.on(''beforeCreateSchedule'',function(event) {
-              	// page.getInstance(Events).publish("beforeCreateSchedule", event);
-              	page.actionBeans.EmitEventAction(page, { event: ''beforeCreateSchedule'', data: event }, {})
-              })
-              this.calendar.on(''beforeUpdateSchedule'', function(event) {
-                  var schedule = event.schedule;
-                  var changes = event.changes;
-              
-                  calendar.updateSchedule(schedule.id, schedule.calendarId, changes);
-              });
-              
-              this.calendar.on(''clickDayname'', function(event) {
-                  if (calendar.getViewName() === ''week'') {
-                      calendar.setDate(new Date(event.date));
-                      calendar.changeView(''day'', true);
-                  }
-              });
-              
-              		this.calendar.on(''clickSchedule'', (event) => {
-              			page.getInstance(Events).publish("clickSchedule", event);
-              			console.log(''---------------------------'')
-              			console.log(''clickSchedule Event (event object)'')
-              			console.log(''---------------------------'')
-              			console.log(event)
-              		})
-              
-              		resolve();
-              '
-      ↓containerId [ngx.components.UIControlVariable-1660315727059]: 
-        varValue: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+              - com.twinsoft.convertigo.beans.common.XMLVector: 
+                - java.lang.String: 
+                  - ↑value: moment
+                - java.lang.String: 
+                  - ↑value: 2.29.4
+      page_ts_imports: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+              - com.twinsoft.convertigo.beans.common.XMLVector: 
+                - java.lang.String: 
+                  - ↑value: '* as Moment'
+                - java.lang.String: 
+                  - ↑value: moment
+      ↓initTuiCalendar [ngx.components.UICustomAction-1660134756764]: 
+        actionValue: 
           - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.containerId","prefix":"","suffix":"","custom":"","useCustom":false}}
+            - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+            - com.twinsoft.convertigo.beans.common.FormatedContent: 
+              →: |
+                '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+                		let calendarDomElement = document.getElementById(vars.containerId);
+                		
+                		// Used to configure locale dates (months / weekdays)
+                		var locale = vars.locale;
+                		var weekdays = Moment.localeData(locale).weekdays()
+                		var months = Moment.localeData(locale).months();
+                		
+                		var calendar = new Calendar("#"+vars.containerId, {
+                		   defaultView: ''week'', // set ''week'' or ''day''
+                		   taskView: [''task''],  // e.g. true, false, or [''task'', ''milestone'']
+                		   scheduleView: true, // e.g. true, false, or [''allday'', ''time'']
+                			useCreationPopup: true,
+                			useDetailPopup: false,
+                			usageStatistics: false,
+                			disableClick: true,
+                			isReadOnly: false,
+                			week: {
+                				showTimezoneCollapseButton: true,
+                				daynames: weekdays
+                			},
+                			month: {
+                				daynames: weekdays
+                			},
+                			template: {
+                			    monthMoreTitleDate: function(date, dayname) {
+                            		var day = date.split(''.'')[2];
+                
+                            		return ''<span class="tui-full-calendar-month-more-title-day">'' + day + ''</span> <span class="tui-full-calendar-month-more-title-day-label">'' + dayname + ''</span>'';
+                        		},
+                        		timegridDisplayPrimayTime: function(time) {
+                			        var meridiem = time.hour < 12 ? ''h'' : ''h'';
+                			
+                			        return time.hour + '' '' + meridiem;
+                			    },
+                			    timegridDisplayTime: function(time) {
+                			        var meridiem = time.hour < 12 ? ''h'' : ''h'';
+                			
+                			        return time.hour + '' '' + meridiem;
+                			    }
+                			},
+                			
+                			calendars: []
+                		 })
+                		 
+                 		this.setCalendar(calendar);
+                //		this.calendar.createSchedules([
+                //{
+                //    "id": "1639955526333",
+                //    "calendarId": "1639950472765",
+                //    "title": "toto2",
+                //    "body": "<p>ff</p>\n",
+                //    "start": "2021-12-20T00:00:00.000Z",
+                //    "end": "2021-12-20T00:30:00.000Z",
+                //    "isAllDay": false,
+                //    "category": "time",
+                //    "location": "",
+                //    "state": "busy"
+                //}
+                //]);
+                
+                // this.setDateRange();
+                
+                this.calendar.on(''afterRenderSchedule'', function(event) {
+                	page.actionBeans.EmitEventAction(page, { event: ''afterRenderSchedule'', data: event }, {})
+                })
+                
+                this.calendar.on(''beforeCreateSchedule'',function(event) {
+                	// page.getInstance(Events).publish("beforeCreateSchedule", event);
+                	page.actionBeans.EmitEventAction(page, { event: ''beforeCreateSchedule'', data: event }, {})
+                })
+                
+                this.calendar.on(''beforeUpdateSchedule'', function(event) {
+                    page.actionBeans.EmitEventAction(page, { event: ''beforeUpdateSchedule'', data: event }, {})
+                });
+                
+                this.calendar.on(''beforeDeleteSchedule'',function(event) {
+                	// page.getInstance(Events).publish("beforeCreateSchedule", event);
+                	page.actionBeans.EmitEventAction(page, { event: ''beforeDeleteSchedule'', data: event }, {})
+                })
+                
+                //this.calendar.on(''clickDayname'', function(event) {
+                //    if (calendar.getViewName() === ''week'') {
+                //        calendar.setDate(new Date(event.date));
+                //        calendar.changeView(''day'', true);
+                //    }
+                //});
+                //
+                //		this.calendar.on(''clickSchedule'', (event) => {
+                //			page.getInstance(Events).publish("clickSchedule", event);
+                //			console.log(''---------------------------'')
+                //			console.log(''clickSchedule Event (event object)'')
+                //			console.log(''---------------------------'')
+                //			console.log(event)
+                //		})
+                
+                		resolve();
+                '
+        ↓containerId [ngx.components.UIControlVariable-1660315727059]: 
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.containerId","prefix":"","suffix":"","custom":"","useCustom":false}}
+        ↓locale [ngx.components.UIControlVariable-1663749641482]: 
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.locale","prefix":"","suffix":"","custom":"","useCustom":false}}
 ↓tuiCalendar [ngx.components.UIStyle-1660138817946]: 
   styleContent: 
     - xmlizable: 
@@ -4551,5 +4608,13 @@ scriptContent:
          "data": "script:event"
         }'
 ↓containerId [ngx.components.UICompVariable-1660315688168]: 
+↓afterRenderSchedule [ngx.components.UICompEvent-1663747364075]: 
+  attrName: afterRenderSchedule
 ↓beforeCreateSchedule [ngx.components.UICompEvent-1662996106232]: 
   attrName: beforeCreateSchedule
+↓beforeDeleteSchedule [ngx.components.UICompEvent-1663747491889]: 
+  attrName: beforeDeleteSchedule
+↓beforeUpdateSchedule [ngx.components.UICompEvent-1663747528147]: 
+  attrName: beforeUpdateSchedule
+↓locale [ngx.components.UICompVariable-1663749593770]: 
+  comment: use for dates / week days names

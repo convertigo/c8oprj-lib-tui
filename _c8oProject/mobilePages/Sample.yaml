@@ -663,6 +663,38 @@ title: First page
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:parent.out
+          ↓Event1 [ngx.components.UIControlEvent-1663747624749]: 
+            attrName: (afterRenderSchedule)
+            eventName: afterRenderSchedule
+          ↓Event2 [ngx.components.UIControlEvent-1663747624752]: 
+            attrName: (beforeDeleteSchedule)
+            eventName: beforeDeleteSchedule
+          ↓Event3 [ngx.components.UIControlEvent-1663747624754]: 
+            attrName: (beforeUpdateSchedule)
+            eventName: beforeUpdateSchedule
+            ↓CustomAction [ngx.components.UICustomAction-1663747633421]: 
+              actionValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                  - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                    →: |
+                      '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+                      		var event = vars.event;
+                      		console.log("updateSchedule")
+                      		console.log(event);
+                      		resolve();
+                      '
+              ↓event [ngx.components.UIControlVariable-1663747640381]: 
+                varValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                    - MobileSmartSourceType: script:parent.out
+          ↓locale [ngx.components.UIUseVariable-1663749701684]: 
+            comment: use for dates / week days names
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:'es'
       ↓Style [ngx.components.UIStyle-1660141591135]: 
         styleContent: 
           - xmlizable: 

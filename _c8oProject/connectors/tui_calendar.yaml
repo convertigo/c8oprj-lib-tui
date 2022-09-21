@@ -1,0 +1,3 @@
+databaseName: tui_calendar
+↓GetServerInfo [transactions.couchdb.GetServerInfoTransaction]: 
+  ↑default: true
