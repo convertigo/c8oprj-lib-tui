@@ -10,10 +10,10 @@
         →: |
           '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
           		var identifier = vars.identifier;
-          		var silent = vars.silent;
+          		var silent = (vars.silent == "true") ? vars.silent : false ;
           		var schedules = vars.schedules;
           		
-          		page[identifier].calendar.createSchedules(schedules, (silent) ? silent : false);
+          		page[identifier].calendar.createSchedules(schedules, silent);
           		resolve();
           '
   ↓identifier [ngx.components.UIControlVariable-1663682888804]: 

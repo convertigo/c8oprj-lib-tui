@@ -290,16 +290,14 @@ scriptContent:
                  		this.setCalendar(calendar);
                 //		this.calendar.createSchedules([
                 //{
-                //    "id": "1639955526333",
-                //    "calendarId": "1639950472765",
-                //    "title": "toto2",
-                //    "body": "<p>ff</p>\n",
-                //    "start": "2021-12-20T00:00:00.000Z",
-                //    "end": "2021-12-20T00:30:00.000Z",
+                //    "id": "schedule_My Schedule 3",
+                //    "calendarId": "calendar_Company",
+                //    "title": "My Schedule",
+                //    "body": "Text",
+                //    "start": "2022-09-22T10:00:00.000Z",
+                //    "end": "2022-09-22T15:00:00.000Z",
                 //    "isAllDay": false,
-                //    "category": "time",
-                //    "location": "",
-                //    "state": "busy"
+                //    "category": "time"
                 //}
                 //]);
                 

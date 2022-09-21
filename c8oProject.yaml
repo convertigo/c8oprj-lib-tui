@@ -2,9 +2,11 @@
 ↓c8oprj_lib_tui [core.Project]: 
   comment: Convertigo Mobile builder Project
   corsOrigin: =Origin
-  version: 0.0.3
+  version: 0.0.4
   ↓tui_calendar [connectors.FullSyncConnector]: 🗏 connectors/tui_calendar.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
+  ↓getCalendars [sequences.GenericSequence]: 🗏 sequences/getCalendars.yaml
+  ↓getSchedules [sequences.GenericSequence]: 🗏 sequences/getSchedules.yaml
   ↓CouchDb_schema [references.ImportXsdSchemaReference]: 
     urlpath: http://localhost:18080/convertigo/xsd/couchdb/CouchDb.xsd
   ↓NgxBuilderTemplate [references.ProjectSchemaReference]: 

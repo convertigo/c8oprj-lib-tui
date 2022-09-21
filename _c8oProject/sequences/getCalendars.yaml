@@ -1,0 +1,20 @@
+↓Call_Transaction [steps.TransactionStep-1663753049791]: 
+  sourceTransaction: c8oprj_lib_tui.tui_calendar.getCalendars
+↓Iterator [steps.IteratorStep-1663753095631]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1663753049791
+        - java.lang.String: 
+          - ↑value: ./document/couchdb_output/rows/item
+  ↓Copy [steps.XMLCopyStep-1663753155285]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1663753095631
+          - java.lang.String: 
+            - ↑value: ./value
