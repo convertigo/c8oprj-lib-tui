@@ -60,6 +60,7 @@ scriptContent:
         /*Begin_c8o_CompFinalization*/
         		/*End_c8o_CompFinalization*/
         /*Begin_c8o_CompChanges*/
+        		console.log(changes)
         		/*End_c8o_CompChanges*/
         /*Begin_c8o_CompDoCheck*/
         		/*End_c8o_CompDoCheck*/
@@ -4583,6 +4584,7 @@ scriptContent:
   ↓Event [ngx.components.UIControlEvent-1660316747905]: 
     attrName: (beforeCreateSchedule)
     eventName: (beforeCreateSchedule)
+    isEnabled: false
     ↓CustomAction [ngx.components.UICustomAction-1660316840156]: 
       actionValue: 
         - xmlizable: 

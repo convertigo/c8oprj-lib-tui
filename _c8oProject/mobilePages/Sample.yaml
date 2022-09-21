@@ -643,52 +643,110 @@ title: First page
                     →: |
                       '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
                       		var event = vars.event;
-                      		var startTime = event.start;
-                      	    var endTime = event.end;
+                      		
+                      		var startTime = event.start._date;
+                      	    var endTime = event.end._date;
                       	    var isAllDay = event.isAllDay;
                       	    var location = event.location;
                       	    var state = event.state;
                       	    // var guide = event.guide;
                       	    var title = event.title;
+                      	    var calendarId = event.calendarId;
                       	    var triggerEventName = event.triggerEventName;
                       	    var schedule;
                       	    
-                      	    schedule = {
-                      			id: '''',
-                      			calendarId: '''',
+                      //	    schedule = {
+                      //			id: '''',
+                      //			calendarId: '''',
+                      //			title: title,
+                      //			body: '''',
+                      //			start: startTime,
+                      //			endTime: endTime,
+                      //			goingDuration: '''', 
+                      //			comingDuration: '''', 
+                      //			isAllDay: isAllDay,
+                      //			category: '''',
+                      //			dueDateClass: '''',
+                      //			location: location,
+                      //			attendees: [],
+                      //			recurrenceRule: '''', 
+                      //			isPending: '''', // boolean
+                      //			isFocused: '''', // boolean
+                      //			isVisible: '''', // boolean
+                      //			isReadOnly: '''', // boolean
+                      //			color: '''', // The schedule text color
+                      //			bgColor: '''', // The schedule background color
+                      //			dragBgColor: '''', // The schedule background color when dragging it
+                      //			borderColor: '''', // The schedule left border color
+                      //			customStyle: '''', // The schedule''s custom css class
+                      //			raw: '''', // The user data
+                      //			state: state // The schedule''s state (''busy'', ''free'')
+                      //		}
+                      
+                      		schedule = {
+                      			id: ''schedule_'' + title,
+                      			calendarId: calendarId,
                       			title: title,
                       			body: '''',
                       			start: startTime,
-                      			endTime: endTime,
-                      			goingDuration: '''', 
-                      			comingDuration: '''', 
+                      			end: endTime,
+                      //			goingDuration: '''', 
+                      //			comingDuration: '''', 
                       			isAllDay: isAllDay,
-                      			category: '''',
+                      			category: ''time'',
                       			dueDateClass: '''',
                       			location: location,
-                      			attendees: [],
-                      			recurrenceRule: '''', 
-                      			isPending: '''', // boolean
-                      			isFocused: '''', // boolean
-                      			isVisible: '''', // boolean
-                      			isReadOnly: '''', // boolean
-                      			color: '''', // The schedule text color
-                      			bgColor: '''', // The schedule background color
-                      			dragBgColor: '''', // The schedule background color when dragging it
-                      			borderColor: '''', // The schedule left border color
-                      			customStyle: '''', // The schedule''s custom css class
-                      			raw: '''', // The user data
+                      //			attendees: [],
+                      //			recurrenceRule: '''', 
+                      //			isPending: '''', // boolean
+                      //			isFocused: '''', // boolean
+                      //			isVisible: '''', // boolean
+                      //			isReadOnly: '''', // boolean
+                      //			color: '''', // The schedule text color
+                      //			bgColor: '''', // The schedule background color
+                      //			dragBgColor: '''', // The schedule background color when dragging it
+                      //			borderColor: '''', // The schedule left border color
+                      //			customStyle: '''', // The schedule''s custom css class
+                      //			raw: '''', // The user data
                       			state: state // The schedule''s state (''busy'', ''free'')
                       		}
                       		
                       		console.log("c8o event beforeCreateSchedule", vars.event)
-                      		resolve();
+                      		console.log(schedule)
+                      		resolve(schedule);
                       '
               ↓event [ngx.components.UIControlVariable-1662996222341]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:parent.out
+              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1663767225124]: 
+                beanData: '{"ionBean":"InvokeAction"}'
+                stack: c8oprj_lib_tui.Application.NgxApp.createSchedules
+                ↓identifier [ngx.components.UIControlVariable-1663767237652]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: script:'calendar'
+                ↓silent [ngx.components.UIControlVariable-1663767237654]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: script:''
+                ↓schedules [ngx.components.UIControlVariable-1663767237656]: 
+                  comment: array of object
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: script:[parent.out]
+                ↓CallSequence [ngx.components.UIDynamicAction-1663767276715]: 
+                  beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.addSchedule"}'
+                  ↓schedule [ngx.components.UIControlVariable-1663767287639]: 
+                    comment: new variable
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:JSON.stringify(stack['prepareScheduleObject'].out)
           ↓Event1 [ngx.components.UIControlEvent-1663747624749]: 
             attrName: (afterRenderSchedule)
             eventName: afterRenderSchedule
@@ -698,7 +756,7 @@ title: First page
           ↓Event3 [ngx.components.UIControlEvent-1663747624754]: 
             attrName: (beforeUpdateSchedule)
             eventName: beforeUpdateSchedule
-            ↓CustomAction [ngx.components.UICustomAction-1663747633421]: 
+            ↓prepareObjectForUpdate [ngx.components.UICustomAction-1663747633421]: 
               actionValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
@@ -706,21 +764,64 @@ title: First page
                     →: |
                       '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
                       		var event = vars.event;
+                      		if(event.schedule.start != undefined)
+                      			event.schedule.start = event.schedule.start._date
+                      		
+                      		if(event.schedule.end != undefined)
+                      			event.schedule.end = event.schedule.end._date
+                      			
                       		console.log("updateSchedule")
                       		console.log(event);
-                      		resolve();
+                      		resolve(event);
                       '
               ↓event [ngx.components.UIControlVariable-1663747640381]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:parent.out
+              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1663756179370]: 
+                beanData: '{"ionBean":"InvokeAction"}'
+                stack: c8oprj_lib_tui.Application.NgxApp.updateSchedule
+                ↓identifier [ngx.components.UIControlVariable-1663756194959]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: script:'calendar'
+                ↓scheduleId [ngx.components.UIControlVariable-1663756194961]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: script:parent.out.schedule.id
+                ↓calendarId [ngx.components.UIControlVariable-1663756194963]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: script:parent.out.schedule.calendarId
+                ↓changes [ngx.components.UIControlVariable-1663756194965]: 
+                  comment: object of changes
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: script:parent.out.changes
+                ↓silent [ngx.components.UIControlVariable-1663756194967]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: script:''
+                ↓CallSequence [ngx.components.UIDynamicAction-1663772528321]: 
+                  beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.updateSchedule"}'
+                  ↓schedule [ngx.components.UIControlVariable-1663772555753]: 
+                    comment: new variable
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:JSON.stringify(stack['prepareObjectForUpdate'].out.schedule)
           ↓locale [ngx.components.UIUseVariable-1663749701684]: 
             comment: use for dates / week days names
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: script:'es'
+                - MobileSmartSourceType: script:'fr'
       ↓Style [ngx.components.UIStyle-1660141591135]: 
         styleContent: 
           - xmlizable: 

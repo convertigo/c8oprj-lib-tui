@@ -15,9 +15,9 @@
           		var scheduleId = vars.scheduleId;
           		var calendarId = vars.calendarId;
           		var changes = vars.changes;
-          		var silent = vars.silent;
+          		var silent = (vars.silent == "true") ? vars.silent : false;
           		
-          		page[identifier].calendar.updateSchedule(scheduleId, calendarId, changes, (silent) ? silent : false);
+          		page[identifier].calendar.updateSchedule(scheduleId, calendarId, changes, silent);
           		resolve();
           '
   ↓identifier [ngx.components.UIControlVariable-1663688458363]: 

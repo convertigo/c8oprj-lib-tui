@@ -1,4 +1,11 @@
 databaseName: tui_calendar
+↓addSchedule [transactions.couchdb.PostDocumentTransaction]: 
+  ↓_use_json_base [variables.RequestableVariable-1663766029558]: 
+    description: (string) – JSON use as a base for the document (js object). Optional
+  ↓_id [variables.RequestableVariable-1663766029560]: 
+    description: Document id
+  ↓data [variables.RequestableVariable-1663766255408]: 
+    description: Document content
 ↓getCalendars [transactions.couchdb.GetViewTransaction]: 
   ↓Test_Case [core.TestCase]: 
     ↓_use_ddoc [variables.TestCaseVariable-1663752869167]: 
@@ -61,6 +68,12 @@ databaseName: tui_calendar
     value: 
 ↓GetServerInfo [transactions.couchdb.GetServerInfoTransaction]: 
   ↑default: true
+↓updateSchedule [transactions.couchdb.PostDocumentTransaction]: 
+  policy: override
+  ↓_id [variables.RequestableVariable-1663772440924]: 
+    description: Document id
+  ↓_use_json_base [variables.RequestableVariable-1663772900048]: 
+    description: (string) – JSON use as a base for the document (js object). Optional
 ↓Design_document [couchdb.DesignDocument]: 
   docdata: 
     →: |

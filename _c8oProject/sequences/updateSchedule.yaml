@@ -1,0 +1,29 @@
+↓Input_variables [steps.InputVariablesStep-1663756431331]: 
+↓Sequence_JS [steps.SimpleStep-1663757036945]: 
+  expression: |
+    'schedule = JSON.parse(schedule);
+    
+    if(schedule.start._date != undefined)
+    	schedule.start = schedule.start._date
+    	
+    if(schedule.end._date != undefined)
+    	schedule.end = schedule.end._date
+    
+    log.warn(''schedule after updated start and end'')
+    log.warn(JSON.stringify(schedule))
+    _id = schedule.id;
+    _use_json_base = JSON.stringify({
+    	"schedule": schedule
+    })
+    
+    log.warn(''data'')
+    log.warn(_use_json_base)'
+↓Call_Transaction [steps.TransactionStep-1663771771732]: 
+  sourceTransaction: c8oprj_lib_tui.tui_calendar.updateSchedule
+  ↓_id [variables.StepVariable-1663771780920]: 
+    description: Document id
+  ↓_use_json_base [variables.StepVariable-1663772913088]: 
+    description: (string) – JSON use as a base for the document (js object). Optional
+↓schedule [variables.RequestableVariable-1663756436933]: 
+↓Test_Case [core.TestCase]: 
+  ↓schedule [variables.TestCaseVariable-1663757082635]: 

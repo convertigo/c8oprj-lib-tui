@@ -1,0 +1,37 @@
+↓buildData [steps.SimpleStep-1663765305108]: 
+  expression: |
+    'log.warn(''schedule'')
+    log.warn(schedule)
+    
+    schedule = JSON.parse(schedule)
+    
+    _id = schedule.id;
+    _use_json_base = JSON.stringify({
+    	"schedule": schedule
+    })
+    
+    // schedule = JSON.parse(schedule)'
+↓Call_Transaction [steps.TransactionStep-1663765901627]: 
+  output: true
+  sourceTransaction: c8oprj_lib_tui.tui_calendar.addSchedule
+  ↓_use_json_base [variables.StepVariable-1663766836317]: 
+    description: (string) – JSON use as a base for the document (js object). Optional
+  ↓_id [variables.StepVariable-1663766093618]: 
+    description: Document id
+↓schedule [variables.RequestableVariable-1663765263966]: 
+↓Test_Case [core.TestCase]: 
+  ↓schedule [variables.TestCaseVariable-1663765714210]: 
+    value: |
+      '{
+          "id": "schedule_toto",
+          "calendarId": "calendar_Company",
+          "title": "toto",
+          "body": "",
+          "start": "2022-09-21T14:00:00.000Z",
+          "end": "2022-09-21T14:30:00.000Z",
+          "isAllDay": false,
+          "category": "time",
+          "dueDateClass": "",
+          "location": "",
+          "state": "Busy"
+      }'

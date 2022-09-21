@@ -2,16 +2,20 @@
 ↓c8oprj_lib_tui [core.Project]: 
   comment: Convertigo Mobile builder Project
   corsOrigin: =Origin
-  version: 0.0.4
+  version: 0.0.5
   ↓tui_calendar [connectors.FullSyncConnector]: 🗏 connectors/tui_calendar.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
+  ↓addSchedule [sequences.GenericSequence]: 🗏 sequences/addSchedule.yaml
   ↓getCalendars [sequences.GenericSequence]: 🗏 sequences/getCalendars.yaml
   ↓getSchedules [sequences.GenericSequence]: 🗏 sequences/getSchedules.yaml
+  ↓updateSchedule [sequences.GenericSequence]: 🗏 sequences/updateSchedule.yaml
   ↓CouchDb_schema [references.ImportXsdSchemaReference]: 
     urlpath: http://localhost:18080/convertigo/xsd/couchdb/CouchDb.xsd
   ↓NgxBuilderTemplate [references.ProjectSchemaReference]: 
     comment: ngx builder template
     projectName: mobilebuilder_tpl_8_0_0_ngx=https://github.com/convertigo/c8oprj-mobilebuilder-tpl/archive/mobilebuilder_tpl_8_0_0_ngx.zip
+  ↓Project_reference [references.ProjectSchemaReference]: 
+    projectName: c8oprj_lib_tui
   ↓Application [core.MobileApplication]: 
     comment: Describes the mobile application global properties
     splashRemoveMode: beforeUpdate
