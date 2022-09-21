@@ -1,6 +1,10 @@
-↑convertigo: 8.0.0.m006
+↑convertigo: 8.1.0.m006
 ↓c8oprj_lib_tui [core.Project]: 
-  comment: Convertigo Mobile builder Project
+  comment: |
+    This is the Planning component for the Convertigo Low Code Platform. This component will enable your apps to have a complete agenda like display and display several calendars. Each calendar will display their schedules on a day,week or month planning. You will be able to add, delete or move calendar schedules.
+    
+    The Planning component will automatically persist in a FullSync database and free you from all database management.
+    
   corsOrigin: =Origin
   version: 0.0.5
   ↓tui_calendar [connectors.FullSyncConnector]: 🗏 connectors/tui_calendar.yaml

@@ -3,7 +3,10 @@
 
 # c8oprj_lib_tui
 
-Convertigo Mobile builder Project
+This is the Planning component for the Convertigo Low Code Platform. This component will enable your apps to have a complete agenda like display and display several calendars. Each calendar will display their schedules on a day,week or month planning. You will be able to add, delete or move calendar schedules.
+
+The Planning component will automatically persist in a FullSync database and free you from all database management.
+
 
 
 For more technical informations : [documentation](./project.md)
@@ -14,12 +17,16 @@ For more technical informations : [documentation](./project.md)
         - [Sample](#sample)
     - [Shared Actions](#shared-actions)
         - [changeView](#changeview)
+        - [clear](#clear)
+        - [createSchedules](#createschedules)
         - [getDateRangeEnd](#getdaterangeend)
         - [getDateRangeStart](#getdaterangestart)
         - [moveNext](#movenext)
         - [movePrev](#moveprev)
+        - [setCalendars](#setcalendars)
         - [setOptions](#setoptions)
         - [today](#today)
+        - [updateSchedule](#updateschedule)
     - [Shared Components](#shared-components)
         - [tui_calendar](#tui_calendar)
 
@@ -70,17 +77,115 @@ My First Page as root page
 <td>force</td><td></td>
 </tr>
 <tr>
+<td>identifier</td><td></td>
+</tr>
+<tr>
 <td>newViewName</td><td></td>
+</tr>
+</table>
+
+#### clear
+
+**variables**
+
+<table>
+<tr>
+<th>name</th><th>comment</th>
+</tr>
+<tr>
+<td>identifier</td><td></td>
+</tr>
+<tr>
+<td>immediately</td><td></td>
+</tr>
+</table>
+
+#### createSchedules
+
+**variables**
+
+<table>
+<tr>
+<th>name</th><th>comment</th>
+</tr>
+<tr>
+<td>identifier</td><td></td>
+</tr>
+<tr>
+<td>schedules</td><td>array of object</td>
+</tr>
+<tr>
+<td>silent</td><td></td>
 </tr>
 </table>
 
 #### getDateRangeEnd
 
+**variables**
+
+<table>
+<tr>
+<th>name</th><th>comment</th>
+</tr>
+<tr>
+<td>identifier</td><td></td>
+</tr>
+</table>
+
 #### getDateRangeStart
+
+**variables**
+
+<table>
+<tr>
+<th>name</th><th>comment</th>
+</tr>
+<tr>
+<td>identifier</td><td></td>
+</tr>
+</table>
 
 #### moveNext
 
+**variables**
+
+<table>
+<tr>
+<th>name</th><th>comment</th>
+</tr>
+<tr>
+<td>identifier</td><td></td>
+</tr>
+</table>
+
 #### movePrev
+
+**variables**
+
+<table>
+<tr>
+<th>name</th><th>comment</th>
+</tr>
+<tr>
+<td>identifier</td><td></td>
+</tr>
+</table>
+
+#### setCalendars
+
+**variables**
+
+<table>
+<tr>
+<th>name</th><th>comment</th>
+</tr>
+<tr>
+<td>calendars</td><td>Array of objects</td>
+</tr>
+<tr>
+<td>identifier</td><td></td>
+</tr>
+</table>
 
 #### setOptions
 
@@ -89,6 +194,9 @@ My First Page as root page
 <table>
 <tr>
 <th>name</th><th>comment</th>
+</tr>
+<tr>
+<td>identifier</td><td></td>
 </tr>
 <tr>
 <td>options</td><td></td>
@@ -100,9 +208,67 @@ My First Page as root page
 
 #### today
 
+**variables**
+
+<table>
+<tr>
+<th>name</th><th>comment</th>
+</tr>
+<tr>
+<td>identifier</td><td></td>
+</tr>
+</table>
+
+#### updateSchedule
+
+**variables**
+
+<table>
+<tr>
+<th>name</th><th>comment</th>
+</tr>
+<tr>
+<td>calendarId</td><td></td>
+</tr>
+<tr>
+<td>changes</td><td>object of changes</td>
+</tr>
+<tr>
+<td>identifier</td><td></td>
+</tr>
+<tr>
+<td>scheduleId</td><td></td>
+</tr>
+<tr>
+<td>silent</td><td></td>
+</tr>
+</table>
+
 ### Shared Components
 
 #### tui_calendar
+
+**variables**
+
+<table>
+<tr>
+<th>name</th><th>comment</th>
+</tr>
+<tr>
+<td>containerId</td><td></td>
+</tr>
+</table>
+
+**events**
+
+<table>
+<tr>
+<th>name</th><th>comment</th>
+</tr>
+<tr>
+<td>beforeCreateSchedule</td><td></td>
+</tr>
+</table>
 
 
 

@@ -1,3 +1,4 @@
+comment: The Calendar / Agenda component
 scriptContent: 
   - xmlizable: 
     - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
