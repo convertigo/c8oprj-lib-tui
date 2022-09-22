@@ -19,7 +19,7 @@
   ↓_id [variables.StepVariable-1663766093618]: 
     description: Document id
 ↓schedule [variables.RequestableVariable-1663765263966]: 
-↓Test_Case [core.TestCase]: 
+↓CreateSchedule [core.TestCase]: 
   ↓schedule [variables.TestCaseVariable-1663765714210]: 
     value: |
       '{

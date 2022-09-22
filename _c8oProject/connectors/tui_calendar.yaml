@@ -68,6 +68,13 @@ databaseName: tui_calendar
     value: 
 ↓GetServerInfo [transactions.couchdb.GetServerInfoTransaction]: 
   ↑default: true
+↓PostData [transactions.couchdb.PostDocumentTransaction]: 
+  ↓_use_json_base [variables.RequestableVariable-1663842202929]: 
+    description: (string) – JSON use as a base for the document (js object). Optional
+  ↓_id [variables.RequestableVariable-1663842202931]: 
+    description: Document id
+  ↓data [variables.RequestableVariable-1663842202933]: 
+    description: Document content
 ↓updateSchedule [transactions.couchdb.PostDocumentTransaction]: 
   policy: override
   ↓_id [variables.RequestableVariable-1663772440924]: 

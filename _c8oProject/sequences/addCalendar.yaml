@@ -1,0 +1,39 @@
+↓buildData [steps.SimpleStep-1663842251694]: 
+  expression: |
+    'calendar = JSON.parse(calendar)
+    _id = "calendar_" + calendar.name;
+    _use_json_base = JSON.stringify({
+    	"calendar": calendar
+    })
+    '
+↓Call_Transaction [steps.TransactionStep-1663842227117]: 
+  sourceTransaction: c8oprj_lib_tui.tui_calendar.PostData
+  ↓_use_json_base [variables.StepVariable-1663842227119]: 
+    description: (string) – JSON use as a base for the document (js object). Optional
+  ↓_id [variables.StepVariable-1663842227121]: 
+    description: Document id
+↓calendar [variables.RequestableVariable-1663842260182]: 
+↓CreateConvertigoCalendar [core.TestCase]: 
+  ↓calendar [variables.TestCaseVariable-1663842397931]: 
+    value: |
+      '{
+          "name": "Convertigo",
+          "color": "#ffffff",
+          "bgColor": "#9e5fff",
+          "dragBgColor": "#9e5fff",
+          "borderColor": "#9e5fff"
+      }
+      
+      '
+↓CreateVacationCalendar [core.TestCase]: 
+  ↓calendar [variables.TestCaseVariable-1663843550205]: 
+    value: |
+      '{
+          "name": "Vacation",
+          "color": "#ffffff",
+          "bgColor": "#6e5fff",
+          "dragBgColor": "#9e5fff",
+          "borderColor": "#9e5fff"
+      }
+      
+      '

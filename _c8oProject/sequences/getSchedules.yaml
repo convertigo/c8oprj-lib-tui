@@ -6,21 +6,19 @@
   ↓_use_view [variables.StepVariable-1663753793595]: 
     description: View function name
     value: schedulesByCalendarAndStartTime
-↓Iterator [steps.IteratorStep-1663753736047]: 
-  sourceDefinition: 
+↓Array [steps.JsonArrayStep-1663859821023]: 
+  key: 
     - xmlizable: 
-      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-      - com.twinsoft.convertigo.beans.common.XMLVector: 
-        - java.lang.String: 
-          - ↑value: 1663753698239
-        - java.lang.String: 
-          - ↑value: ./document/couchdb_output/rows/item
+      - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+      - SmartType: 
+        - ↑mode: PLAIN
+        - →→: value
   ↓Copy [steps.XMLCopyStep-1663753822307]: 
     sourceDefinition: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
         - com.twinsoft.convertigo.beans.common.XMLVector: 
           - java.lang.String: 
-            - ↑value: 1663753736047
+            - ↑value: 1663753698239
           - java.lang.String: 
-            - ↑value: ./value
+            - ↑value: ./document/couchdb_output/rows/item/value

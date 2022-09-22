@@ -1,4 +1,4 @@
-↑convertigo: 8.0.2.m006
+↑convertigo: 8.1.0.m006
 ↓c8oprj_lib_tui [core.Project]: 
   comment: |
     This is the Planning component for the Convertigo Low Code Platform. This component will enable your apps to have a complete agenda like display and display several calendars. Each calendar will display their schedules on a day,week or month planning. You will be able to add, delete or move calendar schedules.
@@ -9,6 +9,7 @@
   version: 0.0.5
   ↓tui_calendar [connectors.FullSyncConnector]: 🗏 connectors/tui_calendar.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
+  ↓addCalendar [sequences.GenericSequence]: 🗏 sequences/addCalendar.yaml
   ↓addSchedule [sequences.GenericSequence]: 🗏 sequences/addSchedule.yaml
   ↓getCalendars [sequences.GenericSequence]: 🗏 sequences/getCalendars.yaml
   ↓getSchedules [sequences.GenericSequence]: 🗏 sequences/getSchedules.yaml
