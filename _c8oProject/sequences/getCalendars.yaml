@@ -1,3 +1,4 @@
+comment: Gets all calendars from the database
 ↓Call_Transaction [steps.TransactionStep-1663753049791]: 
   sourceTransaction: c8oprj_lib_tui.tui_calendar.getCalendars
 ↓Array [steps.JsonArrayStep-1663843358305]: 

@@ -1,3 +1,4 @@
+comment: Adds a Schedule attached to a calendar in the database
 ↓buildData [steps.SimpleStep-1663765305108]: 
   expression: |
     'log.warn(''schedule'')
@@ -19,6 +20,7 @@
   ↓_id [variables.StepVariable-1663766093618]: 
     description: Document id
 ↓schedule [variables.RequestableVariable-1663765263966]: 
+  comment: The Scedule as a stringified JSON strcuture
 ↓CreateSchedule [core.TestCase]: 
   ↓schedule [variables.TestCaseVariable-1663765714210]: 
     value: |

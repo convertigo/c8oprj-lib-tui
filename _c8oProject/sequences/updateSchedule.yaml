@@ -1,3 +1,4 @@
+comment: Updates a Schedule in the database
 ↓Input_variables [steps.InputVariablesStep-1663756431331]: 
 ↓Sequence_JS [steps.SimpleStep-1663757036945]: 
   expression: |
@@ -25,5 +26,6 @@
   ↓_use_json_base [variables.StepVariable-1663772913088]: 
     description: (string) – JSON use as a base for the document (js object). Optional
 ↓schedule [variables.RequestableVariable-1663756436933]: 
+  comment: The Schedule as a Stringified JSON
 ↓Test_Case [core.TestCase]: 
   ↓schedule [variables.TestCaseVariable-1663757082635]: 

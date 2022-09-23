@@ -4609,6 +4609,7 @@ scriptContent:
          "data": "script:event"
         }'
 ↓containerId [ngx.components.UICompVariable-1660315688168]: 
+  comment: This ID of the DIV where the agenda will be displayed
 ↓afterRenderSchedule [ngx.components.UICompEvent-1663747364075]: 
   attrName: afterRenderSchedule
 ↓beforeCreateSchedule [ngx.components.UICompEvent-1662996106232]: 
@@ -4618,4 +4619,4 @@ scriptContent:
 ↓beforeUpdateSchedule [ngx.components.UICompEvent-1663747528147]: 
   attrName: beforeUpdateSchedule
 ↓locale [ngx.components.UICompVariable-1663749593770]: 
-  comment: use for dates / week days names
+  comment: use for dates / week days. For example get the locale from the navigator (fr, en, es, ...)

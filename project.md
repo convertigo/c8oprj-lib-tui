@@ -41,12 +41,12 @@ see [documentation](http://localhost:18080/convertigo/xsd/couchdb/CouchDb.xsd)
 <details><summary><span style="color:DarkGoldenRod"><i>Transactions</i></span></summary><blockquote><p>
 
 
-<details><summary><b>addSchedule</b></summary><blockquote><p>
+<details><summary><b>addSchedule</b> : FS Adds a schedule in a calendar</summary><blockquote><p>
 
 
 ### ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/transactions/couchdb/images/postdocument_color_16x16.png?raw=true "PostDocumentTransaction") addSchedule
 
-
+FS Adds a schedule in a calendar
 
 <span style="color:DarkGoldenRod">Variables</span>
 
@@ -87,12 +87,12 @@ comment
 
 </p></blockquote></details>
 
-<details><summary><b>getCalendars</b></summary><blockquote><p>
+<details><summary><b>getCalendars</b> : FS get all calendars</summary><blockquote><p>
 
 
 ### ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/transactions/couchdb/images/getview_color_16x16.png?raw=true "GetViewTransaction") getCalendars
 
-
+FS get all calendars
 
 <span style="color:DarkGoldenRod">Variables</span>
 
@@ -125,12 +125,12 @@ comment
 
 </p></blockquote></details>
 
-<details><summary><b>getSchedules</b></summary><blockquote><p>
+<details><summary><b>getSchedules</b> : FS get schedules calendar and date</summary><blockquote><p>
 
 
 ### ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/transactions/couchdb/images/getview_color_16x16.png?raw=true "GetViewTransaction") getSchedules
 
-
+FS get schedules calendar and date
 
 <span style="color:DarkGoldenRod">Variables</span>
 
@@ -187,12 +187,12 @@ comment
 
 </p></blockquote></details>
 
-<details><summary><b>PostData</b></summary><blockquote><p>
+<details><summary><b>PostData</b> : FS Post generic data in database</summary><blockquote><p>
 
 
 ### ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/transactions/couchdb/images/postdocument_color_16x16.png?raw=true "PostDocumentTransaction") PostData
 
-
+FS Post generic data in database
 
 <span style="color:DarkGoldenRod">Variables</span>
 
@@ -233,12 +233,12 @@ comment
 
 </p></blockquote></details>
 
-<details><summary><b>updateSchedule</b></summary><blockquote><p>
+<details><summary><b>updateSchedule</b> : FS updates a Schedule</summary><blockquote><p>
 
 
 ### ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/transactions/couchdb/images/postdocument_color_16x16.png?raw=true "PostDocumentTransaction") updateSchedule
 
-
+FS updates a Schedule
 
 <span style="color:DarkGoldenRod">Variables</span>
 
@@ -293,12 +293,12 @@ does nothing
 <details><summary><span style="color:DarkGoldenRod"><i>Sequences</i></span></summary><blockquote><p>
 
 
-<details><summary><b>addCalendar</b></summary><blockquote><p>
+<details><summary><b>addCalendar</b> : Adds a Clendar in the database</summary><blockquote><p>
 
 
 ## ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/sequences/images/genericsequence_color_16x16.png?raw=true "GenericSequence") addCalendar
 
-
+Adds a Clendar in the database
 
 <span style="color:DarkGoldenRod">Variables</span>
 
@@ -316,19 +316,19 @@ comment
 <img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/variables/images/variable_color_16x16.png?raw=true "  alt="RequestableVariable" >&nbsp;calendar
 </td>
 <td>
-
+The calendar a a stringified JSON Structure
 </td>
 </tr>
 </table>
 
 </p></blockquote></details>
 
-<details><summary><b>addSchedule</b></summary><blockquote><p>
+<details><summary><b>addSchedule</b> : Adds a Schedule attached to a calendar in the database</summary><blockquote><p>
 
 
 ## ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/sequences/images/genericsequence_color_16x16.png?raw=true "GenericSequence") addSchedule
 
-
+Adds a Schedule attached to a calendar in the database
 
 <span style="color:DarkGoldenRod">Variables</span>
 
@@ -346,35 +346,35 @@ comment
 <img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/variables/images/variable_color_16x16.png?raw=true "  alt="RequestableVariable" >&nbsp;schedule
 </td>
 <td>
-
+The Scedule as a stringified JSON strcuture
 </td>
 </tr>
 </table>
 
 </p></blockquote></details>
 
-<details><summary><b>getCalendars</b></summary><blockquote><p>
+<details><summary><b>getCalendars</b> : Gets all calendars from the database</summary><blockquote><p>
 
 
 ## ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/sequences/images/genericsequence_color_16x16.png?raw=true "GenericSequence") getCalendars
 
-
+Gets all calendars from the database
 </p></blockquote></details>
 
-<details><summary><b>getSchedules</b></summary><blockquote><p>
+<details><summary><b>getSchedules</b> : Gets schedules attached to calendar within a timeframe</summary><blockquote><p>
 
 
 ## ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/sequences/images/genericsequence_color_16x16.png?raw=true "GenericSequence") getSchedules
 
-
+Gets schedules attached to calendar within a timeframe
 </p></blockquote></details>
 
-<details><summary><b>updateSchedule</b></summary><blockquote><p>
+<details><summary><b>updateSchedule</b> : Updates a Schedule in the database</summary><blockquote><p>
 
 
 ## ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/sequences/images/genericsequence_color_16x16.png?raw=true "GenericSequence") updateSchedule
 
-
+Updates a Schedule in the database
 
 <span style="color:DarkGoldenRod">Variables</span>
 
@@ -392,7 +392,7 @@ comment
 <img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/variables/images/variable_color_16x16.png?raw=true "  alt="RequestableVariable" >&nbsp;schedule
 </td>
 <td>
-
+The Schedule as a Stringified JSON
 </td>
 </tr>
 </table>
@@ -868,7 +868,7 @@ comment
 <img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/uicompvariable_color_16x16.png?raw=true "  alt="UICompVariable" >&nbsp;containerId
 </td>
 <td>
-
+This ID of the DIV where the agenda will be displayed
 </td>
 </tr>
 <tr>
@@ -876,7 +876,7 @@ comment
 <img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/uicompvariable_color_16x16.png?raw=true "  alt="UICompVariable" >&nbsp;locale
 </td>
 <td>
-use for dates / week days names
+use for dates / week days. For example get the locale from the navigator (fr, en, es, ...)
 </td>
 </tr>
 </table>
