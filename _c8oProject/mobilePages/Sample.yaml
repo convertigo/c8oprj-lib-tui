@@ -13,6 +13,7 @@ scriptContent:
         	/* ngModels */ 
         	public view = 'week'
         	public workWeek = false;
+        	public lang = "fr";
         	
         	
         	/*End_c8o_PageDeclaration*/
@@ -592,6 +593,45 @@ title: First page
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'false'
+          ↓SelectContainer [ngx.components.UIDynamicElement-1664203794000]: 
+            beanData: |
+              '{
+               "ionBean": "Select",
+               "ControlName": "plain:name1664203794000",
+               "Interface": "plain:popover",
+               "Placeholder": "plain:Language"
+              }'
+            tagName: ion-select
+            ↓SelectOption [ngx.components.UIDynamicElement-1664203802089]: 
+              beanData: '{"ionBean":"SelectOption","Value":"plain:fr"}'
+              tagName: ion-select-option
+              ↓Text [ngx.components.UIText-1664203809529]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                    - MobileSmartSourceType: plain:Français
+            ↓SelectOption1 [ngx.components.UIDynamicElement-1664203830053]: 
+              beanData: '{"ionBean":"SelectOption","Value":"plain:en"}'
+              tagName: ion-select-option
+              ↓Text [ngx.components.UIText-1664203830057]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                    - MobileSmartSourceType: plain:English
+            ↓SelectOption2 [ngx.components.UIDynamicElement-1664203833511]: 
+              beanData: '{"ionBean":"SelectOption","Value":"plain:es"}'
+              tagName: ion-select-option
+              ↓Text [ngx.components.UIText-1664203833516]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                    - MobileSmartSourceType: plain:Español
+            ↓Attr [ngx.components.UIAttribute-1664203963346]: 
+              attrName: '[(ngModel)]'
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.lang
     ↓rowListCalendars [ngx.components.UIDynamicElement-1663753291897]: 
       beanData: '{"ionBean":"GridRow","Height":"plain"}'
       tagName: ion-row
@@ -821,7 +861,35 @@ title: First page
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: script:'fr'
+                - MobileSmartSourceType: script:this.lang
+          ↓Event4 [ngx.components.UIControlEvent-1664200659234]: 
+            attrName: (clickSchedule)
+            eventName: clickSchedule
+            ↓CustomAction [ngx.components.UICustomAction-1664200796438]: 
+              actionValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                  - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                    →: |
+                      '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+                      		console.log("event", event)
+                      		console.log(vars.event)
+                      		resolve();
+                      '
+              ↓event [ngx.components.UIControlVariable-1664200817458]: 
+                varValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                    - MobileSmartSourceType: script:parent.out
+          ↓Event5 [ngx.components.UIControlEvent-1664206475945]: 
+            attrName: (clickDayname)
+            eventName: clickDayname
+          ↓Event6 [ngx.components.UIControlEvent-1664206475947]: 
+            attrName: (clickMore)
+            eventName: clickMore
+          ↓Event7 [ngx.components.UIControlEvent-1664206475949]: 
+            attrName: (clickTimezonesCollapseBtn)
+            eventName: clickTimezonesCollapseBtn
       ↓Style [ngx.components.UIStyle-1660141591135]: 
         styleContent: 
           - xmlizable: 

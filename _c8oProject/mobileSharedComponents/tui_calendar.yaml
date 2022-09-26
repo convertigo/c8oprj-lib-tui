@@ -257,7 +257,7 @@ scriptContent:
                 		   taskView: [''task''],  // e.g. true, false, or [''task'', ''milestone'']
                 		   scheduleView: true, // e.g. true, false, or [''allday'', ''time'']
                 			useCreationPopup: true,
-                			useDetailPopup: false,
+                			useDetailPopup: true,
                 			usageStatistics: false,
                 			disableClick: true,
                 			isReadOnly: false,
@@ -305,38 +305,39 @@ scriptContent:
                 
                 // this.setDateRange();
                 
-                this.calendar.on(''afterRenderSchedule'', function(event) {
-                	page.actionBeans.EmitEventAction(page, { event: ''afterRenderSchedule'', data: event }, {})
-                })
-                
-                this.calendar.on(''beforeCreateSchedule'',function(event) {
-                	// page.getInstance(Events).publish("beforeCreateSchedule", event);
-                	page.actionBeans.EmitEventAction(page, { event: ''beforeCreateSchedule'', data: event }, {})
-                })
-                
-                this.calendar.on(''beforeUpdateSchedule'', function(event) {
-                    page.actionBeans.EmitEventAction(page, { event: ''beforeUpdateSchedule'', data: event }, {})
-                });
-                
-                this.calendar.on(''beforeDeleteSchedule'',function(event) {
-                	// page.getInstance(Events).publish("beforeCreateSchedule", event);
-                	page.actionBeans.EmitEventAction(page, { event: ''beforeDeleteSchedule'', data: event }, {})
-                })
-                
-                //this.calendar.on(''clickDayname'', function(event) {
-                //    if (calendar.getViewName() === ''week'') {
-                //        calendar.setDate(new Date(event.date));
-                //        calendar.changeView(''day'', true);
-                //    }
-                //});
-                //
-                //		this.calendar.on(''clickSchedule'', (event) => {
-                //			page.getInstance(Events).publish("clickSchedule", event);
-                //			console.log(''---------------------------'')
-                //			console.log(''clickSchedule Event (event object)'')
-                //			console.log(''---------------------------'')
-                //			console.log(event)
-                //		})
+                		this.calendar.on(''afterRenderSchedule'', function(event) {
+                			page.actionBeans.EmitEventAction(page, { event: ''afterRenderSchedule'', data: event }, {})
+                		})
+                		
+                		this.calendar.on(''beforeCreateSchedule'',function(event) {
+                			// page.getInstance(Events).publish("beforeCreateSchedule", event);
+                			page.actionBeans.EmitEventAction(page, { event: ''beforeCreateSchedule'', data: event }, {})
+                		})
+                		
+                		this.calendar.on(''beforeUpdateSchedule'', function(event) {
+                		    page.actionBeans.EmitEventAction(page, { event: ''beforeUpdateSchedule'', data: event }, {})
+                		});
+                		
+                		this.calendar.on(''beforeDeleteSchedule'',function(event) {
+                			// page.getInstance(Events).publish("beforeCreateSchedule", event);
+                			page.actionBeans.EmitEventAction(page, { event: ''beforeDeleteSchedule'', data: event }, {})
+                		})
+                		
+                		this.calendar.on(''clickSchedule'', function(event) {
+                			page.actionBeans.EmitEventAction(page, { event: ''clickSchedule'', data: event }, {})
+                		})
+                		
+                		this.calendar.on(''clickDayname'', function(event) {
+                			page.actionBeans.EmitEventAction(page, { event: ''clickDayname'', data: event }, {})
+                		})
+                		
+                		this.calendar.on(''clickMore'', function(event) {
+                			page.actionBeans.EmitEventAction(page, { event: ''clickMore'', data: event }, {})
+                		})
+                		
+                		this.calendar.on(''clickTimezonesCollapseBtn'', function(event) {
+                			page.actionBeans.EmitEventAction(page, { event: ''clickTimezonesCollapseBtn'', data: event }, {})
+                		})
                 
                 		resolve();
                 '
@@ -4620,3 +4621,11 @@ scriptContent:
   attrName: beforeUpdateSchedule
 ↓locale [ngx.components.UICompVariable-1663749593770]: 
   comment: use for dates / week days. For example get the locale from the navigator (fr, en, es, ...)
+↓clickDayname [ngx.components.UICompEvent-1664206339057]: 
+  attrName: clickDayname
+↓clickMore [ngx.components.UICompEvent-1664206387483]: 
+  attrName: clickMore
+↓clickSchedule [ngx.components.UICompEvent-1664200628318]: 
+  attrName: clickSchedule
+↓clickTimezonesCollapseBtn [ngx.components.UICompEvent-1664206435571]: 
+  attrName: clickTimezonesCollapseBtn
