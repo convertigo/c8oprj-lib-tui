@@ -1,0 +1,27 @@
+comment: Delete a schedule.
+↓identifier [ngx.components.UIStackVariable-1664287546581]: 
+↓scheduleId [ngx.components.UIStackVariable-1664287556372]: 
+  comment: (string) ID of schedule to delete
+↓calendarId [ngx.components.UIStackVariable-1664287573174]: 
+  comment: (string) The CalendarId of the schedule to delete
+↓silent [ngx.components.UIStackVariable-1664287594706]: 
+  comment: (boolean) No auto render after creation when set true
+↓deleteSchedule [ngx.components.UICustomAction-1664287676269]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+          		var identifier = vars.identifier;
+          		var silent = (vars.silent == "true") ? vars.silent : false ;
+          		var scheduleId = vars.scheduleId;
+          		var calendarId = vars.calendarId;
+          		
+          		page[identifier].calendar.deleteSchedule(scheduleId, calendarId, silent);
+          		resolve();
+          '
+  ↓identifier [ngx.components.UIControlVariable-1664287710480]: 
+  ↓scheduleId [ngx.components.UIControlVariable-1664287720299]: 
+  ↓calendarId [ngx.components.UIControlVariable-1664287721317]: 
+  ↓silent [ngx.components.UIControlVariable-1664287722354]: 

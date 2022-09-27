@@ -67,6 +67,7 @@ tplProjectName: mobilebuilder_tpl_8_0_0_ngx
 ↓changeView [ngx.components.UIActionStack-1660223678336]: 🗏 mobileSharedActions/changeView.yaml
 ↓clear [ngx.components.UIActionStack-1662996403734]: 🗏 mobileSharedActions/clear.yaml
 ↓createSchedules [ngx.components.UIActionStack-1663682721061]: 🗏 mobileSharedActions/createSchedules.yaml
+↓deleteSchedule [ngx.components.UIActionStack-1664287457064]: 🗏 mobileSharedActions/deleteSchedule.yaml
 ↓getDateRangeStart [ngx.components.UIActionStack-1660222588223]: 🗏 mobileSharedActions/getDateRangeStart.yaml
 ↓getDateRangeEnd [ngx.components.UIActionStack-1660222705202]: 🗏 mobileSharedActions/getDateRangeEnd.yaml
 ↓moveNext [ngx.components.UIActionStack-1660144765523]: 🗏 mobileSharedActions/moveNext.yaml
