@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:c8oprj_lib_tui_ns="http://www.convertigo.com/convertigo/projects/c8oprj_lib_tui" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.convertigo.com/convertigo/projects/c8oprj_lib_tui">
+    <xsd:element name="APIGouv__daysOff" type="c8oprj_lib_tui_ns:APIGouv__daysOffRequestData">
+        <xsd:annotation/>
+    </xsd:element>
+    <xsd:element name="APIGouv__daysOffResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="response" type="c8oprj_lib_tui_ns:APIGouv__daysOffResponseData"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="APIGouv__daysOffResponseType">
+        <xsd:sequence>
+            <xsd:element name="document" type="c8oprj_lib_tui_ns:APIGouv__daysOffResponseData"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="APIGouv__daysOffRequestData">
+        <xsd:sequence>
+            <xsd:element name="zone" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="annee" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="APIGouv_daysOff_document_object__2022_01_01Type">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="2022-01-01" name="originalKeyName" type="xsd:date"/>
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="APIGouv_daysOff_document_object__2022_04_18Type">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="2022-04-18" name="originalKeyName" type="xsd:date"/>
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="APIGouv_daysOff_document_object__2022_05_01Type">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="2022-05-01" name="originalKeyName" type="xsd:date"/>
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="APIGouv_daysOff_document_object__2022_05_08Type">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="2022-05-08" name="originalKeyName" type="xsd:date"/>
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="APIGouv_daysOff_document_object__2022_05_26Type">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="2022-05-26" name="originalKeyName" type="xsd:date"/>
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="APIGouv_daysOff_document_object__2022_06_06Type">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="2022-06-06" name="originalKeyName" type="xsd:date"/>
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="APIGouv_daysOff_document_object__2022_07_14Type">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="2022-07-14" name="originalKeyName" type="xsd:date"/>
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="APIGouv_daysOff_document_object__2022_08_15Type">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="2022-08-15" name="originalKeyName" type="xsd:date"/>
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="APIGouv_daysOff_document_object__2022_11_01Type">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="2022-11-01" name="originalKeyName" type="xsd:date"/>
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="APIGouv_daysOff_document_object__2022_11_11Type">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="2022-11-11" name="originalKeyName" type="xsd:date"/>
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="APIGouv_daysOff_document_object__2022_12_25Type">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="2022-12-25" name="originalKeyName" type="xsd:date"/>
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="APIGouv_daysOff_document_objectType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="_2022_01_01" type="c8oprj_lib_tui_ns:APIGouv_daysOff_document_object__2022_01_01Type"/>
+            <xsd:element minOccurs="0" name="_2022_04_18" type="c8oprj_lib_tui_ns:APIGouv_daysOff_document_object__2022_04_18Type"/>
+            <xsd:element minOccurs="0" name="_2022_05_01" type="c8oprj_lib_tui_ns:APIGouv_daysOff_document_object__2022_05_01Type"/>
+            <xsd:element minOccurs="0" name="_2022_05_08" type="c8oprj_lib_tui_ns:APIGouv_daysOff_document_object__2022_05_08Type"/>
+            <xsd:element minOccurs="0" name="_2022_05_26" type="c8oprj_lib_tui_ns:APIGouv_daysOff_document_object__2022_05_26Type"/>
+            <xsd:element minOccurs="0" name="_2022_06_06" type="c8oprj_lib_tui_ns:APIGouv_daysOff_document_object__2022_06_06Type"/>
+            <xsd:element minOccurs="0" name="_2022_07_14" type="c8oprj_lib_tui_ns:APIGouv_daysOff_document_object__2022_07_14Type"/>
+            <xsd:element minOccurs="0" name="_2022_08_15" type="c8oprj_lib_tui_ns:APIGouv_daysOff_document_object__2022_08_15Type"/>
+            <xsd:element minOccurs="0" name="_2022_11_01" type="c8oprj_lib_tui_ns:APIGouv_daysOff_document_object__2022_11_01Type"/>
+            <xsd:element minOccurs="0" name="_2022_11_11" type="c8oprj_lib_tui_ns:APIGouv_daysOff_document_object__2022_11_11Type"/>
+            <xsd:element minOccurs="0" name="_2022_12_25" type="c8oprj_lib_tui_ns:APIGouv_daysOff_document_object__2022_12_25Type"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="APIGouv__daysOffResponseData">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="object" type="c8oprj_lib_tui_ns:APIGouv_daysOff_document_objectType"/>
+            <xsd:element minOccurs="0" name="error" type="c8oprj_lib_tui_ns:ConvertigoError"/>
+        </xsd:sequence>
+        <xsd:attribute name="connector" type="xsd:string"/>
+        <xsd:attribute name="context" type="xsd:string"/>
+        <xsd:attribute name="contextId" type="xsd:string"/>
+        <xsd:attribute name="fromStub" type="xsd:boolean"/>
+        <xsd:attribute name="fromcache" type="xsd:boolean"/>
+        <xsd:attribute name="generated" type="xsd:string"/>
+        <xsd:attribute name="project" type="xsd:string"/>
+        <xsd:attribute name="sequence" type="xsd:string"/>
+        <xsd:attribute name="signature" type="xsd:long"/>
+        <xsd:attribute name="transaction" type="xsd:string"/>
+        <xsd:attribute name="version" type="xsd:string"/>
+        <xsd:attribute name="screenclass" type="xsd:string"/>
+        <xsd:attribute name="userReference" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoErrorContextVariable">
+        <xsd:attribute name="name" type="xsd:string"/>
+        <xsd:attribute name="value" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoErrorContext">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="variable" type="c8oprj_lib_tui_ns:ConvertigoErrorContextVariable"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoError">
+        <xsd:sequence minOccurs="0">
+            <xsd:element name="code" type="xsd:integer"/>
+            <xsd:element name="message" type="xsd:string"/>
+            <xsd:element name="details" type="xsd:string"/>
+            <xsd:element name="context" type="c8oprj_lib_tui_ns:ConvertigoErrorContext"/>
+            <xsd:element name="exception" type="xsd:string"/>
+            <xsd:element name="stacktrace" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="project" type="xsd:string"/>
+        <xsd:attribute name="connector" type="xsd:string"/>
+        <xsd:attribute name="transaction" type="xsd:string"/>
+        <xsd:attribute name="sequence" type="xsd:string"/>
+        <xsd:attribute name="type">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="c8o"/>
+                    <xsd:enumeration value="project"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+    </xsd:complexType>
+</xsd:schema>

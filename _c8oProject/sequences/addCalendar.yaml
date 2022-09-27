@@ -41,3 +41,14 @@ comment: Adds a Clendar in the database
       }
       
       '
+↓DaysOff [core.TestCase]: 
+  ↓calendar [variables.TestCaseVariable-1664280843347]: 
+    value: |
+      '{
+      	"id": "calendar_Days Off",
+          "name": "Days Off",
+          "color": "#ffffff",
+          "bgColor": "#63DA38",
+          "dragBgColor": "#63DA38",
+          "borderColor": "#63DA38"
+      }'

@@ -6,13 +6,15 @@
     The Planning component will automatically persist in a FullSync database and free you from all database management.
     
   corsOrigin: =Origin
-  version: 0.0.5
+  version: 0.0.6
+  ↓APIGouv [connectors.HttpConnector]: 🗏 connectors/APIGouv.yaml
   ↓tui_calendar [connectors.FullSyncConnector]: 🗏 connectors/tui_calendar.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓addCalendar [sequences.GenericSequence]: 🗏 sequences/addCalendar.yaml
   ↓addSchedule [sequences.GenericSequence]: 🗏 sequences/addSchedule.yaml
   ↓getCalendars [sequences.GenericSequence]: 🗏 sequences/getCalendars.yaml
   ↓getSchedules [sequences.GenericSequence]: 🗏 sequences/getSchedules.yaml
+  ↓importDaysOff [sequences.GenericSequence]: 🗏 sequences/importDaysOff.yaml
   ↓updateSchedule [sequences.GenericSequence]: 🗏 sequences/updateSchedule.yaml
   ↓CouchDb_schema [references.ImportXsdSchemaReference]: 
     urlpath: http://localhost:18080/convertigo/xsd/couchdb/CouchDb.xsd

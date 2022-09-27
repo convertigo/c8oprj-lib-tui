@@ -1,0 +1,13 @@
+https: true
+port: 443
+server: calendrier.api.gouv.fr/jours-feries
+↓daysOff [transactions.JsonHttpTransaction]: 
+  ↑default: true
+  subDir: '{zone}/{annee}.json'
+  ↓Test_Case [core.TestCase]: 
+    ↓zone [variables.TestCaseVariable-1664269199855]: 
+      value: metropole
+    ↓annee [variables.TestCaseVariable-1664269199857]: 
+      value: 2022
+  ↓zone [variables.RequestableHttpVariable-1664269145829]: 
+  ↓annee [variables.RequestableHttpVariable-1664269145832]: 

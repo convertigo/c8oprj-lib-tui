@@ -1,0 +1,60 @@
+↓Call_Transaction [steps.TransactionStep-1664268867528]: 
+  output: true
+  sourceTransaction: c8oprj_lib_tui.APIGouv.daysOff
+  ↓zone [variables.StepVariable-1664269281652]: 
+    value: metropole
+  ↓annee [variables.StepVariable-1664269281654]: 
+    value: 2022
+↓JsonSource [steps.JsonSourceStep-1664281093187]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1664268867528
+        - java.lang.String: 
+          - ↑value: ./document/object
+  variableName: days
+↓prepareObjectArray [steps.SimpleStep-1664281346836]: 
+  expression: |
+    'var schedules = [];
+    Object.keys(days).forEach( (key) => {
+    	var schedule = {
+    		    "id": "schedule_" + days[key],
+    		    "title": days[key],
+    		    "body": "",
+    		    "isAllDay": false,
+    		    "start": key,
+    		    "end": key,
+    		    "color": "#ffffff",
+    		    "isVisible": true,
+    		    "bgColor": "#63DA38",
+    		    "dragBgColor": "#63DA38",
+    		    "borderColor": "#63DA38",
+    		    "calendarId": "calendar_Days Off",
+    		    "category": "allday",
+    		    "dueDateClass": "",
+    		    "customStyle": "",
+    		    "isPending": false,
+    		    "isFocused": false,
+    		    "isReadOnly": false,
+    		    "isPrivate": false,
+    		    "location": "",
+    		    "attendees": [],
+    		    "recurrenceRule": "",
+    		    "state": "Busy",
+    		    "goingDuration": 0,
+    		    "comingDuration": 0,
+    		    "raw": null,
+    	}
+    	schedules.push(schedule)
+    	log.warn(JSON.stringify(schedules))
+    })'
+↓jIterator [steps.SimpleIteratorStep-1664282405801]: 
+  expression: schedules
+  ↓prepareScheduleObject [steps.SimpleStep-1664282459619]: 
+    expression: var schedule = JSON.stringify(schedules[index])
+  ↓Call_Sequence [steps.SequenceStep-1664282190042]: 
+    sourceSequence: c8oprj_lib_tui.addSchedule
+    ↓schedule [variables.StepVariable-1664282203811]: 
+      comment: The Scedule as a stringified JSON strcuture
