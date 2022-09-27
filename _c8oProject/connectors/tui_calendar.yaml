@@ -7,6 +7,10 @@ databaseName: tui_calendar
     description: Document id
   ↓data [variables.RequestableVariable-1663766255408]: 
     description: Document content
+↓deleteSchedule [transactions.couchdb.DeleteDocumentTransaction]: 
+  comment: FS Delete a schedule
+  ↓_use_docid [variables.RequestableVariable-1664294679283]: 
+    description: Document ID
 ↓getCalendars [transactions.couchdb.GetViewTransaction]: 
   comment: FS get all calendars
   ↓Test_Case [core.TestCase]: 
