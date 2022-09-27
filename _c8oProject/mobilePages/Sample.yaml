@@ -1645,3 +1645,11 @@ title: First page
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: source:{"filter":"Sequence","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sequence":"c8oprj_lib_tui.getSchedules","marker":""}],"path":"?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664294253305]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: c8oprj_lib_tui.Application.NgxApp.scrollToNow
+            ↓identifier [ngx.components.UIControlVariable-1664294264196]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:'calendar'

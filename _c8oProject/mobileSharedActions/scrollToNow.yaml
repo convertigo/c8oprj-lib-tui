@@ -1,0 +1,20 @@
+↓scrollToNow [ngx.components.UICustomAction-1664294042636]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+          		var identifier = vars.identifier;
+          	
+          		if (page[identifier].calendar.getViewName() !== ''month'') {
+                  	page[identifier].calendar.scrollToNow();
+              	}
+          		resolve();
+          '
+  ↓identifier [ngx.components.UIControlVariable-1664294070661]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1664294025693}],"path":"?.in?.vars?.identifier","prefix":"","suffix":"","custom":"","useCustom":false}}
+↓identifier [ngx.components.UIStackVariable-1664294082119]: 
