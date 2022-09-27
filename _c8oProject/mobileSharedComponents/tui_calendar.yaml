@@ -62,6 +62,27 @@ scriptContent:
         		/*End_c8o_CompFinalization*/
         /*Begin_c8o_CompChanges*/
         		console.log(changes)
+        		Object.keys(changes).forEach( (key) => {
+        			switch(key) {
+        				case "locale": {
+        					if(!changes[key].firstChange) {
+        						var weekdays = Moment.localeData(changes[key].currentValue).weekdays()
+        						var months = Moment.localeData(changes[key].currentValue).months();
+        						
+        						this.calendar.setOptions({
+        							week: {
+        								daynames: weekdays
+        							},
+        							month: {
+        								daynames: weekdays
+        							}
+        						})	
+        					}
+        					
+        					break;
+        				} // end case ''locale''
+        			} // end switch
+        		}) // end Object.keys
         		/*End_c8o_CompChanges*/
         /*Begin_c8o_CompDoCheck*/
         		/*End_c8o_CompDoCheck*/
