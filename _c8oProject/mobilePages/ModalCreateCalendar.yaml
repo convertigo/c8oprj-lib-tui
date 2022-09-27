@@ -1,0 +1,146 @@
+scriptContent: 
+  - xmlizable: 
+    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+      →: |
+        /*Begin_c8o_PageImport*/
+        /*End_c8o_PageImport*/
+        /*Begin_c8o_PageDeclaration*/
+        	public color;
+        	/*End_c8o_PageDeclaration*/
+        /*Begin_c8o_PageConstructor*/
+        		/*End_c8o_PageConstructor*/
+        /*Begin_c8o_PageFunction*/
+        	changeColor(event) {
+        		this.color = event.target.value;
+        		console.log("color", this.color)
+        	}
+        	
+        	/*End_c8o_PageFunction*/
+        
+segment: path-to-modalcreatecalendar
+title: Title for ModalCreateCalendar
+↓Content [ngx.components.UIDynamicElement-1664292277372]: 
+  beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
+  ↓Form [ngx.components.UIForm-1664292253081]: 
+    identifier: createCalendar
+    ↓FormItem [ngx.components.UIDynamicElement-1664292253083]: 
+      beanData: '{"ionBean":"FormItem"}'
+      tagName: ion-item
+      ↓Label [ngx.components.UIDynamicElement-1664292253085]: 
+        beanData: '{"ionBean":"Label","Position":"plain:stacked"}'
+        tagName: ion-label
+        ↓Text [ngx.components.UIText-1664292253087]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Nom
+      ↓TextInput [ngx.components.UIDynamicElement-1664292253089]: 
+        beanData: |
+          '{
+           "ionBean": "Input",
+           "ControlName": "plain:name",
+           "Debounce": "plain:0"
+          }'
+        tagName: ion-input
+    ↓FormItem1 [ngx.components.UIDynamicElement-1664292253091]: 
+      beanData: '{"ionBean":"FormItem"}'
+      tagName: ion-item
+      ↓Label [ngx.components.UIDynamicElement-1664292253093]: 
+        beanData: '{"ionBean":"Label","Position":"plain:stacked"}'
+        tagName: ion-label
+        ↓Text [ngx.components.UIText-1664292253095]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Couleur
+      ↓Tag [ngx.components.UIElement-1664292431415]: 
+        selfClose: true
+        tagName: input
+        ↓Attr [ngx.components.UIAttribute-1664292445216]: 
+          attrName: type
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:color
+        ↓Attr1 [ngx.components.UIAttribute-1664292558071]: 
+          attrName: (change)
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.changeColor($event)
+    ↓Event [ngx.components.UIControlEvent-1664292253107]: 
+      attrName: (ngSubmit)
+      eventName: onSubmit
+      isEnabled: false
+      ↓Alert [ngx.components.UIDynamicAction-1664292253109]: 
+        beanData: '{"ionBean":"AlertAction","message":"script:''formSample value is\\\\n'' + JSON.stringify(this?.formSample.value)"}'
+↓Footer [ngx.components.UIDynamicElement-1664292296170]: 
+  beanData: '{"ionBean":"Footer"}'
+  tagName: ion-footer
+  ↓ToolBar [ngx.components.UIDynamicElement-1664292296172]: 
+    beanData: '{"ionBean":"ToolBar"}'
+    tagName: ion-toolbar
+    ↓ButtonSet [ngx.components.UIDynamicElement-1664292296182]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
+      tagName: ion-buttons
+      ↓SubmitButton [ngx.components.UIDynamicElement-1664292253099]: 
+        beanData: '{"ionBean":"SubmitButton"}'
+        tagName: ion-button
+        ↓Text [ngx.components.UIText-1664292253101]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Créer
+        ↓Event [ngx.components.UIControlEvent-1664292774858]: 
+          ↓prepareCalendarObject [ngx.components.UICustomAction-1664292797698]: 
+            actionValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                  →: |
+                    '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+                    		var name = vars.name;
+                    		var color = vars.color;
+                    		
+                    		var calendar = {
+                    			"id": "calendar_"+name,
+                    		    "name": name,
+                    		    "color": color,
+                    		    "bgColor": color,
+                    		    "dragBgColor": color,
+                    		    "borderColor": color
+                    		}
+                    		
+                    		
+                    		resolve(JSON.stringify(calendar));
+                    '
+            ↓name [ngx.components.UIControlVariable-1664292821461]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Form","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1664292253081,"identifier":"createCalendar"}],"path":"?.controls['name']?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
+            ↓color [ngx.components.UIControlVariable-1664292830287]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.color
+            ↓CallSequence [ngx.components.UIDynamicAction-1664293059030]: 
+              beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.addCalendar"}'
+              ↓calendar [ngx.components.UIControlVariable-1664293066927]: 
+                comment: new variable
+                varValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                    - MobileSmartSourceType: script:parent.out
+              ↓CloseModal [ngx.components.UIDynamicAction-1664293097030]: 
+                beanData: '{"ionBean":"CloseModalAction"}'
+      ↓ResetButton [ngx.components.UIDynamicElement-1664292253103]: 
+        beanData: '{"ionBean":"ResetButton"}'
+        tagName: ion-button
+        ↓Text [ngx.components.UIText-1664292253105]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Annuler

@@ -226,13 +226,6 @@ scriptContent:
             - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
             - com.twinsoft.convertigo.beans.common.XMLVector: 
               - java.lang.String: 
-                - ↑value: '* as joint'
-              - java.lang.String: 
-                - ↑value: jointjs
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-            - com.twinsoft.convertigo.beans.common.XMLVector: 
-              - java.lang.String: 
                 - ↑value: '* as jQuery'
               - java.lang.String: 
                 - ↑value: jquery
@@ -275,7 +268,7 @@ scriptContent:
                 		
                 		var calendar = new Calendar("#"+vars.containerId, {
                 		   defaultView: ''week'', // set ''week'' or ''day''
-                		   taskView: [''task''],  // e.g. true, false, or [''task'', ''milestone'']
+                		   taskView: false, // [''task''],  // e.g. true, false, or [''task'', ''milestone'']
                 		   scheduleView: true, // e.g. true, false, or [''allday'', ''time'']
                 			useCreationPopup: true,
                 			useDetailPopup: true,
