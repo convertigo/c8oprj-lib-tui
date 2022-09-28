@@ -282,6 +282,7 @@ title: First page
         ↓Event [ngx.components.UIControlEvent-1664289636525]: 
           attrName: (ionChange)
           eventName: ionChange
+          isEnabled: false
           ↓IfElse [ngx.components.UIDynamicIf-1664289636528]: 
             beanData: '{"ionBean":"IfElseAction","condition":"script:this.workWeek"}'
             ↓IfElse [ngx.components.UIDynamicIf-1664289636531]: 
@@ -1585,6 +1586,29 @@ title: First page
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: script:this.view
+          ↓workWeek [ngx.components.UIUseVariable-1664377883603]: 
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:this.workWeek
+          ↓hourStart [ngx.components.UIUseVariable-1664378486805]: 
+            comment: Number, can limit of render hour start in daily / weekly view
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:9
+          ↓hourEnd [ngx.components.UIUseVariable-1664378486807]: 
+            comment: Number, can limit of render hour end in daily / weekly view
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:24
+          ↓startDayOfWeek [ngx.components.UIUseVariable-1664379618275]: 
+            comment: Number between 0 and 7, 0 = Sunday. The start day of week in month view
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:1
       ↓Style [ngx.components.UIStyle-1660141591135]: 
         styleContent: 
           - xmlizable: 

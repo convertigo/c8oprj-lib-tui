@@ -81,6 +81,7 @@ scriptContent:
         					
         					break;
         				} // end case ''locale''
+        				
         				case "calendars": {
         					if(!changes[key].firstChange) {
         						this.calendar.setCalendars(changes[key].currentValue)
@@ -88,11 +89,63 @@ scriptContent:
         					console.log(changes)
         					break;
         				} // end case ''calendars''
+        				
         				case "view": {
         					if(!changes[key].firstChange) {
         						this.calendar.changeView(changes[key].currentValue, true)
         					}
-        				}
+        					break;
+        				} // end case ''view''
+        				
+        				case "workWeek": {
+        					if(!changes[key].firstChange) {
+        						this.calendar.setOptions({
+        							week: {
+        								workweek: changes[key].currentValue
+        							},
+        							month: {
+        								workweek: changes[key].currentValue
+        							}
+        						})
+        					}
+        					break;
+        				} // end case ''workWeek''
+        				
+        				case "hourStart": {
+        					if(!changes[key].firstChange) {
+        						this.calendar.setOptions({
+        							week: {
+        								hourStart: changes[key].currentValue
+        							}
+        						})
+        					}
+        					break;
+        				} // end case ''hourStart''
+        				
+        				case "hourEnd": {
+        					if(!changes[key].firstChange) {
+        						this.calendar.setOptions({
+        							week: {
+        								hourEnd: changes[key].currentValue
+        							}
+        						})
+        					}
+        					break;
+        				} // end case ''hourEnd''
+        				
+        				case "startDayOfWeek": {
+        					if(!changes[key].firstChange) {
+        						this.calendar.setOptions({
+        							week: {
+        								startDayOfWeek: changes[key].currentValue
+        							},
+        							month: {
+        								startDayOfWeek: changes[key].currentValue
+        							}
+        						})
+        					}
+        					break;
+        				} // end case ''startDayOfWeek''
         			} // end switch
         		}) // end Object.keys
         		/*End_c8o_CompChanges*/
@@ -273,26 +326,39 @@ scriptContent:
                 '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
                 		let calendarDomElement = document.getElementById(vars.containerId);
                 		
-                		// Used to configure locale dates (months / weekdays)
+                		// Used to configure default options on initialization
                 		var locale = vars.locale;
+                		var calendars = vars.calendars;
+                		var view = vars.view;
+                		var workWeek = vars.workWeek;
+                		var hourStart = vars.hourStart;
+                		var hourEnd = vars.hourEnd;
+                		var startDayOfWeek = vars.startDayOfWeek;
+                		
                 		var weekdays = Moment.localeData(locale).weekdays()
                 		var months = Moment.localeData(locale).months();
                 		
                 		var calendar = new Calendar("#"+vars.containerId, {
-                		   defaultView: ''week'', // set ''week'' or ''day''
-                		   taskView: false, // [''task''],  // e.g. true, false, or [''task'', ''milestone'']
-                		   scheduleView: true, // e.g. true, false, or [''allday'', ''time'']
+                		   	defaultView: view, // set ''week'' or ''day''
+                		   	taskView: false, // [''task''],  // e.g. true, false, or [''task'', ''milestone'']
+                		   	scheduleView: true, // e.g. true, false, or [''allday'', ''time'']
                 			useCreationPopup: true,
                 			useDetailPopup: true,
                 			usageStatistics: false,
                 			disableClick: true,
                 			isReadOnly: false,
                 			week: {
+                				startDayOfWeek: startDayOfWeek,
                 				showTimezoneCollapseButton: true,
-                				daynames: weekdays
+                				daynames: weekdays,
+                				workweek: workWeek,
+                				hourStart: hourStart,
+                				hourEnd: hourEnd
                 			},
                 			month: {
-                				daynames: weekdays
+                				daynames: weekdays,
+                				startDayOfWeek: startDayOfWeek,
+                				workweek: workWeek
                 			},
                 			template: {
                 			    monthMoreTitleDate: function(date, dayname) {
@@ -312,7 +378,7 @@ scriptContent:
                 			    }
                 			},
                 			
-                			calendars: []
+                			calendars: calendars
                 		 })
                 		 
                  		this.setCalendar(calendar);
@@ -377,6 +443,36 @@ scriptContent:
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.locale","prefix":"","suffix":"","custom":"","useCustom":false}}
+        ↓calendars [ngx.components.UIControlVariable-1664378895730]: 
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.calendars","prefix":"","suffix":"","custom":"","useCustom":false}}
+        ↓view [ngx.components.UIControlVariable-1664378778727]: 
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.view","prefix":"","suffix":"","custom":"","useCustom":false}}
+        ↓workWeek [ngx.components.UIControlVariable-1664379032152]: 
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.workWeek","prefix":"","suffix":"","custom":"","useCustom":false}}
+        ↓hourStart [ngx.components.UIControlVariable-1664379053381]: 
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.hourStart","prefix":"","suffix":"","custom":"","useCustom":false}}
+        ↓hourEnd [ngx.components.UIControlVariable-1664379055047]: 
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.hourEnd","prefix":"","suffix":"","custom":"","useCustom":false}}
+        ↓startDayOfWeek [ngx.components.UIControlVariable-1664379512899]: 
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.startDayOfWeek","prefix":"","suffix":"","custom":"","useCustom":false}}
 ↓tuiCalendar [ngx.components.UIStyle-1660138817946]: 
   styleContent: 
     - xmlizable: 
@@ -4646,7 +4742,7 @@ scriptContent:
 ↓beforeUpdateSchedule [ngx.components.UICompEvent-1663747528147]: 
   attrName: beforeUpdateSchedule
 ↓locale [ngx.components.UICompVariable-1663749593770]: 
-  comment: use for dates / week days. For example get the locale from the navigator (fr, en, es, ...)
+  comment: use for week days. For example get the locale from the navigator (fr, en, es, ...)
 ↓clickDayname [ngx.components.UICompEvent-1664206339057]: 
   attrName: clickDayname
 ↓clickMore [ngx.components.UICompEvent-1664206387483]: 
@@ -4660,3 +4756,15 @@ scriptContent:
 ↓view [ngx.components.UICompVariable-1664376263476]: 
   comment: '''day'', ''week'', ''month'''
   value: '''week'''
+↓workWeek [ngx.components.UICompVariable-1664377717744]: 
+  comment: true or false, show only 5 days except for weekend
+  value: '''false'''
+↓hourStart [ngx.components.UICompVariable-1664378222436]: 
+  comment: Number between 0 and 24, can limit of render hour start in daily / weekly view
+  value: 0
+↓hourEnd [ngx.components.UICompVariable-1664378230969]: 
+  comment: Number between 0 and 24, can limit of render hour end in daily / weekly view
+  value: 24
+↓startDayOfWeek [ngx.components.UICompVariable-1664379423616]: 
+  comment: Number between 0 and 7, 0 = Sunday. The start day of week in week / month view
+  value: 0
