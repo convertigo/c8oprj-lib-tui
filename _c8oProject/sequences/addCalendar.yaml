@@ -24,7 +24,8 @@ comment: Adds a Clendar in the database
           "color": "#ffffff",
           "bgColor": "#9e5fff",
           "dragBgColor": "#9e5fff",
-          "borderColor": "#9e5fff"
+          "borderColor": "#9e5fff",
+          "checked": true
       }
       
       '
@@ -37,7 +38,8 @@ comment: Adds a Clendar in the database
           "color": "#ffffff",
           "bgColor": "#6e5fff",
           "dragBgColor": "#9e5fff",
-          "borderColor": "#9e5fff"
+          "borderColor": "#9e5fff",
+          "checked": true
       }
       
       '
