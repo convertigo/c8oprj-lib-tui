@@ -13,7 +13,7 @@ scriptContent:
         	/* ngModels */
         //	public rangeEnd;
         //	public rangeStart;
-        	public view;
+        // 	public view;
         //	public showSchedule = false;
         //	public scheduleWindowPosition = {
         //		x: Number,
@@ -87,6 +87,11 @@ scriptContent:
         					}
         					console.log(changes)
         					break;
+        				} // end case ''calendars''
+        				case "view": {
+        					if(!changes[key].firstChange) {
+        						this.calendar.changeView(changes[key].currentValue, true)
+        					}
         				}
         			} // end switch
         		}) // end Object.keys
@@ -4652,3 +4657,6 @@ scriptContent:
   attrName: clickTimezonesCollapseBtn
 ↓calendars [ngx.components.UICompVariable-1664369820039]: 
   comment: Array of objects, list of calendars
+↓view [ngx.components.UICompVariable-1664376263476]: 
+  comment: '''day'', ''week'', ''month'''
+  value: '''week'''

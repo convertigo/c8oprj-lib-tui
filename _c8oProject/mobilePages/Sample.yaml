@@ -441,7 +441,7 @@ title: First page
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: script:this.workWeek
-      ↓SelectContainer [ngx.components.UIDynamicElement-1664289548337]: 
+      ↓selectView [ngx.components.UIDynamicElement-1664289548337]: 
         beanData: |
           '{
            "ionBean": "Select",
@@ -477,6 +477,7 @@ title: First page
         ↓Event [ngx.components.UIControlEvent-1664289548358]: 
           attrName: (ionChange)
           eventName: ionChange
+          isEnabled: false
           ↓CustomAction [ngx.components.UICustomAction-1664289548361]: 
             actionValue: 
               - xmlizable: 
@@ -587,14 +588,6 @@ title: First page
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'calendar'
-        ↓SelectOption3 [ngx.components.UIDynamicElement-1664289548433]: 
-          beanData: '{"ionBean":"SelectOption","Value":"plain:2weeks"}'
-          tagName: ion-select-option
-          ↓Text [ngx.components.UIText-1664289548436]: 
-            textValue: 
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: plain:2 Weeks
         ↓Attr [ngx.components.UIAttribute-1664289548439]: 
           attrName: '[(ngModel)]'
           attrValue: 
@@ -1587,6 +1580,11 @@ title: First page
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: source:{"filter":"Global","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.calendars","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓view [ngx.components.UIUseVariable-1664376525398]: 
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:this.view
       ↓Style [ngx.components.UIStyle-1660141591135]: 
         styleContent: 
           - xmlizable: 
