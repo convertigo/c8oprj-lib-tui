@@ -107,7 +107,7 @@ title: Title for ModalCreateCalendar
                     		var calendar = {
                     			"id": "calendar_"+name,
                     		    "name": name,
-                    		    "color": color,
+                    		    "color": "#fff",
                     		    "bgColor": color,
                     		    "dragBgColor": color,
                     		    "borderColor": color
