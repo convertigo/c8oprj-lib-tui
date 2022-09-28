@@ -1,0 +1,43 @@
+comment: Toggle schedules' visibility by calendar ID
+↓identifier [ngx.components.UIStackVariable-1664372263156]: 
+↓calendarId [ngx.components.UIStackVariable-1664372292245]: 
+  comment: (string) The calendar id value
+↓toHide [ngx.components.UIStackVariable-1664372293320]: 
+  comment: (boolean) Set true to hide schedules
+↓render [ngx.components.UIStackVariable-1664372294681]: 
+  comment: (boolean) set true then render after change visible property each models
+↓toggleSchedules [ngx.components.UICustomAction-1664372399934]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+          		var identifier = vars.identifier;
+          		var calendarId = vars.calendarId;
+          		var toHide = (vars.toHide == "true" || vars.toHide == true) ? vars.toHide : false;
+          		var render = (vars.render == "true" || vars.render == true) ? vars.render : false;
+          		
+          		page[identifier].calendar.toggleSchedules(calendarId, toHide, render);
+          		resolve();
+          '
+  ↓identifier [ngx.components.UIControlVariable-1664372436913]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1664372248418}],"path":"?.in?.vars?.identifier","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓calendarId [ngx.components.UIControlVariable-1664372443971]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1664372248418}],"path":"?.in?.vars?.calendarId","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓toHide [ngx.components.UIControlVariable-1664372446015]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1664372248418}],"path":"?.in?.vars?.toHide","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓render [ngx.components.UIControlVariable-1664372447147]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1664372248418}],"path":"?.in?.vars?.render","prefix":"","suffix":"","custom":"","useCustom":false}}

@@ -81,6 +81,13 @@ scriptContent:
         					
         					break;
         				} // end case ''locale''
+        				case "calendars": {
+        					if(!changes[key].firstChange) {
+        						this.calendar.setCalendars(changes[key].currentValue)
+        					}
+        					console.log(changes)
+        					break;
+        				}
         			} // end switch
         		}) // end Object.keys
         		/*End_c8o_CompChanges*/
@@ -4643,3 +4650,5 @@ scriptContent:
   attrName: clickSchedule
 ↓clickTimezonesCollapseBtn [ngx.components.UICompEvent-1664206435571]: 
   attrName: clickTimezonesCollapseBtn
+↓calendars [ngx.components.UICompVariable-1664369820039]: 
+  comment: Array of objects, list of calendars

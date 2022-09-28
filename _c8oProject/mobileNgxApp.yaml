@@ -77,6 +77,7 @@ tplProjectName: mobilebuilder_tpl_8_0_0_ngx
 ↓today [ngx.components.UIActionStack-1660222396378]: 🗏 mobileSharedActions/today.yaml
 ↓updateSchedule [ngx.components.UIActionStack-1663688237548]: 🗏 mobileSharedActions/updateSchedule.yaml
 ↓scrollToNow [ngx.components.UIActionStack-1664294025693]: 🗏 mobileSharedActions/scrollToNow.yaml
+↓toggleSchedules [ngx.components.UIActionStack-1664372248418]: 🗏 mobileSharedActions/toggleSchedules.yaml
 ↓tui_calendar [ngx.components.UISharedRegularComponent-1660134716658]: 🗏 mobileSharedComponents/tui_calendar.yaml
 ↓Sample [ngx.components.PageComponent-1500538678074]: 🗏 mobilePages/Sample.yaml
 ↓ModalCreateCalendar [ngx.components.PageComponent-1664290755196]: 🗏 mobilePages/ModalCreateCalendar.yaml
