@@ -1198,6 +1198,9 @@ title: First page
                     }'
                   ↓CallSequence [ngx.components.UIDynamicAction-1664357197294]: 
                     beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.getCalendars"}'
+                ↓Popover [ngx.components.UIDynamicAction-1664874632978]: 
+                  beanData: '{"ionBean":"PopoverAction","page":"plain:c8oprj_lib_tui.Application.NgxApp.ModalCreateCalendar"}'
+                  isEnabled: false
         ↓rowMyCalendars [ngx.components.UIDynamicElement-1664288283608]: 
           beanData: '{"ionBean":"GridRow","Height":"plain"}'
           tagName: ion-row
@@ -1380,6 +1383,8 @@ title: First page
                       	    var triggerEventName = event.triggerEventName;
                       	    var schedule;
                       	    
+                      	    console.log(event.guide.guideElement)
+                      	    
                       //	    schedule = {
                       //			id: '''',
                       //			calendarId: '''',
@@ -1472,6 +1477,9 @@ title: First page
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                         - MobileSmartSourceType: script:JSON.stringify(stack['prepareScheduleObject'].out)
+              ↓Popover [ngx.components.UIDynamicAction-1664874818585]: 
+                beanData: '{"ionBean":"PopoverAction","page":"plain:c8oprj_lib_tui.Application.NgxApp.ModalCreateCalendar"}'
+                isEnabled: false
           ↓Event1 [ngx.components.UIControlEvent-1663747624749]: 
             attrName: (afterRenderSchedule)
             eventName: afterRenderSchedule
@@ -1609,6 +1617,11 @@ title: First page
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: script:1
+          ↓useCreationPopup [ngx.components.UIUseVariable-1664871978329]: 
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:'false'
       ↓Style [ngx.components.UIStyle-1660141591135]: 
         styleContent: 
           - xmlizable: 

@@ -146,6 +146,25 @@ scriptContent:
         					}
         					break;
         				} // end case ''startDayOfWeek''
+        				
+        				case "useCreationPopup": {
+        					if(!changes[key].firstChange) {
+        						this.calendar.setOptions({
+        							useCreationPopup: changes[key].currentValue 
+        						})
+        					}
+        					break;
+        				} // end case ''useCreationPopup''
+        				
+        				case "useDetailPopup": {
+        					if(!changes[key].firstChange) {
+        						this.calendar.setOptions({
+        							useDetailPopup: changes[key].currentValue 
+        						})
+        					}
+        					break;
+        				} // end case ''useCreationPopup''
+        				
         			} // end switch
         		}) // end Object.keys
         		/*End_c8o_CompChanges*/
@@ -334,6 +353,8 @@ scriptContent:
                 		var hourStart = vars.hourStart;
                 		var hourEnd = vars.hourEnd;
                 		var startDayOfWeek = vars.startDayOfWeek;
+                		var useCreationPopup = (vars.useCreationPopup == true || vars.useCreationPopup == "true") ? true : false;
+                		var useDetailPopup = (vars.useDetailPopup == true || vars.useDetailPopup == "true") ? true : false;
                 		
                 		var weekdays = Moment.localeData(locale).weekdays()
                 		var months = Moment.localeData(locale).months();
@@ -342,8 +363,8 @@ scriptContent:
                 		   	defaultView: view, // set ''week'' or ''day''
                 		   	taskView: false, // [''task''],  // e.g. true, false, or [''task'', ''milestone'']
                 		   	scheduleView: true, // e.g. true, false, or [''allday'', ''time'']
-                			useCreationPopup: true,
-                			useDetailPopup: true,
+                			useCreationPopup: useCreationPopup,
+                			useDetailPopup: useDetailPopup,
                 			usageStatistics: false,
                 			disableClick: true,
                 			isReadOnly: false,
@@ -473,6 +494,16 @@ scriptContent:
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.startDayOfWeek","prefix":"","suffix":"","custom":"","useCustom":false}}
+        ↓useCreationPopup [ngx.components.UIControlVariable-1664871936022]: 
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.useCreationPopup","prefix":"","suffix":"","custom":"","useCustom":false}}
+        ↓useDetailPopup [ngx.components.UIControlVariable-1664872159780]: 
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.useDetailPopup","prefix":"","suffix":"","custom":"","useCustom":false}}
 ↓tuiCalendar [ngx.components.UIStyle-1660138817946]: 
   styleContent: 
     - xmlizable: 
@@ -4768,3 +4799,7 @@ scriptContent:
 ↓startDayOfWeek [ngx.components.UICompVariable-1664379423616]: 
   comment: Number between 0 and 7, 0 = Sunday. The start day of week in week / month view
   value: 0
+↓useCreationPopup [ngx.components.UICompVariable-1664871741978]: 
+  comment: (boolean) Whether use default creation popup or not. The default value is false.
+↓useDetailPopup [ngx.components.UICompVariable-1664872147411]: 
+  comment: (boolean) Whether use default detail popup or not. The default value is false.
