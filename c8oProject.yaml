@@ -6,7 +6,7 @@
     The Planning component will automatically persist in a FullSync database and free you from all database management.
     
   corsOrigin: =Origin
-  version: 0.0.16
+  version: 0.0.17
   ↓APIGouv [connectors.HttpConnector]: 🗏 connectors/APIGouv.yaml
   ↓tui_calendar [connectors.FullSyncConnector]: 🗏 connectors/tui_calendar.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml

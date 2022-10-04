@@ -1380,10 +1380,8 @@ title: First page
                       	    // var guide = event.guide;
                       	    var title = event.title;
                       	    var calendarId = event.calendarId;
-                      	    var triggerEventName = event.triggerEventName;
+                      	    // var triggerEventName = event.triggerEventName;
                       	    var schedule;
-                      	    
-                      	    console.log(event.guide.guideElement)
                       	    
                       //	    schedule = {
                       //			id: '''',
@@ -1477,9 +1475,6 @@ title: First page
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                         - MobileSmartSourceType: script:JSON.stringify(stack['prepareScheduleObject'].out)
-              ↓Popover [ngx.components.UIDynamicAction-1664874818585]: 
-                beanData: '{"ionBean":"PopoverAction","page":"plain:c8oprj_lib_tui.Application.NgxApp.ModalCreateCalendar"}'
-                isEnabled: false
           ↓Event1 [ngx.components.UIControlEvent-1663747624749]: 
             attrName: (afterRenderSchedule)
             eventName: afterRenderSchedule
@@ -1621,7 +1616,13 @@ title: First page
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: script:'false'
+                - MobileSmartSourceType: script:'true'
+          ↓useDetailPopup [ngx.components.UIUseVariable-1664895407560]: 
+            comment: (boolean) Whether use default detail popup or not. The default value is false.
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:'true'
       ↓Style [ngx.components.UIStyle-1660141591135]: 
         styleContent: 
           - xmlizable: 
@@ -1708,32 +1709,39 @@ title: First page
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
             - MobileSmartSourceType: source:{"filter":"Sequence","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sequence":"c8oprj_lib_tui.getCalendars","marker":""}],"path":"?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
-    ↓CallSequence [ngx.components.UIDynamicAction-1663753855028]: 
-      beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.getSchedules"}'
-      ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1663753872925]: 
-        beanData: '{"ionBean":"InvokeAction"}'
-        stack: c8oprj_lib_tui.Application.NgxApp.createSchedules
-        ↓identifier [ngx.components.UIControlVariable-1663753918361]: 
-          varValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: script:'calendar'
-        ↓silent [ngx.components.UIControlVariable-1663753918363]: 
-          varValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: script:''
-        ↓schedules [ngx.components.UIControlVariable-1663753918365]: 
-          comment: array of object
-          varValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: source:{"filter":"Sequence","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sequence":"c8oprj_lib_tui.getSchedules","marker":""}],"path":"?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
-        ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664294253305]: 
+    ↓calendars [ngx.components.UIDynamicAction-1664895457166]: 
+      beanData: |
+        '{
+         "ionBean": "SetGlobalAction",
+         "Property": "plain:calendars",
+         "Value": "source:{\"filter\":\"Sequence\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"sequence\":\"c8oprj_lib_tui.getCalendars\",\"marker\":\"\"}],\"path\":\"?.value\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+        }'
+      ↓CallSequence [ngx.components.UIDynamicAction-1663753855028]: 
+        beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.getSchedules"}'
+        ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1663753872925]: 
           beanData: '{"ionBean":"InvokeAction"}'
-          stack: c8oprj_lib_tui.Application.NgxApp.scrollToNow
-          ↓identifier [ngx.components.UIControlVariable-1664294264196]: 
+          stack: c8oprj_lib_tui.Application.NgxApp.createSchedules
+          ↓identifier [ngx.components.UIControlVariable-1663753918361]: 
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: script:'calendar'
+          ↓silent [ngx.components.UIControlVariable-1663753918363]: 
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:''
+          ↓schedules [ngx.components.UIControlVariable-1663753918365]: 
+            comment: array of object
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: source:{"filter":"Sequence","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sequence":"c8oprj_lib_tui.getSchedules","marker":""}],"path":"?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664294253305]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: c8oprj_lib_tui.Application.NgxApp.scrollToNow
+            ↓identifier [ngx.components.UIControlVariable-1664294264196]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:'calendar'
