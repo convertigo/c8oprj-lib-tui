@@ -21,7 +21,7 @@ scriptContent:
         	    dragBgColor: "",
         	    borderColor: "",
         	    calendarId: "",
-        	    category: "",
+        	    category: "time",
         	    dueDateClass: "",
         	    customStyle: "",
         	    isPending: false,
@@ -241,6 +241,7 @@ title: Title for ModalCreateSchedule
                     '{
                      "ionBean": "Select",
                      "ControlName": "plain:name1639948147029",
+                     "Disabled": "plain:true",
                      "Interface": "plain:popover",
                      "Placeholder": "plain:"
                     }'
