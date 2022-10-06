@@ -30,7 +30,7 @@ comment: Delete a schedule.
     varValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1664287676269},{"priority":1664287457064}],"path":"?.in?.vars?.scheduleId","prefix":"","suffix":"","custom":"","useCustom":false}}
+        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1664287457064}],"path":"?.in?.vars?.scheduleId","prefix":"","suffix":"","custom":"","useCustom":false}}
   ↓calendarId [ngx.components.UIControlVariable-1664287721317]: 
     varValue: 
       - xmlizable: 

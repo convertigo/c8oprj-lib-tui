@@ -6,6 +6,38 @@ title: Title for ModalViewSchedule
   ↓ToolBar [ngx.components.UIDynamicElement-1665050184393]: 
     beanData: '{"ionBean":"ToolBar"}'
     tagName: ion-toolbar
+    ↓Attr [ngx.components.UIAttribute-1665062888213]: 
+      attrName: style
+      attrValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'--background:' + this.local.schedule.bgColor
+    ↓BarTitle [ngx.components.UIDynamicElement-1665063006178]: 
+      beanData: '{"ionBean":"BarTitle"}'
+      tagName: ion-title
+      ↓Text [ngx.components.UIText-1665063006181]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:this.local.schedule.title
+      ↓Style [ngx.components.UIStyle-1665066269459]: 
+        styleContent: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+            - com.twinsoft.convertigo.beans.common.FormatedContent: 
+              →: |
+                '/**
+                 * Custom properties (sometimes referred to as CSS variables or cascading variables)
+                 * are entities defined by CSS authors that contain specific values to be reused throughout a document.
+                 * They are set using custom property notation, e.g.: --main-color: black;
+                 * and are accessed using the var() function, e.g.: color: var(--main-color);
+                 * You can find below your component''s properties you can customize within the page.
+                 * If you''d like to make some customizations for whole app, please see your app Style & Theme components.
+                 * For more informations see https://ionicframework.com/docs/theming.
+                **/
+                //--color	//Text color of the title
+                --color: white;
+                '
     ↓ButtonSet1 [ngx.components.UIDynamicElement-1665050184396]: 
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
       tagName: ion-buttons
@@ -24,6 +56,266 @@ title: Title for ModalViewSchedule
             }'
           tagName: ion-icon
 ↓PageEvent [ngx.components.UIPageEvent-1665050394364]: 
-  isEnabled: false
-  ↓CallSequence [ngx.components.UIDynamicAction-1665050402784]: 
-    beanData: '{"ionBean":"CallSequenceAction"}'
+  ↓SetLocal [ngx.components.UIDynamicAction-1665062664876]: 
+    beanData: |
+      '{
+       "ionBean": "SetLocalAction",
+       "Property": "plain:schedule",
+       "Value": "script:this.navParams.data.schedule"
+      }'
+    ↓computeDatesAndInsertScheduleBody [ngx.components.UICustomAction-1665062690976]: 
+      actionValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+          - com.twinsoft.convertigo.beans.common.FormatedContent: 
+            →: |
+              '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+              		
+              		console.log(page.local.schedule)
+              		
+              		page.local.schedule.startDate = page.local.schedule.start.toDate().toLocaleString(''fr-FR'', { weekday: ''long'', day: ''2-digit'', month: ''long''});
+              		page.local.schedule.endDate = page.local.schedule.end.toDate().toLocaleString(''fr-FR'', { weekday: ''long'', day: ''2-digit'', month: ''long''});
+              		page.local.schedule.startHour = this.local.schedule.start.toDate().toLocaleString().split('', '')[1]
+              		page.local.schedule.endHour = this.local.schedule.end.toDate().toLocaleString().split('', '')[1]
+              		
+              		var scheduleBodyEl = document.getElementById("scheduleBody").innerHTML = page.local.schedule.body;
+              		resolve();
+              '
+↓Content [ngx.components.UIDynamicElement-1665066292468]: 
+  beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
+  ↓Grid [ngx.components.UIDynamicElement-1665066533153]: 
+    beanData: '{"ionBean":"Grid"}'
+    tagName: ion-grid
+    ↓rowDate [ngx.components.UIDynamicElement-1665066533155]: 
+      beanData: |
+        '{
+         "ionBean": "GridRow",
+         "Height": "plain",
+         "FlexAlignement": "plain:ion-align-items-center"
+        }'
+      tagName: ion-row
+      ↓colIcon [ngx.components.UIDynamicElement-1665066937869]: 
+        beanData: '{"ionBean":"GridCol","Size":"plain:1"}'
+        tagName: ion-col
+        ↓Icon [ngx.components.UIDynamicElement-1665066952346]: 
+          beanData: |
+            '{
+             "ionBean": "Icon",
+             "IconName": "plain:calendar-outline",
+             "IonSize": "plain:large"
+            }'
+          tagName: ion-icon
+      ↓colDate [ngx.components.UIDynamicElement-1665066533157]: 
+        beanData: '{"ionBean":"GridCol","FlexAlignement":"plain:ion-align-self-center"}'
+        tagName: ion-col
+        ↓Label [ngx.components.UIDynamicElement-1665066533159]: 
+          beanData: '{"ionBean":"Label"}'
+          tagName: ion-label
+          ↓Text [ngx.components.UIText-1665066533161]: 
+            textValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: 'script:(this.local.schedule.startDate == this.local.schedule.endDate) ? this.local.schedule.startDate : this.local.schedule.startDate + '' - '' + this.local.schedule.endDate'
+    ↓rowHours [ngx.components.UIDynamicElement-1665066786149]: 
+      beanData: '{"ionBean":"GridRow","Height":"plain"}'
+      tagName: ion-row
+      ↓colIcon [ngx.components.UIDynamicElement-1665067052925]: 
+        beanData: '{"ionBean":"GridCol","Size":"plain:1"}'
+        tagName: ion-col
+      ↓colHours [ngx.components.UIDynamicElement-1665066786151]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Label [ngx.components.UIDynamicElement-1665066786153]: 
+          beanData: '{"ionBean":"Label"}'
+          tagName: ion-label
+          ↓Text [ngx.components.UIText-1665066786155]: 
+            textValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: 'script:(this.local.schedule.startDate == this.local.schedule.endDate) ? this.local.schedule.startHour + '' - '' + this.local.schedule.endHour : '''''
+    ↓rowAttendees [ngx.components.UIDynamicElement-1665067236843]: 
+      beanData: |
+        '{
+         "ionBean": "GridRow",
+         "Height": "plain",
+         "FlexAlignement": "plain:ion-align-items-center"
+        }'
+      tagName: ion-row
+      ↓colIcon [ngx.components.UIDynamicElement-1665067236846]: 
+        beanData: '{"ionBean":"GridCol","Size":"plain:1"}'
+        tagName: ion-col
+        ↓Icon [ngx.components.UIDynamicElement-1665067251599]: 
+          beanData: |
+            '{
+             "ionBean": "Icon",
+             "IconName": "plain:people-outline",
+             "IonSize": "plain:large"
+            }'
+          tagName: ion-icon
+      ↓colAttendees [ngx.components.UIDynamicElement-1665067236849]: 
+        beanData: '{"ionBean":"GridCol","FlexAlignement":"plain:ion-align-self-center"}'
+        tagName: ion-col
+        ↓ListContainer [ngx.components.UIDynamicElement-1665067393582]: 
+          beanData: '{"ionBean":"List"}'
+          tagName: ion-list
+          ↓Directive [ngx.components.UIControlDirective-1665067393592]: 
+            directiveIndexName: idx
+            directiveItemName: item
+            directiveSource: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: 'script:[{text: ''first list item''},{text: ''second list item''}]'
+            ↓ListItem [ngx.components.UIDynamicElement-1665067393594]: 
+              beanData: '{"ionBean":"ListItem"}'
+              tagName: ion-item
+              ↓Label [ngx.components.UIDynamicElement-1665067393596]: 
+                beanData: '{"ionBean":"Label"}'
+                tagName: ion-label
+                ↓Text [ngx.components.UIText-1665067393598]: 
+                  textValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: script:item.text
+    ↓rowLocation [ngx.components.UIDynamicElement-1665067478173]: 
+      beanData: '{"ionBean":"GridRow","Height":"plain"}'
+      tagName: ion-row
+      ↓colIcon [ngx.components.UIDynamicElement-1665067478176]: 
+        beanData: '{"ionBean":"GridCol","Size":"plain:1"}'
+        tagName: ion-col
+        ↓Icon [ngx.components.UIDynamicElement-1665067478179]: 
+          beanData: |
+            '{
+             "ionBean": "Icon",
+             "IconName": "plain:location",
+             "IonSize": "plain:large"
+            }'
+          tagName: ion-icon
+      ↓colInput [ngx.components.UIDynamicElement-1665067478185]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Label [ngx.components.UIDynamicElement-1665067492578]: 
+          beanData: '{"ionBean":"Label"}'
+          tagName: ion-label
+          ↓Text [ngx.components.UIText-1665067492580]: 
+            textValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:this.local.schedule.location
+    ↓rowBody [ngx.components.UIDynamicElement-1665067555978]: 
+      beanData: '{"ionBean":"GridRow","Height":"plain"}'
+      tagName: ion-row
+      ↓colIcon [ngx.components.UIDynamicElement-1665067555981]: 
+        beanData: '{"ionBean":"GridCol","Size":"plain:1"}'
+        tagName: ion-col
+        ↓Icon [ngx.components.UIDynamicElement-1665067555984]: 
+          beanData: |
+            '{
+             "ionBean": "Icon",
+             "IconName": "plain:document-text",
+             "IonSize": "plain:large"
+            }'
+          tagName: ion-icon
+      ↓colBody [ngx.components.UIDynamicElement-1665067555987]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Paragraph [ngx.components.UIDynamicElement-1665067602699]: 
+          beanData: '{"ionBean":"Paragraph"}'
+          tagName: p
+          ↓Text [ngx.components.UIText-1665067602701]: 
+            textValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:this.local.schedule.body
+          ↓Attr [ngx.components.UIAttribute-1665067668021]: 
+            attrName: id
+            attrValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: plain:scheduleBody
+↓Footer [ngx.components.UIDynamicElement-1665067803147]: 
+  beanData: '{"ionBean":"Footer"}'
+  tagName: ion-footer
+  ↓ToolBar [ngx.components.UIDynamicElement-1665067803149]: 
+    beanData: '{"ionBean":"ToolBar"}'
+    tagName: ion-toolbar
+    ↓ButtonSet [ngx.components.UIDynamicElement-1665067803151]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:start"}'
+      tagName: ion-buttons
+      ↓Button [ngx.components.UIDynamicElement-1665067803153]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: ion-button
+        ↓Icon [ngx.components.UIDynamicElement-1665067844541]: 
+          beanData: '{"ionBean":"Icon","IconName":"plain:pencil"}'
+          tagName: ion-icon
+        ↓Text [ngx.components.UIText-1665067803155]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Editer
+        ↓Event [ngx.components.UIControlEvent-1665067803157]: 
+    ↓ButtonSet1 [ngx.components.UIDynamicElement-1665067803159]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
+      tagName: ion-buttons
+      ↓Button [ngx.components.UIDynamicElement-1665067803161]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: ion-button
+        ↓Icon [ngx.components.UIDynamicElement-1665067914617]: 
+          beanData: '{"ionBean":"Icon","IconName":"plain:trash-outline"}'
+          tagName: ion-icon
+        ↓Text [ngx.components.UIText-1665067803163]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Supprimer
+        ↓Event [ngx.components.UIControlEvent-1665067803165]: 
+          ↓Alert [ngx.components.UIDynamicAction-1665067958268]: 
+            beanData: |
+              '{
+               "ionBean": "AlertAction",
+               "message": "plain:Etes vous sur de vouloir supprimer cet évènement ?",
+               "button1": "plain:Oui",
+               "button2": "plain:Non",
+               "value1": "plain:true",
+               "value2": "plain:false"
+              }'
+            ↓If [ngx.components.UIDynamicAction-1665068034459]: 
+              beanData: '{"ionBean":"IfAction","condition":"script:parent.out.data == true || parent.out.data == \"true\""}'
+              ↓Toast [ngx.components.UIDynamicAction-1665068042217]: 
+                beanData: '{"ionBean":"ToastAction","message":"script:this.local.schedule.id"}'
+              ↓CallSequence [ngx.components.UIDynamicAction-1665068298255]: 
+                beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.deleteSchedule"}'
+                ↓scheduleId [ngx.components.UIControlVariable-1665068308698]: 
+                  comment: new variable
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: script:this.local.schedule.id
+                ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1665068334548]: 
+                  beanData: '{"ionBean":"InvokeAction"}'
+                  stack: c8oprj_lib_tui.Application.NgxApp.deleteSchedule
+                  ↓identifier [ngx.components.UIControlVariable-1665068345074]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:'calendar'
+                  ↓scheduleId [ngx.components.UIControlVariable-1665068345076]: 
+                    comment: (string) ID of schedule to delete
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:this.local.schedule.id
+                  ↓calendarId [ngx.components.UIControlVariable-1665068345078]: 
+                    comment: (string) The CalendarId of the schedule to delete
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:this.local.schedule.calendarId
+                  ↓silent [ngx.components.UIControlVariable-1665068345080]: 
+                    comment: (boolean) No auto render after creation when set true
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:''
+                ↓CloseModal [ngx.components.UIDynamicAction-1665068391463]: 
+                  beanData: '{"ionBean":"CloseModalAction","data":"script:this.local.schedule"}'

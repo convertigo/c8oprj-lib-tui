@@ -1599,14 +1599,43 @@ title: First page
           ↓Event4 [ngx.components.UIControlEvent-1664200659234]: 
             attrName: (clickSchedule)
             eventName: clickSchedule
-            ↓ModalPage [ngx.components.UIDynamicAction-1665062429827]: 
+            ↓modalView [ngx.components.UIDynamicAction-1665062429827]: 
               beanData: |
                 '{
                  "ionBean": "ModalAction",
                  "page": "plain:c8oprj_lib_tui.Application.NgxApp.ModalViewSchedule",
                  "data": "script:parent.out",
+                 "blockWhileDisplayed": "plain:true",
                  "cssClass": "plain:modal50"
                 }'
+              ↓If [ngx.components.UIDynamicAction-1665068457838]: 
+                beanData: '{"ionBean":"IfAction","condition":"script:parent.out.data != undefined"}'
+                ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1665068475606]: 
+                  beanData: '{"ionBean":"InvokeAction"}'
+                  stack: c8oprj_lib_tui.Application.NgxApp.deleteSchedule
+                  ↓identifier [ngx.components.UIControlVariable-1665068475609]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:'calendar'
+                  ↓scheduleId [ngx.components.UIControlVariable-1665068475612]: 
+                    comment: (string) ID of schedule to delete
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:stack['modalView'].out.data.id
+                  ↓calendarId [ngx.components.UIControlVariable-1665068475615]: 
+                    comment: (string) The CalendarId of the schedule to delete
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:stack['modalView'].out.data.calendarId
+                  ↓silent [ngx.components.UIControlVariable-1665068475618]: 
+                    comment: (boolean) No auto render after creation when set true
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:''
           ↓Event5 [ngx.components.UIControlEvent-1664206475945]: 
             attrName: (clickDayname)
             eventName: clickDayname

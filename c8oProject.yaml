@@ -6,7 +6,7 @@
     The Planning component will automatically persist in a FullSync database and free you from all database management.
     
   corsOrigin: =Origin
-  version: 0.0.17
+  version: 0.0.19
   ↓GouvDaysOff [connectors.HttpConnector]: 🗏 connectors/GouvDaysOff.yaml
   ↓GouvHolidays [connectors.HttpConnector]: 🗏 connectors/GouvHolidays.yaml
   ↓tui_calendar [connectors.FullSyncConnector]: 🗏 connectors/tui_calendar.yaml
