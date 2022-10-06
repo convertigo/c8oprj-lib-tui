@@ -81,6 +81,10 @@ tplProjectName: mobilebuilder_tpl_8_0_0_ngx
 ↓tui_calendar [ngx.components.UISharedRegularComponent-1660134716658]: 🗏 mobileSharedComponents/tui_calendar.yaml
 ↓Sample [ngx.components.PageComponent-1500538678074]: 🗏 mobilePages/Sample.yaml
 ↓ModalCreateCalendar [ngx.components.PageComponent-1664290755196]: 🗏 mobilePages/ModalCreateCalendar.yaml
+↓ModalCreateSchedule [ngx.components.PageComponent-1664896275427]: 🗏 mobilePages/ModalCreateSchedule.yaml
+↓SampleCustomModal [ngx.components.PageComponent-1664896262488]: 🗏 mobilePages/SampleCustomModal.yaml
+↓ModalUpdateSchedule [ngx.components.PageComponent-1665050120807]: 🗏 mobilePages/ModalUpdateSchedule.yaml
+↓ModalViewSchedule [ngx.components.PageComponent-1665050157810]: 🗏 mobilePages/ModalViewSchedule.yaml
 ↓Style [ngx.components.UIStyle-1491635462437]: 
   comment: You can add some global application styles here
   styleContent: 
@@ -293,3 +297,17 @@ tplProjectName: mobilebuilder_tpl_8_0_0_ngx
           }
           
           '
+↓modal50 [ngx.components.UIStyle-1664896317535]: 
+  styleContent: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          'ion-modal.modal50 {
+          	  align-items: center;
+            justify-content: center;
+            --min-height: 80%; 
+            --min-width: 50%;
+            --max-height: 80%; 
+            --max-width: 50%;
+          }'

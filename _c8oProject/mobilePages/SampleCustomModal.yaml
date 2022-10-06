@@ -1,6 +1,4 @@
-↑isRoot: true
-comment: My First Page as root page
-preloadPriority: high
+isEnabled: false
 scriptContent: 
   - xmlizable: 
     - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
@@ -9,201 +7,282 @@ scriptContent:
         /*Begin_c8o_PageImport*/
         /*End_c8o_PageImport*/
         /*Begin_c8o_PageDeclaration*/
-        	
-        	/* ngModels */ 
         	public view = 'week'
         	public workWeek = false;
         	public lang = "fr";
-        	
         	/*End_c8o_PageDeclaration*/
         /*Begin_c8o_PageConstructor*/
         		/*End_c8o_PageConstructor*/
         /*Begin_c8o_PageFunction*/
         	/*End_c8o_PageFunction*/
         
-segment: path-to-xfirst
-title: First page
-↓Header [ngx.components.UIDynamicElement-1491634212350]: 
+segment: path-to-samplecustommodal
+title: Title for SampleCustomModal
+↓PageEvent [ngx.components.UIPageEvent-1664896262491]: 
+  ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262494]: 
+    beanData: '{"ionBean":"InvokeAction"}'
+    stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeStart
+    ↓SetGlobal [ngx.components.UIDynamicAction-1664896262497]: 
+      beanData: |
+        '{
+         "ionBean": "SetGlobalAction",
+         "Property": "plain:dateRangeStart",
+         "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262494}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+        }'
+    ↓identifier [ngx.components.UIControlVariable-1664896262500]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'calendarCustomPopup'
+  ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262503]: 
+    beanData: '{"ionBean":"InvokeAction"}'
+    stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeEnd
+    ↓SetGlobal [ngx.components.UIDynamicAction-1664896262506]: 
+      beanData: |
+        '{
+         "ionBean": "SetGlobalAction",
+         "Property": "plain:dateRangeEnd",
+         "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262503}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+        }'
+    ↓identifier [ngx.components.UIControlVariable-1664896262509]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'calendarCustomPopup'
+  ↓CallSequence [ngx.components.UIDynamicAction-1664896262512]: 
+    beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.getCalendars"}'
+    ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262515]: 
+      beanData: '{"ionBean":"InvokeAction"}'
+      isEnabled: false
+      stack: c8oprj_lib_tui.Application.NgxApp.setCalendars
+      ↓identifier [ngx.components.UIControlVariable-1664896262518]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:'calendar'
+      ↓calendars [ngx.components.UIControlVariable-1664896262521]: 
+        comment: Array of objects
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: source:{"filter":"Sequence","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sequence":"c8oprj_lib_tui.getCalendars","marker":""}],"path":"?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
+    ↓CallSequence [ngx.components.UIDynamicAction-1664896262524]: 
+      beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.getSchedules"}'
+      ↓calendars [ngx.components.UIDynamicAction-1664896262527]: 
+        beanData: |
+          '{
+           "ionBean": "SetGlobalAction",
+           "Property": "plain:calendars",
+           "Value": "source:{\"filter\":\"Sequence\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"sequence\":\"c8oprj_lib_tui.getCalendars\",\"marker\":\"\"}],\"path\":\"?.value\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+          }'
+        ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262530]: 
+          beanData: '{"ionBean":"InvokeAction"}'
+          stack: c8oprj_lib_tui.Application.NgxApp.createSchedules
+          ↓identifier [ngx.components.UIControlVariable-1664896262533]: 
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:'calendarCustomPopup'
+          ↓silent [ngx.components.UIControlVariable-1664896262536]: 
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:''
+          ↓schedules [ngx.components.UIControlVariable-1664896262539]: 
+            comment: array of object
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: source:{"filter":"Sequence","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sequence":"c8oprj_lib_tui.getSchedules","marker":""}],"path":"?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262542]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: c8oprj_lib_tui.Application.NgxApp.scrollToNow
+            ↓identifier [ngx.components.UIControlVariable-1664896262545]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:'calendarCustomPopup'
+↓Header [ngx.components.UIDynamicElement-1664896262548]: 
   beanData: '{"ionBean":"Header"}'
   comment: Page header
   tagName: ion-header
-  ↓ToolBar [ngx.components.UIDynamicElement-1491634231108]: 
+  ↓ToolBar [ngx.components.UIDynamicElement-1664896262551]: 
     beanData: '{"ionBean":"ToolBar"}'
     tagName: ion-toolbar
-    ↓ButtonSet1 [ngx.components.UIDynamicElement-1588171103814]: 
+    ↓ButtonSet1 [ngx.components.UIDynamicElement-1664896262554]: 
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:start"}'
       tagName: ion-buttons
-      ↓BackButton [ngx.components.UIDynamicElement-1643993281257]: 
+      ↓BackButton [ngx.components.UIDynamicElement-1664896262557]: 
         beanData: '{"ionBean":"BackButton"}'
         tagName: ion-back-button
-      ↓MenuButton [ngx.components.UIDynamicElement-1588172846908]: 
+      ↓MenuButton [ngx.components.UIDynamicElement-1664896262560]: 
         beanData: '{"ionBean":"MenuButton"}'
         tagName: ion-menu-button
-      ↓BarTitle [ngx.components.UIDynamicElement-1491634265317]: 
+      ↓BarTitle [ngx.components.UIDynamicElement-1664896262563]: 
         beanData: '{"ionBean":"BarTitle"}'
         tagName: ion-title
-        ↓Text [ngx.components.UIText-1491634275121]: 
+        ↓Text [ngx.components.UIText-1664896262566]: 
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:Calendar Sample
-      ↓buttonToday [ngx.components.UIDynamicElement-1664289548229]: 
+              - MobileSmartSourceType: plain:Calendar Sample - Custom Popup
+      ↓buttonToday [ngx.components.UIDynamicElement-1664896262569]: 
         beanData: '{"ionBean":"Button"}'
         tagName: ion-button
-        ↓Event [ngx.components.UIControlEvent-1664289548232]: 
-          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289548235]: 
+        ↓Event [ngx.components.UIControlEvent-1664896262572]: 
+          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262575]: 
             beanData: '{"ionBean":"InvokeAction"}'
             stack: c8oprj_lib_tui.Application.NgxApp.today
-            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289548238]: 
+            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262578]: 
               beanData: '{"ionBean":"InvokeAction"}'
               stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeStart
-              ↓SetGlobal [ngx.components.UIDynamicAction-1664289548241]: 
+              ↓SetGlobal [ngx.components.UIDynamicAction-1664896262581]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeStart",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664289548238}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262578}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
-              ↓identifier [ngx.components.UIControlVariable-1664289548244]: 
+              ↓identifier [ngx.components.UIControlVariable-1664896262584]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:'calendar'
-            ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664289548247]: 
+            ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262587]: 
               beanData: '{"ionBean":"InvokeAction"}'
               stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeEnd
-              ↓SetGlobal [ngx.components.UIDynamicAction-1664289548250]: 
+              ↓SetGlobal [ngx.components.UIDynamicAction-1664896262590]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeEnd",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664289548247}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262587}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
-              ↓identifier [ngx.components.UIControlVariable-1664289548253]: 
+              ↓identifier [ngx.components.UIControlVariable-1664896262593]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:'calendar'
-            ↓identifier [ngx.components.UIControlVariable-1664289548256]: 
+            ↓identifier [ngx.components.UIControlVariable-1664896262596]: 
               varValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                   - MobileSmartSourceType: script:'calendar'
-        ↓Text [ngx.components.UIText-1664289548259]: 
+        ↓Text [ngx.components.UIText-1664896262599]: 
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Today
-      ↓buttonMovePrev [ngx.components.UIDynamicElement-1664289548262]: 
+      ↓buttonMovePrev [ngx.components.UIDynamicElement-1664896262602]: 
         beanData: '{"ionBean":"Button"}'
         tagName: ion-button
-        ↓Event [ngx.components.UIControlEvent-1664289548265]: 
-          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289548268]: 
+        ↓Event [ngx.components.UIControlEvent-1664896262605]: 
+          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262608]: 
             beanData: '{"ionBean":"InvokeAction"}'
             stack: c8oprj_lib_tui.Application.NgxApp.movePrev
-            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289548271]: 
+            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262611]: 
               beanData: '{"ionBean":"InvokeAction"}'
               stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeStart
-              ↓SetGlobal [ngx.components.UIDynamicAction-1664289548274]: 
+              ↓SetGlobal [ngx.components.UIDynamicAction-1664896262614]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeStart",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664289548271}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262611}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
-              ↓identifier [ngx.components.UIControlVariable-1664289548277]: 
+              ↓identifier [ngx.components.UIControlVariable-1664896262617]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:'calendar'
-            ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664289548280]: 
+            ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262620]: 
               beanData: '{"ionBean":"InvokeAction"}'
               stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeEnd
-              ↓SetGlobal [ngx.components.UIDynamicAction-1664289548283]: 
+              ↓SetGlobal [ngx.components.UIDynamicAction-1664896262623]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeEnd",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664289548280}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262620}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
-              ↓identifier [ngx.components.UIControlVariable-1664289548286]: 
+              ↓identifier [ngx.components.UIControlVariable-1664896262626]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:'calendar'
-            ↓identifier [ngx.components.UIControlVariable-1664289548289]: 
+            ↓identifier [ngx.components.UIControlVariable-1664896262629]: 
               varValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                   - MobileSmartSourceType: script:'calendar'
-        ↓Icon [ngx.components.UIDynamicElement-1664289548292]: 
+        ↓Icon [ngx.components.UIDynamicElement-1664896262632]: 
           beanData: '{"ionBean":"Icon","IconName":"plain:caret-back-circle-outline"}'
           tagName: ion-icon
-      ↓buttonMoveNext [ngx.components.UIDynamicElement-1664289548295]: 
+      ↓buttonMoveNext [ngx.components.UIDynamicElement-1664896262635]: 
         beanData: '{"ionBean":"Button"}'
         tagName: ion-button
-        ↓Event [ngx.components.UIControlEvent-1664289548298]: 
-          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289548301]: 
+        ↓Event [ngx.components.UIControlEvent-1664896262638]: 
+          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262641]: 
             beanData: '{"ionBean":"InvokeAction"}'
             stack: c8oprj_lib_tui.Application.NgxApp.moveNext
-            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289548304]: 
+            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262644]: 
               beanData: '{"ionBean":"InvokeAction"}'
               stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeStart
-              ↓SetGlobal [ngx.components.UIDynamicAction-1664289548307]: 
+              ↓SetGlobal [ngx.components.UIDynamicAction-1664896262647]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeStart",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664289548304}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262644}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
-              ↓identifier [ngx.components.UIControlVariable-1664289548310]: 
+              ↓identifier [ngx.components.UIControlVariable-1664896262650]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:'calendar'
-            ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664289548313]: 
+            ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262653]: 
               beanData: '{"ionBean":"InvokeAction"}'
               stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeEnd
-              ↓SetGlobal [ngx.components.UIDynamicAction-1664289548316]: 
+              ↓SetGlobal [ngx.components.UIDynamicAction-1664896262656]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeEnd",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664289548313}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262653}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
-              ↓identifier [ngx.components.UIControlVariable-1664289548319]: 
+              ↓identifier [ngx.components.UIControlVariable-1664896262659]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:'calendar'
-            ↓identifier [ngx.components.UIControlVariable-1664289548322]: 
+            ↓identifier [ngx.components.UIControlVariable-1664896262662]: 
               varValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                   - MobileSmartSourceType: script:'calendar'
-        ↓Icon [ngx.components.UIDynamicElement-1664289548325]: 
+        ↓Icon [ngx.components.UIDynamicElement-1664896262665]: 
           beanData: '{"ionBean":"Icon","IconName":"plain:caret-forward-circle-outline"}'
           tagName: ion-icon
-      ↓Text1 [ngx.components.UIText-1664289548328]: 
+      ↓Text1 [ngx.components.UIText-1664896262668]: 
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
             - MobileSmartSourceType: source:{"filter":"Global","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.dateRangeStart","prefix":"","suffix":"","custom":"","useCustom":false}}
-      ↓Text [ngx.components.UIText-1664289548331]: 
+      ↓Text [ngx.components.UIText-1664896262671]: 
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
             - MobileSmartSourceType: 'plain: - '
-      ↓Text2 [ngx.components.UIText-1664289548334]: 
+      ↓Text2 [ngx.components.UIText-1664896262674]: 
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
             - MobileSmartSourceType: source:{"filter":"Global","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.dateRangeEnd","prefix":"","suffix":"","custom":"","useCustom":false}}
-    ↓ButtonSet [ngx.components.UIDynamicElement-1664289548224]: 
+    ↓ButtonSet [ngx.components.UIDynamicElement-1664896262677]: 
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
       comment: Navigation actions
       tagName: ion-buttons
-      ↓selectLanguage [ngx.components.UIDynamicElement-1664290438488]: 
+      ↓selectLanguage [ngx.components.UIDynamicElement-1664896262680]: 
         beanData: |
           '{
            "ionBean": "Select",
@@ -212,236 +291,236 @@ title: First page
            "Placeholder": "plain:Language"
           }'
         tagName: ion-select
-        ↓SelectOption [ngx.components.UIDynamicElement-1664290438491]: 
+        ↓SelectOption [ngx.components.UIDynamicElement-1664896262683]: 
           beanData: '{"ionBean":"SelectOption","Value":"plain:fr"}'
           tagName: ion-select-option
-          ↓Text [ngx.components.UIText-1664290438494]: 
+          ↓Text [ngx.components.UIText-1664896262686]: 
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Français
-        ↓SelectOption1 [ngx.components.UIDynamicElement-1664290438497]: 
+        ↓SelectOption1 [ngx.components.UIDynamicElement-1664896262689]: 
           beanData: '{"ionBean":"SelectOption","Value":"plain:en"}'
           tagName: ion-select-option
-          ↓Text [ngx.components.UIText-1664290438500]: 
+          ↓Text [ngx.components.UIText-1664896262692]: 
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:English
-        ↓SelectOption2 [ngx.components.UIDynamicElement-1664290438503]: 
+        ↓SelectOption2 [ngx.components.UIDynamicElement-1664896262695]: 
           beanData: '{"ionBean":"SelectOption","Value":"plain:es"}'
           tagName: ion-select-option
-          ↓Text [ngx.components.UIText-1664290438506]: 
+          ↓Text [ngx.components.UIText-1664896262698]: 
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Español
-        ↓Attr [ngx.components.UIAttribute-1664290438509]: 
+        ↓Attr [ngx.components.UIAttribute-1664896262701]: 
           attrName: '[(ngModel)]'
           attrValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: script:this.lang
-      ↓clearButton [ngx.components.UIDynamicElement-1664289717536]: 
+      ↓clearButton [ngx.components.UIDynamicElement-1664896262704]: 
         beanData: '{"ionBean":"Button"}'
         tagName: ion-button
-        ↓Label [ngx.components.UIDynamicElement-1664289717539]: 
+        ↓Label [ngx.components.UIDynamicElement-1664896262707]: 
           beanData: '{"ionBean":"Label"}'
           tagName: ion-label
-          ↓Text [ngx.components.UIText-1664289717542]: 
+          ↓Text [ngx.components.UIText-1664896262710]: 
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Clear
-        ↓Event [ngx.components.UIControlEvent-1664289717545]: 
-          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289717548]: 
+        ↓Event [ngx.components.UIControlEvent-1664896262713]: 
+          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262716]: 
             beanData: '{"ionBean":"InvokeAction"}'
             stack: c8oprj_lib_tui.Application.NgxApp.clear
-            ↓identifier [ngx.components.UIControlVariable-1664289717551]: 
+            ↓identifier [ngx.components.UIControlVariable-1664896262719]: 
               varValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                  - MobileSmartSourceType: script:'calendar'
-            ↓immediately [ngx.components.UIControlVariable-1664289717554]: 
+                  - MobileSmartSourceType: script:'calendarCustomPopup'
+            ↓immediately [ngx.components.UIControlVariable-1664896262722]: 
               varValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                   - MobileSmartSourceType: script:'false'
-      ↓labelToggleWorkWeek [ngx.components.UIDynamicElement-1664289636516]: 
+      ↓labelToggleWorkWeek [ngx.components.UIDynamicElement-1664896262725]: 
         beanData: '{"ionBean":"Label","Position":"plain:fixed"}'
         tagName: ion-label
-        ↓Text [ngx.components.UIText-1664289636519]: 
+        ↓Text [ngx.components.UIText-1664896262728]: 
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Work week
-      ↓toggleWorkWeek [ngx.components.UIDynamicElement-1664289636522]: 
+      ↓toggleWorkWeek [ngx.components.UIDynamicElement-1664896262731]: 
         beanData: '{"ionBean":"Toggle","ControlName":"plain:name1660231818811"}'
         tagName: ion-toggle
-        ↓Event [ngx.components.UIControlEvent-1664289636525]: 
+        ↓Event [ngx.components.UIControlEvent-1664896262734]: 
           attrName: (ionChange)
           eventName: ionChange
           isEnabled: false
-          ↓IfElse [ngx.components.UIDynamicIf-1664289636528]: 
+          ↓IfElse [ngx.components.UIDynamicIf-1664896262737]: 
             beanData: '{"ionBean":"IfElseAction","condition":"script:this.workWeek"}'
-            ↓IfElse [ngx.components.UIDynamicIf-1664289636531]: 
+            ↓IfElse [ngx.components.UIDynamicIf-1664896262740]: 
               beanData: '{"ionBean":"IfElseAction","condition":"script:this.view == \"2weeks\""}'
-              ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664289636534]: 
+              ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262743]: 
                 beanData: '{"ionBean":"InvokeAction"}'
                 stack: c8oprj_lib_tui.Application.NgxApp.setOptions
-                ↓options [ngx.components.UIControlVariable-1664289636537]: 
+                ↓options [ngx.components.UIControlVariable-1664896262746]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: 'script:{month: {workweek: true, visibleWeeksCount: 2}}'
-                ↓silent [ngx.components.UIControlVariable-1664289636540]: 
+                ↓silent [ngx.components.UIControlVariable-1664896262749]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:true
-                ↓identifier [ngx.components.UIControlVariable-1664289636543]: 
+                ↓identifier [ngx.components.UIControlVariable-1664896262752]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'calendar'
-              ↓Else_Handler [ngx.components.UIActionElseEvent-1664289636546]: 
-                ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664289636549]: 
+              ↓Else_Handler [ngx.components.UIActionElseEvent-1664896262755]: 
+                ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262758]: 
                   beanData: '{"ionBean":"InvokeAction"}'
                   stack: c8oprj_lib_tui.Application.NgxApp.setOptions
-                  ↓options [ngx.components.UIControlVariable-1664289636552]: 
+                  ↓options [ngx.components.UIControlVariable-1664896262761]: 
                     varValue: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                         - MobileSmartSourceType: 'script:{month: {workweek: true}}'
-                  ↓silent [ngx.components.UIControlVariable-1664289636555]: 
+                  ↓silent [ngx.components.UIControlVariable-1664896262764]: 
                     varValue: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                         - MobileSmartSourceType: script:true
-                  ↓identifier [ngx.components.UIControlVariable-1664289636558]: 
+                  ↓identifier [ngx.components.UIControlVariable-1664896262767]: 
                     varValue: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                         - MobileSmartSourceType: script:'calendar'
-            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289636561]: 
+            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262770]: 
               beanData: '{"ionBean":"InvokeAction"}'
               stack: c8oprj_lib_tui.Application.NgxApp.setOptions
-              ↓options [ngx.components.UIControlVariable-1664289636564]: 
+              ↓options [ngx.components.UIControlVariable-1664896262773]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: 'script:{week: {workweek: true}}'
-              ↓silent [ngx.components.UIControlVariable-1664289636567]: 
+              ↓silent [ngx.components.UIControlVariable-1664896262776]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:true
-              ↓identifier [ngx.components.UIControlVariable-1664289636570]: 
+              ↓identifier [ngx.components.UIControlVariable-1664896262779]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:'calendar'
-            ↓InvokeSharedAction2 [ngx.components.UIDynamicInvoke-1664289636573]: 
+            ↓InvokeSharedAction2 [ngx.components.UIDynamicInvoke-1664896262782]: 
               beanData: '{"ionBean":"InvokeAction"}'
               stack: c8oprj_lib_tui.Application.NgxApp.changeView
-              ↓newViewName [ngx.components.UIControlVariable-1664289636576]: 
+              ↓newViewName [ngx.components.UIControlVariable-1664896262785]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: 'script:(this.view == ''2weeks'') ? ''month'' : this.view'
-              ↓force [ngx.components.UIControlVariable-1664289636579]: 
+              ↓force [ngx.components.UIControlVariable-1664896262788]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:true
-              ↓identifier [ngx.components.UIControlVariable-1664289636582]: 
+              ↓identifier [ngx.components.UIControlVariable-1664896262791]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:'calendar'
-            ↓Else_Handler [ngx.components.UIActionElseEvent-1664289636585]: 
-              ↓IfElse [ngx.components.UIDynamicIf-1664289636588]: 
+            ↓Else_Handler [ngx.components.UIActionElseEvent-1664896262794]: 
+              ↓IfElse [ngx.components.UIDynamicIf-1664896262797]: 
                 beanData: '{"ionBean":"IfElseAction","condition":"script:this.view == \"2weeks\""}'
-                ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664289636591]: 
+                ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262800]: 
                   beanData: '{"ionBean":"InvokeAction"}'
                   stack: c8oprj_lib_tui.Application.NgxApp.setOptions
-                  ↓options [ngx.components.UIControlVariable-1664289636594]: 
+                  ↓options [ngx.components.UIControlVariable-1664896262803]: 
                     varValue: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                         - MobileSmartSourceType: 'script:{month: {workweek: false, visibleWeeksCount: 2}}'
-                  ↓silent [ngx.components.UIControlVariable-1664289636597]: 
+                  ↓silent [ngx.components.UIControlVariable-1664896262806]: 
                     varValue: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                         - MobileSmartSourceType: script:true
-                  ↓identifier [ngx.components.UIControlVariable-1664289636600]: 
+                  ↓identifier [ngx.components.UIControlVariable-1664896262809]: 
                     varValue: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                         - MobileSmartSourceType: script:'calendar'
-                ↓Else_Handler [ngx.components.UIActionElseEvent-1664289636603]: 
-                  ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664289636606]: 
+                ↓Else_Handler [ngx.components.UIActionElseEvent-1664896262812]: 
+                  ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262815]: 
                     beanData: '{"ionBean":"InvokeAction"}'
                     stack: c8oprj_lib_tui.Application.NgxApp.setOptions
-                    ↓options [ngx.components.UIControlVariable-1664289636609]: 
+                    ↓options [ngx.components.UIControlVariable-1664896262818]: 
                       varValue: 
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                           - MobileSmartSourceType: 'script:{month: {workweek: false}}'
-                    ↓silent [ngx.components.UIControlVariable-1664289636612]: 
+                    ↓silent [ngx.components.UIControlVariable-1664896262821]: 
                       varValue: 
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                           - MobileSmartSourceType: script:true
-                    ↓identifier [ngx.components.UIControlVariable-1664289636615]: 
+                    ↓identifier [ngx.components.UIControlVariable-1664896262824]: 
                       varValue: 
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                           - MobileSmartSourceType: script:'calendar'
-              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289636618]: 
+              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262827]: 
                 beanData: '{"ionBean":"InvokeAction"}'
                 stack: c8oprj_lib_tui.Application.NgxApp.setOptions
-                ↓options [ngx.components.UIControlVariable-1664289636621]: 
+                ↓options [ngx.components.UIControlVariable-1664896262830]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: 'script:{week: {workweek: false}}'
-                ↓silent [ngx.components.UIControlVariable-1664289636624]: 
+                ↓silent [ngx.components.UIControlVariable-1664896262833]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:true
-                ↓identifier [ngx.components.UIControlVariable-1664289636627]: 
+                ↓identifier [ngx.components.UIControlVariable-1664896262836]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'calendar'
-              ↓InvokeSharedAction2 [ngx.components.UIDynamicInvoke-1664289636630]: 
+              ↓InvokeSharedAction2 [ngx.components.UIDynamicInvoke-1664896262839]: 
                 beanData: '{"ionBean":"InvokeAction"}'
                 stack: c8oprj_lib_tui.Application.NgxApp.changeView
-                ↓newViewName [ngx.components.UIControlVariable-1664289636633]: 
+                ↓newViewName [ngx.components.UIControlVariable-1664896262842]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: 'script:(this.view == ''2weeks'') ? ''month'' : this.view'
-                ↓force [ngx.components.UIControlVariable-1664289636636]: 
+                ↓force [ngx.components.UIControlVariable-1664896262845]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:true
-                ↓identifier [ngx.components.UIControlVariable-1664289636639]: 
+                ↓identifier [ngx.components.UIControlVariable-1664896262848]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'calendar'
-        ↓Attr [ngx.components.UIAttribute-1664289636642]: 
+        ↓Attr [ngx.components.UIAttribute-1664896262851]: 
           attrName: '[(ngModel)]'
           attrValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: script:this.workWeek
-      ↓selectView [ngx.components.UIDynamicElement-1664289548337]: 
+      ↓selectView [ngx.components.UIDynamicElement-1664896262854]: 
         beanData: |
           '{
            "ionBean": "Select",
@@ -450,35 +529,35 @@ title: First page
            "Placeholder": "plain:Change view"
           }'
         tagName: ion-select
-        ↓SelectOption [ngx.components.UIDynamicElement-1664289548340]: 
+        ↓SelectOption [ngx.components.UIDynamicElement-1664896262857]: 
           beanData: '{"ionBean":"SelectOption","Value":"plain:day"}'
           tagName: ion-select-option
-          ↓Text [ngx.components.UIText-1664289548343]: 
+          ↓Text [ngx.components.UIText-1664896262860]: 
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Daily
-        ↓SelectOption1 [ngx.components.UIDynamicElement-1664289548346]: 
+        ↓SelectOption1 [ngx.components.UIDynamicElement-1664896262863]: 
           beanData: '{"ionBean":"SelectOption","Value":"plain:week"}'
           tagName: ion-select-option
-          ↓Text [ngx.components.UIText-1664289548349]: 
+          ↓Text [ngx.components.UIText-1664896262866]: 
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Week
-        ↓SelectOption2 [ngx.components.UIDynamicElement-1664289548352]: 
+        ↓SelectOption2 [ngx.components.UIDynamicElement-1664896262869]: 
           beanData: '{"ionBean":"SelectOption","Value":"plain:month"}'
           tagName: ion-select-option
-          ↓Text [ngx.components.UIText-1664289548355]: 
+          ↓Text [ngx.components.UIText-1664896262872]: 
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Month
-        ↓Event [ngx.components.UIControlEvent-1664289548358]: 
+        ↓Event [ngx.components.UIControlEvent-1664896262875]: 
           attrName: (ionChange)
           eventName: ionChange
           isEnabled: false
-          ↓CustomAction [ngx.components.UICustomAction-1664289548361]: 
+          ↓CustomAction [ngx.components.UICustomAction-1664896262878]: 
             actionValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
@@ -489,274 +568,274 @@ title: First page
                     		resolve();
                     '
             isEnabled: false
-            ↓newViewName [ngx.components.UIControlVariable-1664289548364]: 
+            ↓newViewName [ngx.components.UIControlVariable-1664896262881]: 
               varValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                   - MobileSmartSourceType: script:parent.out.detail.value
-          ↓IfElse [ngx.components.UIDynamicIf-1664289548367]: 
+          ↓IfElse [ngx.components.UIDynamicIf-1664896262884]: 
             beanData: '{"ionBean":"IfElseAction","condition":"script:this.view == \"2weeks\""}'
             comment: need to set options before change view
-            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289548370]: 
+            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262887]: 
               beanData: '{"ionBean":"InvokeAction"}'
               stack: c8oprj_lib_tui.Application.NgxApp.setOptions
-              ↓options [ngx.components.UIControlVariable-1664289548373]: 
+              ↓options [ngx.components.UIControlVariable-1664896262890]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: 'script:{month: {workweek: this.workWeek, visibleWeeksCount: 2}}'
-              ↓silent [ngx.components.UIControlVariable-1664289548376]: 
+              ↓silent [ngx.components.UIControlVariable-1664896262893]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:true
-              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289548379]: 
+              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262896]: 
                 beanData: '{"ionBean":"InvokeAction"}'
                 stack: c8oprj_lib_tui.Application.NgxApp.changeView
-                ↓newViewName [ngx.components.UIControlVariable-1664289548382]: 
+                ↓newViewName [ngx.components.UIControlVariable-1664896262899]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'month'
-                ↓force [ngx.components.UIControlVariable-1664289548385]: 
+                ↓force [ngx.components.UIControlVariable-1664896262902]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:true
-                ↓identifier [ngx.components.UIControlVariable-1664289548388]: 
+                ↓identifier [ngx.components.UIControlVariable-1664896262905]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'calendar'
-              ↓identifier [ngx.components.UIControlVariable-1664289548391]: 
+              ↓identifier [ngx.components.UIControlVariable-1664896262908]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:'calendar'
-            ↓Else_Handler [ngx.components.UIActionElseEvent-1664289548394]: 
-              ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664289548397]: 
+            ↓Else_Handler [ngx.components.UIActionElseEvent-1664896262911]: 
+              ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262914]: 
                 beanData: '{"ionBean":"InvokeAction"}'
                 stack: c8oprj_lib_tui.Application.NgxApp.setOptions
-                ↓options [ngx.components.UIControlVariable-1664289548400]: 
+                ↓options [ngx.components.UIControlVariable-1664896262917]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: 'script:{week: {workweek: this.workWeek}}'
-                ↓silent [ngx.components.UIControlVariable-1664289548403]: 
+                ↓silent [ngx.components.UIControlVariable-1664896262920]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:true
-                ↓identifier [ngx.components.UIControlVariable-1664289548406]: 
+                ↓identifier [ngx.components.UIControlVariable-1664896262923]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'calendar'
-              ↓InvokeSharedAction2 [ngx.components.UIDynamicInvoke-1664289548409]: 
+              ↓InvokeSharedAction2 [ngx.components.UIDynamicInvoke-1664896262926]: 
                 beanData: '{"ionBean":"InvokeAction"}'
                 stack: c8oprj_lib_tui.Application.NgxApp.setOptions
-                ↓options [ngx.components.UIControlVariable-1664289548412]: 
+                ↓options [ngx.components.UIControlVariable-1664896262929]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: 'script:{month: {workweek: this.workWeek}}'
-                ↓silent [ngx.components.UIControlVariable-1664289548415]: 
+                ↓silent [ngx.components.UIControlVariable-1664896262932]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:true
-                ↓identifier [ngx.components.UIControlVariable-1664289548418]: 
+                ↓identifier [ngx.components.UIControlVariable-1664896262935]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'calendar'
-              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289548421]: 
+              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262938]: 
                 beanData: '{"ionBean":"InvokeAction"}'
                 stack: c8oprj_lib_tui.Application.NgxApp.changeView
-                ↓newViewName [ngx.components.UIControlVariable-1664289548424]: 
+                ↓newViewName [ngx.components.UIControlVariable-1664896262941]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:this.view
-                ↓force [ngx.components.UIControlVariable-1664289548427]: 
+                ↓force [ngx.components.UIControlVariable-1664896262944]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:true
-                ↓identifier [ngx.components.UIControlVariable-1664289548430]: 
+                ↓identifier [ngx.components.UIControlVariable-1664896262947]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'calendar'
-        ↓Attr [ngx.components.UIAttribute-1664289548439]: 
+        ↓Attr [ngx.components.UIAttribute-1664896262950]: 
           attrName: '[(ngModel)]'
           attrValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: script:this.view
-  ↓ToolBar1 [ngx.components.UIDynamicElement-1664289507502]: 
+  ↓ToolBar1 [ngx.components.UIDynamicElement-1664896262953]: 
     beanData: '{"ionBean":"ToolBar"}'
     isEnabled: false
     tagName: ion-toolbar
-    ↓Text [ngx.components.UIText-1664289507505]: 
+    ↓Text [ngx.components.UIText-1664896262956]: 
       isEnabled: false
-    ↓ButtonSet [ngx.components.UIDynamicElement-1664289507508]: 
+    ↓ButtonSet [ngx.components.UIDynamicElement-1664896262959]: 
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:primary"}'
       comment: Navigation actions
       tagName: ion-buttons
-      ↓buttonToday [ngx.components.UIDynamicElement-1664289507511]: 
+      ↓buttonToday [ngx.components.UIDynamicElement-1664896262962]: 
         beanData: '{"ionBean":"Button"}'
         tagName: ion-button
-        ↓Event [ngx.components.UIControlEvent-1664289507514]: 
-          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289507517]: 
+        ↓Event [ngx.components.UIControlEvent-1664896262965]: 
+          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262968]: 
             beanData: '{"ionBean":"InvokeAction"}'
             stack: c8oprj_lib_tui.Application.NgxApp.today
-            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289507520]: 
+            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262971]: 
               beanData: '{"ionBean":"InvokeAction"}'
               stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeStart
-              ↓SetGlobal [ngx.components.UIDynamicAction-1664289507523]: 
+              ↓SetGlobal [ngx.components.UIDynamicAction-1664896262974]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeStart",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664289507520}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262971}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
-              ↓identifier [ngx.components.UIControlVariable-1664289507526]: 
+              ↓identifier [ngx.components.UIControlVariable-1664896262977]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:'calendar'
-            ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664289507529]: 
+            ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262980]: 
               beanData: '{"ionBean":"InvokeAction"}'
               stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeEnd
-              ↓SetGlobal [ngx.components.UIDynamicAction-1664289507532]: 
+              ↓SetGlobal [ngx.components.UIDynamicAction-1664896262983]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeEnd",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664289507529}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262980}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
-              ↓identifier [ngx.components.UIControlVariable-1664289507535]: 
+              ↓identifier [ngx.components.UIControlVariable-1664896262986]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:'calendar'
-            ↓identifier [ngx.components.UIControlVariable-1664289507538]: 
+            ↓identifier [ngx.components.UIControlVariable-1664896262989]: 
               varValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                   - MobileSmartSourceType: script:'calendar'
-        ↓Text [ngx.components.UIText-1664289507541]: 
+        ↓Text [ngx.components.UIText-1664896262992]: 
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Today
-      ↓buttonMovePrev [ngx.components.UIDynamicElement-1664289507544]: 
+      ↓buttonMovePrev [ngx.components.UIDynamicElement-1664896262995]: 
         beanData: '{"ionBean":"Button"}'
         tagName: ion-button
-        ↓Event [ngx.components.UIControlEvent-1664289507547]: 
-          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289507550]: 
+        ↓Event [ngx.components.UIControlEvent-1664896262998]: 
+          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263001]: 
             beanData: '{"ionBean":"InvokeAction"}'
             stack: c8oprj_lib_tui.Application.NgxApp.movePrev
-            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289507553]: 
+            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263004]: 
               beanData: '{"ionBean":"InvokeAction"}'
               stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeStart
-              ↓SetGlobal [ngx.components.UIDynamicAction-1664289507556]: 
+              ↓SetGlobal [ngx.components.UIDynamicAction-1664896263007]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeStart",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664289507553}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896263004}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
-              ↓identifier [ngx.components.UIControlVariable-1664289507559]: 
+              ↓identifier [ngx.components.UIControlVariable-1664896263010]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:'calendar'
-            ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664289507562]: 
+            ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896263013]: 
               beanData: '{"ionBean":"InvokeAction"}'
               stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeEnd
-              ↓SetGlobal [ngx.components.UIDynamicAction-1664289507565]: 
+              ↓SetGlobal [ngx.components.UIDynamicAction-1664896263016]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeEnd",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664289507562}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896263013}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
-              ↓identifier [ngx.components.UIControlVariable-1664289507568]: 
+              ↓identifier [ngx.components.UIControlVariable-1664896263019]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:'calendar'
-            ↓identifier [ngx.components.UIControlVariable-1664289507571]: 
+            ↓identifier [ngx.components.UIControlVariable-1664896263022]: 
               varValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                   - MobileSmartSourceType: script:'calendar'
-        ↓Icon [ngx.components.UIDynamicElement-1664289507574]: 
+        ↓Icon [ngx.components.UIDynamicElement-1664896263025]: 
           beanData: '{"ionBean":"Icon","IconName":"plain:caret-back-circle-outline"}'
           tagName: ion-icon
-      ↓buttonMoveNext [ngx.components.UIDynamicElement-1664289507577]: 
+      ↓buttonMoveNext [ngx.components.UIDynamicElement-1664896263028]: 
         beanData: '{"ionBean":"Button"}'
         tagName: ion-button
-        ↓Event [ngx.components.UIControlEvent-1664289507580]: 
-          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289507583]: 
+        ↓Event [ngx.components.UIControlEvent-1664896263031]: 
+          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263034]: 
             beanData: '{"ionBean":"InvokeAction"}'
             stack: c8oprj_lib_tui.Application.NgxApp.moveNext
-            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289507586]: 
+            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263037]: 
               beanData: '{"ionBean":"InvokeAction"}'
               stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeStart
-              ↓SetGlobal [ngx.components.UIDynamicAction-1664289507589]: 
+              ↓SetGlobal [ngx.components.UIDynamicAction-1664896263040]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeStart",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664289507586}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896263037}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
-              ↓identifier [ngx.components.UIControlVariable-1664289507592]: 
+              ↓identifier [ngx.components.UIControlVariable-1664896263043]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:'calendar'
-            ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664289507595]: 
+            ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896263046]: 
               beanData: '{"ionBean":"InvokeAction"}'
               stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeEnd
-              ↓SetGlobal [ngx.components.UIDynamicAction-1664289507598]: 
+              ↓SetGlobal [ngx.components.UIDynamicAction-1664896263049]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeEnd",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664289507595}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896263046}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
-              ↓identifier [ngx.components.UIControlVariable-1664289507601]: 
+              ↓identifier [ngx.components.UIControlVariable-1664896263052]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:'calendar'
-            ↓identifier [ngx.components.UIControlVariable-1664289507604]: 
+            ↓identifier [ngx.components.UIControlVariable-1664896263055]: 
               varValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                   - MobileSmartSourceType: script:'calendar'
-        ↓Icon [ngx.components.UIDynamicElement-1664289507607]: 
+        ↓Icon [ngx.components.UIDynamicElement-1664896263058]: 
           beanData: '{"ionBean":"Icon","IconName":"plain:caret-forward-circle-outline"}'
           tagName: ion-icon
-      ↓Text1 [ngx.components.UIText-1664289507610]: 
+      ↓Text1 [ngx.components.UIText-1664896263061]: 
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
             - MobileSmartSourceType: source:{"filter":"Global","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.dateRangeStart","prefix":"","suffix":"","custom":"","useCustom":false}}
-      ↓Text [ngx.components.UIText-1664289507613]: 
+      ↓Text [ngx.components.UIText-1664896263064]: 
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
             - MobileSmartSourceType: 'plain: - '
-      ↓Text2 [ngx.components.UIText-1664289507616]: 
+      ↓Text2 [ngx.components.UIText-1664896263067]: 
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
             - MobileSmartSourceType: source:{"filter":"Global","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.dateRangeEnd","prefix":"","suffix":"","custom":"","useCustom":false}}
-      ↓SelectContainer [ngx.components.UIDynamicElement-1664289507619]: 
+      ↓SelectContainer [ngx.components.UIDynamicElement-1664896263070]: 
         beanData: |
           '{
            "ionBean": "Select",
@@ -765,34 +844,34 @@ title: First page
            "Placeholder": "plain:Change view"
           }'
         tagName: ion-select
-        ↓SelectOption [ngx.components.UIDynamicElement-1664289507622]: 
+        ↓SelectOption [ngx.components.UIDynamicElement-1664896263073]: 
           beanData: '{"ionBean":"SelectOption","Value":"plain:day"}'
           tagName: ion-select-option
-          ↓Text [ngx.components.UIText-1664289507625]: 
+          ↓Text [ngx.components.UIText-1664896263076]: 
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Daily
-        ↓SelectOption1 [ngx.components.UIDynamicElement-1664289507628]: 
+        ↓SelectOption1 [ngx.components.UIDynamicElement-1664896263079]: 
           beanData: '{"ionBean":"SelectOption","Value":"plain:week"}'
           tagName: ion-select-option
-          ↓Text [ngx.components.UIText-1664289507631]: 
+          ↓Text [ngx.components.UIText-1664896263082]: 
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Week
-        ↓SelectOption2 [ngx.components.UIDynamicElement-1664289507634]: 
+        ↓SelectOption2 [ngx.components.UIDynamicElement-1664896263085]: 
           beanData: '{"ionBean":"SelectOption","Value":"plain:month"}'
           tagName: ion-select-option
-          ↓Text [ngx.components.UIText-1664289507637]: 
+          ↓Text [ngx.components.UIText-1664896263088]: 
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Month
-        ↓Event [ngx.components.UIControlEvent-1664289507640]: 
+        ↓Event [ngx.components.UIControlEvent-1664896263091]: 
           attrName: (ionChange)
           eventName: ionChange
-          ↓CustomAction [ngx.components.UICustomAction-1664289507643]: 
+          ↓CustomAction [ngx.components.UICustomAction-1664896263094]: 
             actionValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
@@ -803,322 +882,322 @@ title: First page
                     		resolve();
                     '
             isEnabled: false
-            ↓newViewName [ngx.components.UIControlVariable-1664289507646]: 
+            ↓newViewName [ngx.components.UIControlVariable-1664896263097]: 
               varValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                   - MobileSmartSourceType: script:parent.out.detail.value
-          ↓IfElse [ngx.components.UIDynamicIf-1664289507649]: 
+          ↓IfElse [ngx.components.UIDynamicIf-1664896263100]: 
             beanData: '{"ionBean":"IfElseAction","condition":"script:this.view == \"2weeks\""}'
             comment: need to set options before change view
-            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289507652]: 
+            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263103]: 
               beanData: '{"ionBean":"InvokeAction"}'
               stack: c8oprj_lib_tui.Application.NgxApp.setOptions
-              ↓options [ngx.components.UIControlVariable-1664289507655]: 
+              ↓options [ngx.components.UIControlVariable-1664896263106]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: 'script:{month: {workweek: this.workWeek, visibleWeeksCount: 2}}'
-              ↓silent [ngx.components.UIControlVariable-1664289507658]: 
+              ↓silent [ngx.components.UIControlVariable-1664896263109]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:true
-              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289507661]: 
+              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263112]: 
                 beanData: '{"ionBean":"InvokeAction"}'
                 stack: c8oprj_lib_tui.Application.NgxApp.changeView
-                ↓newViewName [ngx.components.UIControlVariable-1664289507664]: 
+                ↓newViewName [ngx.components.UIControlVariable-1664896263115]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'month'
-                ↓force [ngx.components.UIControlVariable-1664289507667]: 
+                ↓force [ngx.components.UIControlVariable-1664896263118]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:true
-                ↓identifier [ngx.components.UIControlVariable-1664289507670]: 
+                ↓identifier [ngx.components.UIControlVariable-1664896263121]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'calendar'
-              ↓identifier [ngx.components.UIControlVariable-1664289507673]: 
+              ↓identifier [ngx.components.UIControlVariable-1664896263124]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:'calendar'
-            ↓Else_Handler [ngx.components.UIActionElseEvent-1664289507676]: 
-              ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664289507679]: 
+            ↓Else_Handler [ngx.components.UIActionElseEvent-1664896263127]: 
+              ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896263130]: 
                 beanData: '{"ionBean":"InvokeAction"}'
                 stack: c8oprj_lib_tui.Application.NgxApp.setOptions
-                ↓options [ngx.components.UIControlVariable-1664289507682]: 
+                ↓options [ngx.components.UIControlVariable-1664896263133]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: 'script:{week: {workweek: this.workWeek}}'
-                ↓silent [ngx.components.UIControlVariable-1664289507685]: 
+                ↓silent [ngx.components.UIControlVariable-1664896263136]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:true
-                ↓identifier [ngx.components.UIControlVariable-1664289507688]: 
+                ↓identifier [ngx.components.UIControlVariable-1664896263139]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'calendar'
-              ↓InvokeSharedAction2 [ngx.components.UIDynamicInvoke-1664289507691]: 
+              ↓InvokeSharedAction2 [ngx.components.UIDynamicInvoke-1664896263142]: 
                 beanData: '{"ionBean":"InvokeAction"}'
                 stack: c8oprj_lib_tui.Application.NgxApp.setOptions
-                ↓options [ngx.components.UIControlVariable-1664289507694]: 
+                ↓options [ngx.components.UIControlVariable-1664896263145]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: 'script:{month: {workweek: this.workWeek}}'
-                ↓silent [ngx.components.UIControlVariable-1664289507697]: 
+                ↓silent [ngx.components.UIControlVariable-1664896263148]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:true
-                ↓identifier [ngx.components.UIControlVariable-1664289507700]: 
+                ↓identifier [ngx.components.UIControlVariable-1664896263151]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'calendar'
-              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289507703]: 
+              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263154]: 
                 beanData: '{"ionBean":"InvokeAction"}'
                 stack: c8oprj_lib_tui.Application.NgxApp.changeView
-                ↓newViewName [ngx.components.UIControlVariable-1664289507706]: 
+                ↓newViewName [ngx.components.UIControlVariable-1664896263157]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:this.view
-                ↓force [ngx.components.UIControlVariable-1664289507709]: 
+                ↓force [ngx.components.UIControlVariable-1664896263160]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:true
-                ↓identifier [ngx.components.UIControlVariable-1664289507712]: 
+                ↓identifier [ngx.components.UIControlVariable-1664896263163]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'calendar'
-        ↓SelectOption3 [ngx.components.UIDynamicElement-1664289507715]: 
+        ↓SelectOption3 [ngx.components.UIDynamicElement-1664896263166]: 
           beanData: '{"ionBean":"SelectOption","Value":"plain:2weeks"}'
           tagName: ion-select-option
-          ↓Text [ngx.components.UIText-1664289507718]: 
+          ↓Text [ngx.components.UIText-1664896263169]: 
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:2 Weeks
-        ↓Attr [ngx.components.UIAttribute-1664289507721]: 
+        ↓Attr [ngx.components.UIAttribute-1664896263172]: 
           attrName: '[(ngModel)]'
           attrValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: script:this.view
-    ↓GenericItem [ngx.components.UIDynamicElement-1664289507724]: 
+    ↓GenericItem [ngx.components.UIDynamicElement-1664896263175]: 
       beanData: '{"ionBean":"GenericItem"}'
       comment: workWeek toggle
       tagName: ion-item
-      ↓Label [ngx.components.UIDynamicElement-1664289507727]: 
+      ↓Label [ngx.components.UIDynamicElement-1664896263178]: 
         beanData: '{"ionBean":"Label","Position":"plain:fixed"}'
         tagName: ion-label
-        ↓Text [ngx.components.UIText-1664289507730]: 
+        ↓Text [ngx.components.UIText-1664896263181]: 
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Work week
-      ↓ToggleButton [ngx.components.UIDynamicElement-1664289507733]: 
+      ↓ToggleButton [ngx.components.UIDynamicElement-1664896263184]: 
         beanData: '{"ionBean":"Toggle","ControlName":"plain:name1660231818811"}'
         tagName: ion-toggle
-        ↓Event [ngx.components.UIControlEvent-1664289507736]: 
+        ↓Event [ngx.components.UIControlEvent-1664896263187]: 
           attrName: (ionChange)
           eventName: ionChange
-          ↓IfElse [ngx.components.UIDynamicIf-1664289507739]: 
+          ↓IfElse [ngx.components.UIDynamicIf-1664896263190]: 
             beanData: '{"ionBean":"IfElseAction","condition":"script:this.workWeek"}'
-            ↓IfElse [ngx.components.UIDynamicIf-1664289507742]: 
+            ↓IfElse [ngx.components.UIDynamicIf-1664896263193]: 
               beanData: '{"ionBean":"IfElseAction","condition":"script:this.view == \"2weeks\""}'
-              ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664289507745]: 
+              ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896263196]: 
                 beanData: '{"ionBean":"InvokeAction"}'
                 stack: c8oprj_lib_tui.Application.NgxApp.setOptions
-                ↓options [ngx.components.UIControlVariable-1664289507748]: 
+                ↓options [ngx.components.UIControlVariable-1664896263199]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: 'script:{month: {workweek: true, visibleWeeksCount: 2}}'
-                ↓silent [ngx.components.UIControlVariable-1664289507751]: 
+                ↓silent [ngx.components.UIControlVariable-1664896263202]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:true
-                ↓identifier [ngx.components.UIControlVariable-1664289507754]: 
+                ↓identifier [ngx.components.UIControlVariable-1664896263205]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'calendar'
-              ↓Else_Handler [ngx.components.UIActionElseEvent-1664289507757]: 
-                ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664289507760]: 
+              ↓Else_Handler [ngx.components.UIActionElseEvent-1664896263208]: 
+                ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896263211]: 
                   beanData: '{"ionBean":"InvokeAction"}'
                   stack: c8oprj_lib_tui.Application.NgxApp.setOptions
-                  ↓options [ngx.components.UIControlVariable-1664289507763]: 
+                  ↓options [ngx.components.UIControlVariable-1664896263214]: 
                     varValue: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                         - MobileSmartSourceType: 'script:{month: {workweek: true}}'
-                  ↓silent [ngx.components.UIControlVariable-1664289507766]: 
+                  ↓silent [ngx.components.UIControlVariable-1664896263217]: 
                     varValue: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                         - MobileSmartSourceType: script:true
-                  ↓identifier [ngx.components.UIControlVariable-1664289507769]: 
+                  ↓identifier [ngx.components.UIControlVariable-1664896263220]: 
                     varValue: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                         - MobileSmartSourceType: script:'calendar'
-            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289507772]: 
+            ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263223]: 
               beanData: '{"ionBean":"InvokeAction"}'
               stack: c8oprj_lib_tui.Application.NgxApp.setOptions
-              ↓options [ngx.components.UIControlVariable-1664289507775]: 
+              ↓options [ngx.components.UIControlVariable-1664896263226]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: 'script:{week: {workweek: true}}'
-              ↓silent [ngx.components.UIControlVariable-1664289507778]: 
+              ↓silent [ngx.components.UIControlVariable-1664896263229]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:true
-              ↓identifier [ngx.components.UIControlVariable-1664289507781]: 
+              ↓identifier [ngx.components.UIControlVariable-1664896263232]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:'calendar'
-            ↓InvokeSharedAction2 [ngx.components.UIDynamicInvoke-1664289507784]: 
+            ↓InvokeSharedAction2 [ngx.components.UIDynamicInvoke-1664896263235]: 
               beanData: '{"ionBean":"InvokeAction"}'
               stack: c8oprj_lib_tui.Application.NgxApp.changeView
-              ↓newViewName [ngx.components.UIControlVariable-1664289507787]: 
+              ↓newViewName [ngx.components.UIControlVariable-1664896263238]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: 'script:(this.view == ''2weeks'') ? ''month'' : this.view'
-              ↓force [ngx.components.UIControlVariable-1664289507790]: 
+              ↓force [ngx.components.UIControlVariable-1664896263241]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:true
-              ↓identifier [ngx.components.UIControlVariable-1664289507793]: 
+              ↓identifier [ngx.components.UIControlVariable-1664896263244]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:'calendar'
-            ↓Else_Handler [ngx.components.UIActionElseEvent-1664289507796]: 
-              ↓IfElse [ngx.components.UIDynamicIf-1664289507799]: 
+            ↓Else_Handler [ngx.components.UIActionElseEvent-1664896263247]: 
+              ↓IfElse [ngx.components.UIDynamicIf-1664896263250]: 
                 beanData: '{"ionBean":"IfElseAction","condition":"script:this.view == \"2weeks\""}'
-                ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664289507802]: 
+                ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896263253]: 
                   beanData: '{"ionBean":"InvokeAction"}'
                   stack: c8oprj_lib_tui.Application.NgxApp.setOptions
-                  ↓options [ngx.components.UIControlVariable-1664289507805]: 
+                  ↓options [ngx.components.UIControlVariable-1664896263256]: 
                     varValue: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                         - MobileSmartSourceType: 'script:{month: {workweek: false, visibleWeeksCount: 2}}'
-                  ↓silent [ngx.components.UIControlVariable-1664289507808]: 
+                  ↓silent [ngx.components.UIControlVariable-1664896263259]: 
                     varValue: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                         - MobileSmartSourceType: script:true
-                  ↓identifier [ngx.components.UIControlVariable-1664289507811]: 
+                  ↓identifier [ngx.components.UIControlVariable-1664896263262]: 
                     varValue: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                         - MobileSmartSourceType: script:'calendar'
-                ↓Else_Handler [ngx.components.UIActionElseEvent-1664289507814]: 
-                  ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664289507817]: 
+                ↓Else_Handler [ngx.components.UIActionElseEvent-1664896263265]: 
+                  ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896263268]: 
                     beanData: '{"ionBean":"InvokeAction"}'
                     stack: c8oprj_lib_tui.Application.NgxApp.setOptions
-                    ↓options [ngx.components.UIControlVariable-1664289507820]: 
+                    ↓options [ngx.components.UIControlVariable-1664896263271]: 
                       varValue: 
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                           - MobileSmartSourceType: 'script:{month: {workweek: false}}'
-                    ↓silent [ngx.components.UIControlVariable-1664289507823]: 
+                    ↓silent [ngx.components.UIControlVariable-1664896263274]: 
                       varValue: 
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                           - MobileSmartSourceType: script:true
-                    ↓identifier [ngx.components.UIControlVariable-1664289507826]: 
+                    ↓identifier [ngx.components.UIControlVariable-1664896263277]: 
                       varValue: 
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                           - MobileSmartSourceType: script:'calendar'
-              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289507829]: 
+              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263280]: 
                 beanData: '{"ionBean":"InvokeAction"}'
                 stack: c8oprj_lib_tui.Application.NgxApp.setOptions
-                ↓options [ngx.components.UIControlVariable-1664289507832]: 
+                ↓options [ngx.components.UIControlVariable-1664896263283]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: 'script:{week: {workweek: false}}'
-                ↓silent [ngx.components.UIControlVariable-1664289507835]: 
+                ↓silent [ngx.components.UIControlVariable-1664896263286]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:true
-                ↓identifier [ngx.components.UIControlVariable-1664289507838]: 
+                ↓identifier [ngx.components.UIControlVariable-1664896263289]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'calendar'
-              ↓InvokeSharedAction2 [ngx.components.UIDynamicInvoke-1664289507841]: 
+              ↓InvokeSharedAction2 [ngx.components.UIDynamicInvoke-1664896263292]: 
                 beanData: '{"ionBean":"InvokeAction"}'
                 stack: c8oprj_lib_tui.Application.NgxApp.changeView
-                ↓newViewName [ngx.components.UIControlVariable-1664289507844]: 
+                ↓newViewName [ngx.components.UIControlVariable-1664896263295]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: 'script:(this.view == ''2weeks'') ? ''month'' : this.view'
-                ↓force [ngx.components.UIControlVariable-1664289507847]: 
+                ↓force [ngx.components.UIControlVariable-1664896263298]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:true
-                ↓identifier [ngx.components.UIControlVariable-1664289507850]: 
+                ↓identifier [ngx.components.UIControlVariable-1664896263301]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'calendar'
-        ↓Attr [ngx.components.UIAttribute-1664289507853]: 
+        ↓Attr [ngx.components.UIAttribute-1664896263304]: 
           attrName: '[(ngModel)]'
           attrValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: script:this.workWeek
-    ↓Button [ngx.components.UIDynamicElement-1664289507856]: 
+    ↓Button [ngx.components.UIDynamicElement-1664896263307]: 
       beanData: '{"ionBean":"Button"}'
       tagName: ion-button
-      ↓Label [ngx.components.UIDynamicElement-1664289507859]: 
+      ↓Label [ngx.components.UIDynamicElement-1664896263310]: 
         beanData: '{"ionBean":"Label"}'
         tagName: ion-label
-        ↓Text [ngx.components.UIText-1664289507862]: 
+        ↓Text [ngx.components.UIText-1664896263313]: 
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Clear
-      ↓Event [ngx.components.UIControlEvent-1664289507865]: 
-        ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664289507868]: 
+      ↓Event [ngx.components.UIControlEvent-1664896263316]: 
+        ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263319]: 
           beanData: '{"ionBean":"InvokeAction"}'
           stack: c8oprj_lib_tui.Application.NgxApp.clear
-          ↓identifier [ngx.components.UIControlVariable-1664289507871]: 
+          ↓identifier [ngx.components.UIControlVariable-1664896263322]: 
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: script:'calendar'
-          ↓immediately [ngx.components.UIControlVariable-1664289507874]: 
+          ↓immediately [ngx.components.UIControlVariable-1664896263325]: 
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: script:'false'
-    ↓SelectContainer [ngx.components.UIDynamicElement-1664289507877]: 
+    ↓SelectContainer [ngx.components.UIDynamicElement-1664896263328]: 
       beanData: |
         '{
          "ionBean": "Select",
@@ -1127,93 +1206,93 @@ title: First page
          "Placeholder": "plain:Language"
         }'
       tagName: ion-select
-      ↓SelectOption [ngx.components.UIDynamicElement-1664289507880]: 
+      ↓SelectOption [ngx.components.UIDynamicElement-1664896263331]: 
         beanData: '{"ionBean":"SelectOption","Value":"plain:fr"}'
         tagName: ion-select-option
-        ↓Text [ngx.components.UIText-1664289507883]: 
+        ↓Text [ngx.components.UIText-1664896263334]: 
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Français
-      ↓SelectOption1 [ngx.components.UIDynamicElement-1664289507886]: 
+      ↓SelectOption1 [ngx.components.UIDynamicElement-1664896263337]: 
         beanData: '{"ionBean":"SelectOption","Value":"plain:en"}'
         tagName: ion-select-option
-        ↓Text [ngx.components.UIText-1664289507889]: 
+        ↓Text [ngx.components.UIText-1664896263340]: 
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:English
-      ↓SelectOption2 [ngx.components.UIDynamicElement-1664289507892]: 
+      ↓SelectOption2 [ngx.components.UIDynamicElement-1664896263343]: 
         beanData: '{"ionBean":"SelectOption","Value":"plain:es"}'
         tagName: ion-select-option
-        ↓Text [ngx.components.UIText-1664289507895]: 
+        ↓Text [ngx.components.UIText-1664896263346]: 
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Español
-      ↓Attr [ngx.components.UIAttribute-1664289507898]: 
+      ↓Attr [ngx.components.UIAttribute-1664896263349]: 
         attrName: '[(ngModel)]'
         attrValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
             - MobileSmartSourceType: script:this.lang
-↓Content [ngx.components.UIDynamicElement-1489674805352]: 
+↓Content [ngx.components.UIDynamicElement-1664896263352]: 
   beanData: '{"ionBean":"Content"}'
   comment: Page content
   tagName: ion-content
-  ↓Grid [ngx.components.UIDynamicElement-1660139866216]: 
+  ↓Grid [ngx.components.UIDynamicElement-1664896263355]: 
     beanData: '{"ionBean":"Grid"}'
     tagName: ion-grid
-    ↓rowCalendar [ngx.components.UIDynamicElement-1660139866218]: 
+    ↓rowCalendar [ngx.components.UIDynamicElement-1664896263358]: 
       beanData: '{"ionBean":"GridRow"}'
       tagName: ion-row
-      ↓colCalendars [ngx.components.UIDynamicElement-1664288283584]: 
+      ↓colCalendars [ngx.components.UIDynamicElement-1664896263361]: 
         beanData: '{"ionBean":"GridCol","Size":"plain:2"}'
         tagName: ion-col
-        ↓rowButtonCreate [ngx.components.UIDynamicElement-1664288283587]: 
+        ↓rowButtonCreate [ngx.components.UIDynamicElement-1664896263364]: 
           beanData: '{"ionBean":"GridRow","Height":"plain"}'
           tagName: ion-row
-          ↓colButtonCreate [ngx.components.UIDynamicElement-1664288283590]: 
+          ↓colButtonCreate [ngx.components.UIDynamicElement-1664896263367]: 
             beanData: '{"ionBean":"GridCol"}'
             tagName: ion-col
-            ↓buttonCreate [ngx.components.UIDynamicElement-1664288283593]: 
+            ↓buttonCreate [ngx.components.UIDynamicElement-1664896263370]: 
               beanData: '{"ionBean":"Button","IonFill":"plain:solid"}'
               tagName: ion-button
-              ↓Icon [ngx.components.UIDynamicElement-1664288283596]: 
+              ↓Icon [ngx.components.UIDynamicElement-1664896263373]: 
                 beanData: '{"ionBean":"Icon"}'
                 tagName: ion-icon
-              ↓Text [ngx.components.UIText-1664288283599]: 
+              ↓Text [ngx.components.UIText-1664896263376]: 
                 textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: plain:Créer
-              ↓Event [ngx.components.UIControlEvent-1664288283602]: 
-                ↓ModalPage [ngx.components.UIDynamicAction-1664290819220]: 
+              ↓Event [ngx.components.UIControlEvent-1664896263379]: 
+                ↓ModalPage [ngx.components.UIDynamicAction-1664896263382]: 
                   beanData: |
                     '{
                      "ionBean": "ModalAction",
                      "page": "plain:c8oprj_lib_tui.Application.NgxApp.ModalCreateCalendar",
                      "blockWhileDisplayed": "plain:true"
                     }'
-                  ↓CallSequence [ngx.components.UIDynamicAction-1664357197294]: 
+                  ↓CallSequence [ngx.components.UIDynamicAction-1664896263385]: 
                     beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.getCalendars"}'
-                ↓Popover [ngx.components.UIDynamicAction-1664874632978]: 
+                ↓Popover [ngx.components.UIDynamicAction-1664896263388]: 
                   beanData: '{"ionBean":"PopoverAction","page":"plain:c8oprj_lib_tui.Application.NgxApp.ModalCreateCalendar"}'
                   isEnabled: false
-        ↓rowMyCalendars [ngx.components.UIDynamicElement-1664288283608]: 
+        ↓rowMyCalendars [ngx.components.UIDynamicElement-1664896263391]: 
           beanData: '{"ionBean":"GridRow","Height":"plain"}'
           tagName: ion-row
-          ↓colMyCalendars [ngx.components.UIDynamicElement-1664288283611]: 
+          ↓colMyCalendars [ngx.components.UIDynamicElement-1664896263394]: 
             beanData: '{"ionBean":"GridCol"}'
             tagName: ion-col
-            ↓Directive [ngx.components.UIControlDirective-1664288283614]: 
+            ↓Directive [ngx.components.UIControlDirective-1664896263397]: 
               directiveIndexName: i
               directiveItemName: calendar
               directiveSource: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                   - MobileSmartSourceType: source:{"filter":"Sequence","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sequence":"c8oprj_lib_tui.getCalendars","marker":""}],"path":"?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
-              ↓FormItem [ngx.components.UIDynamicElement-1664288283617]: 
+              ↓FormItem [ngx.components.UIDynamicElement-1664896263400]: 
                 beanData: |
                   '{
                    "ionBean": "FormItem",
@@ -1221,7 +1300,7 @@ title: First page
                    "Lines": "plain:none"
                   }'
                 tagName: ion-item
-                ↓CheckBox [ngx.components.UIDynamicElement-1664288283620]: 
+                ↓CheckBox [ngx.components.UIDynamicElement-1664896263403]: 
                   beanData: |
                     '{
                      "ionBean": "CheckBox",
@@ -1229,50 +1308,50 @@ title: First page
                      "Checked": "script:calendar.checked"
                     }'
                   tagName: ion-checkbox
-                  ↓Attr [ngx.components.UIAttribute-1664288283623]: 
+                  ↓Attr [ngx.components.UIAttribute-1664896263406]: 
                     attrName: style
                     attrValue: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                         - MobileSmartSourceType: 'script:''--background-checked:'' + calendar.bgColor +  '';--border-color-checked: '' + calendar.borderColor + ''; --checkmark-color: #FFF; --border-color:'' + calendar.borderColor '
-                  ↓Event [ngx.components.UIControlEvent-1664371294236]: 
+                  ↓Event [ngx.components.UIControlEvent-1664896263409]: 
                     attrName: (ionChange)
                     eventName: ionChange
-                    ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664372751561]: 
+                    ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263412]: 
                       beanData: '{"ionBean":"InvokeAction"}'
                       stack: c8oprj_lib_tui.Application.NgxApp.toggleSchedules
-                      ↓identifier [ngx.components.UIControlVariable-1664372760936]: 
+                      ↓identifier [ngx.components.UIControlVariable-1664896263415]: 
                         varValue: 
                           - xmlizable: 
                             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                            - MobileSmartSourceType: script:'calendar'
-                      ↓calendarId [ngx.components.UIControlVariable-1664372760938]: 
+                            - MobileSmartSourceType: script:'calendarCustomPopup'
+                      ↓calendarId [ngx.components.UIControlVariable-1664896263418]: 
                         comment: (string) The calendar id value
                         varValue: 
                           - xmlizable: 
                             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                             - MobileSmartSourceType: script:stack.root.scope.calendar.id
-                      ↓toHide [ngx.components.UIControlVariable-1664372760940]: 
+                      ↓toHide [ngx.components.UIControlVariable-1664896263421]: 
                         comment: (boolean) Set true to hide schedules
                         varValue: 
                           - xmlizable: 
                             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                             - MobileSmartSourceType: script:!parent.out.detail.checked
-                      ↓render [ngx.components.UIControlVariable-1664372760942]: 
+                      ↓render [ngx.components.UIControlVariable-1664896263424]: 
                         comment: (boolean) set true then render after change visible property each models
                         varValue: 
                           - xmlizable: 
                             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                             - MobileSmartSourceType: script:'true'
-                ↓Label [ngx.components.UIDynamicElement-1664288283626]: 
+                ↓Label [ngx.components.UIDynamicElement-1664896263427]: 
                   beanData: '{"ionBean":"Label"}'
                   tagName: ion-label
-                  ↓Text [ngx.components.UIText-1664288283629]: 
+                  ↓Text [ngx.components.UIText-1664896263430]: 
                     textValue: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                        - MobileSmartSourceType: source:{"filter":"Iteration","project":"oneTask","input":"","model":{"data":[{"priority":1664288283614}],"path":"?.name","prefix":"","suffix":"","custom":"","useCustom":false}}
-                  ↓Style [ngx.components.UIStyle-1664288283632]: 
+                        - MobileSmartSourceType: source:{"filter":"Iteration","project":"oneTask","input":"","model":{"data":[{"priority":1664896263397}],"path":"?.name","prefix":"","suffix":"","custom":"","useCustom":false}}
+                  ↓Style [ngx.components.UIStyle-1664896263433]: 
                     styleContent: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
@@ -1290,13 +1369,13 @@ title: First page
                             //--color	//Color of the label
                             padding-left: 20px;
                             '
-                ↓ButtonSet [ngx.components.UIDynamicElement-1664288283635]: 
+                ↓ButtonSet [ngx.components.UIDynamicElement-1664896263436]: 
                   beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
                   tagName: ion-buttons
-                  ↓Icon [ngx.components.UIDynamicElement-1664288283638]: 
+                  ↓Icon [ngx.components.UIDynamicElement-1664896263439]: 
                     beanData: '{"ionBean":"Icon","IconName":"plain:ellipsis-vertical"}'
                     tagName: ion-icon
-                ↓Style [ngx.components.UIStyle-1664288283641]: 
+                ↓Style [ngx.components.UIStyle-1664896263442]: 
                   styleContent: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
@@ -1348,21 +1427,21 @@ title: First page
                           //--transition	//Transition of the item
                           
                           '
-      ↓colTuiCalendar [ngx.components.UIDynamicElement-1660139866220]: 
+      ↓colTuiCalendar [ngx.components.UIDynamicElement-1664896263445]: 
         beanData: '{"ionBean":"GridCol"}'
         tagName: ion-col
-        ↓UseSharedComponent [ngx.components.UIUseShared-1660134984416]: 
-          identifier: calendar
+        ↓UseSharedComponent [ngx.components.UIUseShared-1664896263448]: 
+          identifier: calendarCustomPopup
           sharedcomponent: c8oprj_lib_tui.Application.NgxApp.tui_calendar
-          ↓containerId [ngx.components.UIUseVariable-1660315771687]: 
+          ↓containerId [ngx.components.UIUseVariable-1664896263451]: 
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: script:'calendar'
-          ↓Event [ngx.components.UIControlEvent-1662996203280]: 
+                - MobileSmartSourceType: script:'calendarCustomPopup'
+          ↓Event [ngx.components.UIControlEvent-1664896263454]: 
             attrName: (beforeCreateSchedule)
             eventName: beforeCreateSchedule
-            ↓prepareScheduleObject [ngx.components.UICustomAction-1662996212080]: 
+            ↓prepareScheduleObject [ngx.components.UICustomAction-1664896263457]: 
               actionValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
@@ -1379,7 +1458,10 @@ title: First page
                       	    // var guide = event.guide;
                       	    var title = event.title;
                       	    var calendarId = event.calendarId;
+                      	    var triggerEventName = event.triggerEventName;
                       	    var schedule;
+                      	    
+                      	    console.log(event.guide.guideElement)
                       	    
                       //	    schedule = {
                       //			id: '''',
@@ -1437,47 +1519,48 @@ title: First page
                       			state: state // The schedule''s state (''busy'', ''free'')
                       		}
                       		
-                      		console.log(schedule.start)
-                      		console.log(schedule.end)
                       		console.log("c8o event beforeCreateSchedule", vars.event)
                       		console.log(schedule)
                       		resolve(schedule);
                       '
-              comment: Enable if useCreationPopup = true
               isEnabled: false
-              ↓event [ngx.components.UIControlVariable-1662996222341]: 
+              ↓event [ngx.components.UIControlVariable-1664896263460]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:parent.out
-              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1663767225124]: 
+              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263463]: 
                 beanData: '{"ionBean":"InvokeAction"}'
+                isEnabled: false
                 stack: c8oprj_lib_tui.Application.NgxApp.createSchedules
-                ↓identifier [ngx.components.UIControlVariable-1663767237652]: 
+                ↓identifier [ngx.components.UIControlVariable-1664896263466]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'calendar'
-                ↓silent [ngx.components.UIControlVariable-1663767237654]: 
+                ↓silent [ngx.components.UIControlVariable-1664896263469]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:''
-                ↓schedules [ngx.components.UIControlVariable-1663767237656]: 
+                ↓schedules [ngx.components.UIControlVariable-1664896263472]: 
                   comment: array of object
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:[parent.out]
-                ↓CallSequence [ngx.components.UIDynamicAction-1663767276715]: 
+                ↓CallSequence [ngx.components.UIDynamicAction-1664896263475]: 
                   beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.addSchedule"}'
-                  ↓schedule [ngx.components.UIControlVariable-1663767287639]: 
+                  ↓schedule [ngx.components.UIControlVariable-1664896263478]: 
                     comment: new variable
                     varValue: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                         - MobileSmartSourceType: script:JSON.stringify(stack['prepareScheduleObject'].out)
-            ↓ModalPage [ngx.components.UIDynamicAction-1664971707724]: 
+              ↓Popover [ngx.components.UIDynamicAction-1664896263481]: 
+                beanData: '{"ionBean":"PopoverAction","page":"plain:c8oprj_lib_tui.Application.NgxApp.ModalCreateCalendar"}'
+                isEnabled: false
+            ↓ModalPage [ngx.components.UIDynamicAction-1664896263484]: 
               beanData: |
                 '{
                  "ionBean": "ModalAction",
@@ -1486,51 +1569,16 @@ title: First page
                  "blockWhileDisplayed": "plain:true",
                  "cssClass": "plain:modal50"
                 }'
-              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1665050971929]: 
-                beanData: '{"ionBean":"InvokeAction"}'
-                stack: c8oprj_lib_tui.Application.NgxApp.createSchedules
-                ↓identifier [ngx.components.UIControlVariable-1665050971932]: 
-                  varValue: 
-                    - xmlizable: 
-                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                      - MobileSmartSourceType: script:'calendar'
-                ↓silent [ngx.components.UIControlVariable-1665050971935]: 
-                  varValue: 
-                    - xmlizable: 
-                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                      - MobileSmartSourceType: script:''
-                ↓schedules [ngx.components.UIControlVariable-1665050971938]: 
-                  comment: array of object
-                  varValue: 
-                    - xmlizable: 
-                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                      - MobileSmartSourceType: script:[parent.out.data]
-              ↓CustomAction [ngx.components.UICustomAction-1665059535790]: 
-                actionValue: 
-                  - xmlizable: 
-                    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
-                    - com.twinsoft.convertigo.beans.common.FormatedContent: 
-                      →: |
-                        '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
-                        		console.log(vars.d)
-                        		resolve();
-                        '
-                isEnabled: false
-                ↓d [ngx.components.UIControlVariable-1665059546288]: 
-                  varValue: 
-                    - xmlizable: 
-                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                      - MobileSmartSourceType: script:parent.out.data
-          ↓Event1 [ngx.components.UIControlEvent-1663747624749]: 
+          ↓Event1 [ngx.components.UIControlEvent-1664896263487]: 
             attrName: (afterRenderSchedule)
             eventName: afterRenderSchedule
-          ↓Event2 [ngx.components.UIControlEvent-1663747624752]: 
+          ↓Event2 [ngx.components.UIControlEvent-1664896263490]: 
             attrName: (beforeDeleteSchedule)
             eventName: beforeDeleteSchedule
-          ↓Event3 [ngx.components.UIControlEvent-1663747624754]: 
+          ↓Event3 [ngx.components.UIControlEvent-1664896263493]: 
             attrName: (beforeUpdateSchedule)
             eventName: beforeUpdateSchedule
-            ↓prepareObjectForUpdate [ngx.components.UICustomAction-1663747633421]: 
+            ↓prepareObjectForUpdate [ngx.components.UICustomAction-1664896263496]: 
               actionValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
@@ -1548,120 +1596,128 @@ title: First page
                       		console.log(event);
                       		resolve(event);
                       '
-              ↓event [ngx.components.UIControlVariable-1663747640381]: 
+              ↓event [ngx.components.UIControlVariable-1664896263499]: 
                 varValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:parent.out
-              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1663756179370]: 
+              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263502]: 
                 beanData: '{"ionBean":"InvokeAction"}'
                 stack: c8oprj_lib_tui.Application.NgxApp.updateSchedule
-                ↓identifier [ngx.components.UIControlVariable-1663756194959]: 
+                ↓identifier [ngx.components.UIControlVariable-1664896263505]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:'calendar'
-                ↓scheduleId [ngx.components.UIControlVariable-1663756194961]: 
+                ↓scheduleId [ngx.components.UIControlVariable-1664896263508]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:parent.out.schedule.id
-                ↓calendarId [ngx.components.UIControlVariable-1663756194963]: 
+                ↓calendarId [ngx.components.UIControlVariable-1664896263511]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:parent.out.schedule.calendarId
-                ↓changes [ngx.components.UIControlVariable-1663756194965]: 
+                ↓changes [ngx.components.UIControlVariable-1664896263514]: 
                   comment: object of changes
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:parent.out.changes
-                ↓silent [ngx.components.UIControlVariable-1663756194967]: 
+                ↓silent [ngx.components.UIControlVariable-1664896263517]: 
                   varValue: 
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:''
-                ↓CallSequence [ngx.components.UIDynamicAction-1663772528321]: 
+                ↓CallSequence [ngx.components.UIDynamicAction-1664896263520]: 
                   beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.updateSchedule"}'
-                  ↓schedule [ngx.components.UIControlVariable-1663772555753]: 
+                  ↓schedule [ngx.components.UIControlVariable-1664896263523]: 
                     comment: new variable
                     varValue: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                         - MobileSmartSourceType: script:JSON.stringify(stack['prepareObjectForUpdate'].out.schedule)
-          ↓locale [ngx.components.UIUseVariable-1663749701684]: 
+          ↓locale [ngx.components.UIUseVariable-1664896263526]: 
             comment: use for dates / week days names
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: script:this.lang
-          ↓Event4 [ngx.components.UIControlEvent-1664200659234]: 
+          ↓Event4 [ngx.components.UIControlEvent-1664896263529]: 
             attrName: (clickSchedule)
             eventName: clickSchedule
-            ↓ModalPage [ngx.components.UIDynamicAction-1665062429827]: 
-              beanData: |
-                '{
-                 "ionBean": "ModalAction",
-                 "page": "plain:c8oprj_lib_tui.Application.NgxApp.ModalViewSchedule",
-                 "data": "script:parent.out",
-                 "cssClass": "plain:modal50"
-                }'
-          ↓Event5 [ngx.components.UIControlEvent-1664206475945]: 
+            ↓CustomAction [ngx.components.UICustomAction-1664896263532]: 
+              actionValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                  - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                    →: |
+                      '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+                      		console.log("event", event)
+                      		console.log(vars.event)
+                      		resolve();
+                      '
+              ↓event [ngx.components.UIControlVariable-1664896263535]: 
+                varValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                    - MobileSmartSourceType: script:parent.out
+          ↓Event5 [ngx.components.UIControlEvent-1664896263538]: 
             attrName: (clickDayname)
             eventName: clickDayname
-          ↓Event6 [ngx.components.UIControlEvent-1664206475947]: 
+          ↓Event6 [ngx.components.UIControlEvent-1664896263541]: 
             attrName: (clickMore)
             eventName: clickMore
-          ↓Event7 [ngx.components.UIControlEvent-1664206475949]: 
+          ↓Event7 [ngx.components.UIControlEvent-1664896263544]: 
             attrName: (clickTimezonesCollapseBtn)
             eventName: clickTimezonesCollapseBtn
-          ↓calendars [ngx.components.UIUseVariable-1664370845040]: 
+          ↓calendars [ngx.components.UIUseVariable-1664896263547]: 
             comment: Array of objects, list of calendars
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: source:{"filter":"Global","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.calendars","prefix":"","suffix":"","custom":"","useCustom":false}}
-          ↓view [ngx.components.UIUseVariable-1664376525398]: 
+          ↓view [ngx.components.UIUseVariable-1664896263550]: 
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: script:this.view
-          ↓workWeek [ngx.components.UIUseVariable-1664377883603]: 
+          ↓workWeek [ngx.components.UIUseVariable-1664896263553]: 
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: script:this.workWeek
-          ↓hourStart [ngx.components.UIUseVariable-1664378486805]: 
+          ↓hourStart [ngx.components.UIUseVariable-1664896263556]: 
             comment: Number, can limit of render hour start in daily / weekly view
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: script:9
-          ↓hourEnd [ngx.components.UIUseVariable-1664378486807]: 
+          ↓hourEnd [ngx.components.UIUseVariable-1664896263559]: 
             comment: Number, can limit of render hour end in daily / weekly view
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: script:24
-          ↓startDayOfWeek [ngx.components.UIUseVariable-1664379618275]: 
+          ↓startDayOfWeek [ngx.components.UIUseVariable-1664896263562]: 
             comment: Number between 0 and 7, 0 = Sunday. The start day of week in month view
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: script:1
-          ↓useCreationPopup [ngx.components.UIUseVariable-1664871978329]: 
+          ↓useCreationPopup [ngx.components.UIUseVariable-1664896263565]: 
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: script:'false'
-          ↓useDetailPopup [ngx.components.UIUseVariable-1664895407560]: 
+          ↓useDetailPopup [ngx.components.UIUseVariable-1664896263568]: 
             comment: (boolean) Whether use default detail popup or not. The default value is false.
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                 - MobileSmartSourceType: script:'false'
-      ↓Style [ngx.components.UIStyle-1660141591135]: 
+      ↓Style [ngx.components.UIStyle-1664896263571]: 
         styleContent: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
@@ -1669,405 +1725,3 @@ title: First page
               →: |
                 '	height: 50% !important;
                 '
-    ↓UseSharedComponent [ngx.components.UIUseShared-1664896747244]: 
-      identifier: calendarCustomPopup
-      isEnabled: false
-      sharedcomponent: c8oprj_lib_tui.Application.NgxApp.tui_calendar
-      ↓containerId [ngx.components.UIUseVariable-1664896747247]: 
-        varValue: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: script:'calendarCustomPopup'
-      ↓Event [ngx.components.UIControlEvent-1664896747250]: 
-        attrName: (beforeCreateSchedule)
-        eventName: beforeCreateSchedule
-        ↓prepareScheduleObject [ngx.components.UICustomAction-1664896747253]: 
-          actionValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
-              - com.twinsoft.convertigo.beans.common.FormatedContent: 
-                →: |
-                  '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
-                  		var event = vars.event;
-                  		
-                  		var startTime = event.start._date;
-                  	    var endTime = event.end._date;
-                  	    var isAllDay = event.isAllDay;
-                  	    var location = event.location;
-                  	    var state = event.state;
-                  	    // var guide = event.guide;
-                  	    var title = event.title;
-                  	    var calendarId = event.calendarId;
-                  	    var triggerEventName = event.triggerEventName;
-                  	    var schedule;
-                  	    
-                  	    console.log(event.guide.guideElement)
-                  	    
-                  //	    schedule = {
-                  //			id: '''',
-                  //			calendarId: '''',
-                  //			title: title,
-                  //			body: '''',
-                  //			start: startTime,
-                  //			endTime: endTime,
-                  //			goingDuration: '''', 
-                  //			comingDuration: '''', 
-                  //			isAllDay: isAllDay,
-                  //			category: '''',
-                  //			dueDateClass: '''',
-                  //			location: location,
-                  //			attendees: [],
-                  //			recurrenceRule: '''', 
-                  //			isPending: '''', // boolean
-                  //			isFocused: '''', // boolean
-                  //			isVisible: '''', // boolean
-                  //			isReadOnly: '''', // boolean
-                  //			color: '''', // The schedule text color
-                  //			bgColor: '''', // The schedule background color
-                  //			dragBgColor: '''', // The schedule background color when dragging it
-                  //			borderColor: '''', // The schedule left border color
-                  //			customStyle: '''', // The schedule''s custom css class
-                  //			raw: '''', // The user data
-                  //			state: state // The schedule''s state (''busy'', ''free'')
-                  //		}
-                  
-                  		schedule = {
-                  			id: ''schedule_'' + title,
-                  			calendarId: calendarId,
-                  			title: title,
-                  			body: '''',
-                  			start: startTime,
-                  			end: endTime,
-                  //			goingDuration: '''', 
-                  //			comingDuration: '''', 
-                  			isAllDay: isAllDay,
-                  			category: ''time'',
-                  			dueDateClass: '''',
-                  			location: location,
-                  //			attendees: [],
-                  //			recurrenceRule: '''', 
-                  //			isPending: '''', // boolean
-                  //			isFocused: '''', // boolean
-                  //			isVisible: '''', // boolean
-                  //			isReadOnly: '''', // boolean
-                  //			color: '''', // The schedule text color
-                  //			bgColor: '''', // The schedule background color
-                  //			dragBgColor: '''', // The schedule background color when dragging it
-                  //			borderColor: '''', // The schedule left border color
-                  //			customStyle: '''', // The schedule''s custom css class
-                  //			raw: '''', // The user data
-                  			state: state // The schedule''s state (''busy'', ''free'')
-                  		}
-                  		
-                  		console.log("c8o event beforeCreateSchedule", vars.event)
-                  		console.log(schedule)
-                  		resolve(schedule);
-                  '
-          isEnabled: false
-          ↓event [ngx.components.UIControlVariable-1664896747256]: 
-            varValue: 
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: script:parent.out
-          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896747259]: 
-            beanData: '{"ionBean":"InvokeAction"}'
-            isEnabled: false
-            stack: c8oprj_lib_tui.Application.NgxApp.createSchedules
-            ↓identifier [ngx.components.UIControlVariable-1664896747262]: 
-              varValue: 
-                - xmlizable: 
-                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                  - MobileSmartSourceType: script:'calendar'
-            ↓silent [ngx.components.UIControlVariable-1664896747265]: 
-              varValue: 
-                - xmlizable: 
-                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                  - MobileSmartSourceType: script:''
-            ↓schedules [ngx.components.UIControlVariable-1664896747268]: 
-              comment: array of object
-              varValue: 
-                - xmlizable: 
-                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                  - MobileSmartSourceType: script:[parent.out]
-            ↓CallSequence [ngx.components.UIDynamicAction-1664896747271]: 
-              beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.addSchedule"}'
-              ↓schedule [ngx.components.UIControlVariable-1664896747274]: 
-                comment: new variable
-                varValue: 
-                  - xmlizable: 
-                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                    - MobileSmartSourceType: script:JSON.stringify(stack['prepareScheduleObject'].out)
-          ↓Popover [ngx.components.UIDynamicAction-1664896747277]: 
-            beanData: '{"ionBean":"PopoverAction","page":"plain:c8oprj_lib_tui.Application.NgxApp.ModalCreateCalendar"}'
-            isEnabled: false
-        ↓ModalPage [ngx.components.UIDynamicAction-1664896747280]: 
-          beanData: |
-            '{
-             "ionBean": "ModalAction",
-             "page": "plain:c8oprj_lib_tui.Application.NgxApp.ModalCreateSchedule",
-             "data": "script:parent.out",
-             "blockWhileDisplayed": "plain:true",
-             "cssClass": "plain:modal50"
-            }'
-      ↓Event1 [ngx.components.UIControlEvent-1664896747283]: 
-        attrName: (afterRenderSchedule)
-        eventName: afterRenderSchedule
-      ↓Event2 [ngx.components.UIControlEvent-1664896747286]: 
-        attrName: (beforeDeleteSchedule)
-        eventName: beforeDeleteSchedule
-      ↓Event3 [ngx.components.UIControlEvent-1664896747289]: 
-        attrName: (beforeUpdateSchedule)
-        eventName: beforeUpdateSchedule
-        ↓prepareObjectForUpdate [ngx.components.UICustomAction-1664896747292]: 
-          actionValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
-              - com.twinsoft.convertigo.beans.common.FormatedContent: 
-                →: |
-                  '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
-                  		var event = vars.event;
-                  		if(event.schedule.start != undefined)
-                  			event.schedule.start = event.schedule.start._date
-                  		
-                  		if(event.schedule.end != undefined)
-                  			event.schedule.end = event.schedule.end._date
-                  			
-                  		console.log("updateSchedule")
-                  		console.log(event);
-                  		resolve(event);
-                  '
-          ↓event [ngx.components.UIControlVariable-1664896747295]: 
-            varValue: 
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: script:parent.out
-          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896747298]: 
-            beanData: '{"ionBean":"InvokeAction"}'
-            stack: c8oprj_lib_tui.Application.NgxApp.updateSchedule
-            ↓identifier [ngx.components.UIControlVariable-1664896747301]: 
-              varValue: 
-                - xmlizable: 
-                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                  - MobileSmartSourceType: script:'calendar'
-            ↓scheduleId [ngx.components.UIControlVariable-1664896747304]: 
-              varValue: 
-                - xmlizable: 
-                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                  - MobileSmartSourceType: script:parent.out.schedule.id
-            ↓calendarId [ngx.components.UIControlVariable-1664896747307]: 
-              varValue: 
-                - xmlizable: 
-                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                  - MobileSmartSourceType: script:parent.out.schedule.calendarId
-            ↓changes [ngx.components.UIControlVariable-1664896747310]: 
-              comment: object of changes
-              varValue: 
-                - xmlizable: 
-                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                  - MobileSmartSourceType: script:parent.out.changes
-            ↓silent [ngx.components.UIControlVariable-1664896747313]: 
-              varValue: 
-                - xmlizable: 
-                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                  - MobileSmartSourceType: script:''
-            ↓CallSequence [ngx.components.UIDynamicAction-1664896747316]: 
-              beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.updateSchedule"}'
-              ↓schedule [ngx.components.UIControlVariable-1664896747319]: 
-                comment: new variable
-                varValue: 
-                  - xmlizable: 
-                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                    - MobileSmartSourceType: script:JSON.stringify(stack['prepareObjectForUpdate'].out.schedule)
-      ↓locale [ngx.components.UIUseVariable-1664896747322]: 
-        comment: use for dates / week days names
-        varValue: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: script:this.lang
-      ↓Event4 [ngx.components.UIControlEvent-1664896747325]: 
-        attrName: (clickSchedule)
-        eventName: clickSchedule
-        ↓CustomAction [ngx.components.UICustomAction-1664896747328]: 
-          actionValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
-              - com.twinsoft.convertigo.beans.common.FormatedContent: 
-                →: |
-                  '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
-                  		console.log("event", event)
-                  		console.log(vars.event)
-                  		resolve();
-                  '
-          ↓event [ngx.components.UIControlVariable-1664896747331]: 
-            varValue: 
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: script:parent.out
-      ↓Event5 [ngx.components.UIControlEvent-1664896747334]: 
-        attrName: (clickDayname)
-        eventName: clickDayname
-      ↓Event6 [ngx.components.UIControlEvent-1664896747337]: 
-        attrName: (clickMore)
-        eventName: clickMore
-      ↓Event7 [ngx.components.UIControlEvent-1664896747340]: 
-        attrName: (clickTimezonesCollapseBtn)
-        eventName: clickTimezonesCollapseBtn
-      ↓calendars [ngx.components.UIUseVariable-1664896747343]: 
-        comment: Array of objects, list of calendars
-        varValue: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: source:{"filter":"Global","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.calendars","prefix":"","suffix":"","custom":"","useCustom":false}}
-      ↓view [ngx.components.UIUseVariable-1664896747346]: 
-        varValue: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: script:this.view
-      ↓workWeek [ngx.components.UIUseVariable-1664896747349]: 
-        varValue: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: script:this.workWeek
-      ↓hourStart [ngx.components.UIUseVariable-1664896747352]: 
-        comment: Number, can limit of render hour start in daily / weekly view
-        varValue: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: script:9
-      ↓hourEnd [ngx.components.UIUseVariable-1664896747355]: 
-        comment: Number, can limit of render hour end in daily / weekly view
-        varValue: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: script:24
-      ↓startDayOfWeek [ngx.components.UIUseVariable-1664896747358]: 
-        comment: Number between 0 and 7, 0 = Sunday. The start day of week in month view
-        varValue: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: script:1
-      ↓useCreationPopup [ngx.components.UIUseVariable-1664896747361]: 
-        varValue: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: script:'false'
-      ↓useDetailPopup [ngx.components.UIUseVariable-1664896747364]: 
-        comment: (boolean) Whether use default detail popup or not. The default value is false.
-        varValue: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: script:'false'
-↓Footer [ngx.components.UIDynamicElement-1491634242460]: 
-  beanData: '{"ionBean":"Footer"}'
-  comment: Page footer
-  isEnabled: false
-  tagName: ion-footer
-  ↓ToolBar [ngx.components.UIDynamicElement-1491634317538]: 
-    beanData: '{"ionBean":"ToolBar"}'
-    tagName: ion-toolbar
-    ↓ButtonSet [ngx.components.UIDynamicElement-1588170246138]: 
-      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:start"}'
-      tagName: ion-buttons
-      ↓Button1 [ngx.components.UIDynamicElement-1491634332730]: 
-        beanData: '{"ionBean":"Button"}'
-        tagName: ion-button
-        ↓Text [ngx.components.UIText-1491634340354]: 
-          textValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:Action 1
-    ↓ButtonSet1 [ngx.components.UIDynamicElement-1588170269871]: 
-      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
-      tagName: ion-buttons
-      ↓Button2 [ngx.components.UIDynamicElement-1491634376874]: 
-        beanData: '{"ionBean":"Button"}'
-        tagName: ion-button
-        ↓Text [ngx.components.UIText-1491634383107]: 
-          textValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:Action 2
-↓PageEvent [ngx.components.UIPageEvent-1660222811465]: 
-  ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1660222820248]: 
-    beanData: '{"ionBean":"InvokeAction"}'
-    stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeStart
-    ↓SetGlobal [ngx.components.UIDynamicAction-1660222833626]: 
-      beanData: |
-        '{
-         "ionBean": "SetGlobalAction",
-         "Property": "plain:dateRangeStart",
-         "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1660222820248}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
-        }'
-    ↓identifier [ngx.components.UIControlVariable-1662992882529]: 
-      varValue: 
-        - xmlizable: 
-          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-          - MobileSmartSourceType: script:'calendar'
-  ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1660222826805]: 
-    beanData: '{"ionBean":"InvokeAction"}'
-    stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeEnd
-    ↓SetGlobal [ngx.components.UIDynamicAction-1660222862005]: 
-      beanData: |
-        '{
-         "ionBean": "SetGlobalAction",
-         "Property": "plain:dateRangeEnd",
-         "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1660222826805}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
-        }'
-    ↓identifier [ngx.components.UIControlVariable-1662993023548]: 
-      varValue: 
-        - xmlizable: 
-          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-          - MobileSmartSourceType: script:'calendar'
-  ↓CallSequence [ngx.components.UIDynamicAction-1663753246296]: 
-    beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.getCalendars"}'
-    ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1663753632005]: 
-      beanData: '{"ionBean":"InvokeAction"}'
-      isEnabled: false
-      stack: c8oprj_lib_tui.Application.NgxApp.setCalendars
-      ↓identifier [ngx.components.UIControlVariable-1663753641364]: 
-        varValue: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: script:'calendar'
-      ↓calendars [ngx.components.UIControlVariable-1663753641366]: 
-        comment: Array of objects
-        varValue: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: source:{"filter":"Sequence","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sequence":"c8oprj_lib_tui.getCalendars","marker":""}],"path":"?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
-    ↓calendars [ngx.components.UIDynamicAction-1664895457166]: 
-      beanData: |
-        '{
-         "ionBean": "SetGlobalAction",
-         "Property": "plain:calendars",
-         "Value": "source:{\"filter\":\"Sequence\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"sequence\":\"c8oprj_lib_tui.getCalendars\",\"marker\":\"\"}],\"path\":\"?.value\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
-        }'
-      ↓CallSequence [ngx.components.UIDynamicAction-1663753855028]: 
-        beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.getSchedules"}'
-        ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1663753872925]: 
-          beanData: '{"ionBean":"InvokeAction"}'
-          stack: c8oprj_lib_tui.Application.NgxApp.createSchedules
-          ↓identifier [ngx.components.UIControlVariable-1663753918361]: 
-            varValue: 
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: script:'calendar'
-          ↓silent [ngx.components.UIControlVariable-1663753918363]: 
-            varValue: 
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: script:''
-          ↓schedules [ngx.components.UIControlVariable-1663753918365]: 
-            comment: array of object
-            varValue: 
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: source:{"filter":"Sequence","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sequence":"c8oprj_lib_tui.getSchedules","marker":""}],"path":"?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
-          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664294253305]: 
-            beanData: '{"ionBean":"InvokeAction"}'
-            stack: c8oprj_lib_tui.Application.NgxApp.scrollToNow
-            ↓identifier [ngx.components.UIControlVariable-1664294264196]: 
-              varValue: 
-                - xmlizable: 
-                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                  - MobileSmartSourceType: script:'calendar'

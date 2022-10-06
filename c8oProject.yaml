@@ -7,7 +7,8 @@
     
   corsOrigin: =Origin
   version: 0.0.17
-  ↓APIGouv [connectors.HttpConnector]: 🗏 connectors/APIGouv.yaml
+  ↓GouvDaysOff [connectors.HttpConnector]: 🗏 connectors/GouvDaysOff.yaml
+  ↓GouvHolidays [connectors.HttpConnector]: 🗏 connectors/GouvHolidays.yaml
   ↓tui_calendar [connectors.FullSyncConnector]: 🗏 connectors/tui_calendar.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓addCalendar [sequences.GenericSequence]: 🗏 sequences/addCalendar.yaml

@@ -5,7 +5,8 @@ scriptContent:
     - com.twinsoft.convertigo.beans.common.FormatedContent: 
       →: |
         '/*Begin_c8o_CompImport*/
-        import Calendar from "tui-calendar"
+        import Calendar from "tui-calendar";
+        import ''moment-timezone'';
         /*End_c8o_CompImport*/
         /*Begin_c8o_CompDeclaration*/
         	public calendar: Calendar;
@@ -149,9 +150,10 @@ scriptContent:
         				
         				case "useCreationPopup": {
         					if(!changes[key].firstChange) {
-        						this.calendar.setOptions({
-        							useCreationPopup: changes[key].currentValue 
-        						})
+        						var options = this.calendar.getOptions();
+        						console.log(options)
+        						options.useCreationPopup = changes[key].currentValue 
+        						this.calendar.setOptions(options)
         					}
         					break;
         				} // end case ''useCreationPopup''
@@ -322,6 +324,13 @@ scriptContent:
               - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
               - com.twinsoft.convertigo.beans.common.XMLVector: 
                 - java.lang.String: 
+                  - ↑value: moment-timezone
+                - java.lang.String: 
+                  - ↑value: 0.5.37
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+              - com.twinsoft.convertigo.beans.common.XMLVector: 
+                - java.lang.String: 
                   - ↑value: moment
                 - java.lang.String: 
                   - ↑value: 2.29.4
@@ -358,6 +367,8 @@ scriptContent:
                 		
                 		var weekdays = Moment.localeData(locale).weekdays()
                 		var months = Moment.localeData(locale).months();
+                		
+                		console.log(Moment.tz.names())
                 		
                 		var calendar = new Calendar("#"+vars.containerId, {
                 		   	defaultView: view, // set ''week'' or ''day''
@@ -399,7 +410,30 @@ scriptContent:
                 			    }
                 			},
                 			
-                			calendars: calendars
+                			calendars: calendars,
+                //			 timezone: {
+                //			    zones: [
+                //			      {
+                //			        timezoneName: ''Etc/GMT+2'',
+                //			        displayLabel: ''GMT+00:00'',
+                //			        tooltip: ''Paris''
+                //			      },
+                //			      {
+                //			        timezoneName: ''America/New_York'',
+                //			        displayLabel: ''GMT-05:00'',
+                //			        tooltip: ''New York'',
+                //			      }
+                //			    ],
+                //			    offsetCalculator: function(timezoneName, timestamp){
+                //			      // matches ''getTimezoneOffset()'' of Date API
+                //			      // e.g. +09:00 => -540, -04:00 => 240
+                //			      // return Moment.tz.zone(timezoneName).utcOffset(timestamp);
+                //			      console.log("offsetCalculator")
+                //			      console.log(timestamp)
+                //			      console.log(timezoneName)
+                //			      return Moment.tz(timestamp, timezoneName).utcOffset()
+                //			    },
+                //			  }
                 		 })
                 		 
                  		this.setCalendar(calendar);

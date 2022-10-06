@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:c8oprj_lib_tui_ns="http://www.convertigo.com/convertigo/projects/c8oprj_lib_tui" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.convertigo.com/convertigo/projects/c8oprj_lib_tui">
-    <xsd:element name="APIGouv__daysOff" type="c8oprj_lib_tui_ns:APIGouv__daysOffRequestData">
+    <xsd:element name="GouvDaysOff__daysOff" type="c8oprj_lib_tui_ns:GouvDaysOff__daysOffRequestData">
         <xsd:annotation/>
     </xsd:element>
-    <xsd:element name="APIGouv__daysOffResponse">
+    <xsd:element name="GouvDaysOff__daysOffResponse">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="response" type="c8oprj_lib_tui_ns:APIGouv__daysOffResponseData"/>
+                <xsd:element name="response" type="c8oprj_lib_tui_ns:GouvDaysOff__daysOffResponseData"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
-    <xsd:complexType name="APIGouv__daysOffResponseType">
+    <xsd:complexType name="GouvDaysOff__daysOffResponseType">
         <xsd:sequence>
-            <xsd:element name="document" type="c8oprj_lib_tui_ns:APIGouv__daysOffResponseData"/>
+            <xsd:element name="document" type="c8oprj_lib_tui_ns:GouvDaysOff__daysOffResponseData"/>
         </xsd:sequence>
     </xsd:complexType>
-    <xsd:complexType name="APIGouv__daysOffRequestData">
+    <xsd:complexType name="GouvDaysOff__daysOffRequestData">
         <xsd:sequence>
             <xsd:element name="zone" type="xsd:string">
                 <xsd:annotation>
@@ -132,7 +132,7 @@
         </xsd:sequence>
         <xsd:attribute default="object" name="type" type="xsd:string"/>
     </xsd:complexType>
-    <xsd:complexType name="APIGouv__daysOffResponseData">
+    <xsd:complexType name="GouvDaysOff__daysOffResponseData">
         <xsd:sequence>
             <xsd:element minOccurs="0" name="object" type="c8oprj_lib_tui_ns:APIGouv_daysOff_document_objectType"/>
             <xsd:element minOccurs="0" name="error" type="c8oprj_lib_tui_ns:ConvertigoError"/>

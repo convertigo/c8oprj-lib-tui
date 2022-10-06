@@ -1,0 +1,29 @@
+segment: path-to-modalviewschedule
+title: Title for ModalViewSchedule
+↓Header [ngx.components.UIDynamicElement-1665050184390]: 
+  beanData: '{"ionBean":"Header"}'
+  tagName: ion-header
+  ↓ToolBar [ngx.components.UIDynamicElement-1665050184393]: 
+    beanData: '{"ionBean":"ToolBar"}'
+    tagName: ion-toolbar
+    ↓ButtonSet1 [ngx.components.UIDynamicElement-1665050184396]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
+      tagName: ion-buttons
+      ↓Button [ngx.components.UIDynamicElement-1665050184399]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: ion-button
+        ↓Event [ngx.components.UIControlEvent-1665050184402]: 
+          ↓CloseModal [ngx.components.UIDynamicAction-1665050184405]: 
+            beanData: '{"ionBean":"CloseModalAction"}'
+        ↓Icon [ngx.components.UIDynamicElement-1665050184413]: 
+          beanData: |
+            '{
+             "ionBean": "Icon",
+             "IconName": "plain:close",
+             "IonSize": "plain:large"
+            }'
+          tagName: ion-icon
+↓PageEvent [ngx.components.UIPageEvent-1665050394364]: 
+  isEnabled: false
+  ↓CallSequence [ngx.components.UIDynamicAction-1665050402784]: 
+    beanData: '{"ionBean":"CallSequenceAction"}'

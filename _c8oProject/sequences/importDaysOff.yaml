@@ -1,7 +1,7 @@
 comment: Imports french days off
 ↓Call_Transaction [steps.TransactionStep-1664268867528]: 
   output: true
-  sourceTransaction: c8oprj_lib_tui.APIGouv.daysOff
+  sourceTransaction: c8oprj_lib_tui.GouvDaysOff.daysOff
   ↓zone [variables.StepVariable-1664269281652]: 
     value: metropole
   ↓annee [variables.StepVariable-1664269281654]: 

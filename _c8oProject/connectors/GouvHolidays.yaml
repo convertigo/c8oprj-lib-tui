@@ -1,0 +1,12 @@
+https: true
+port: 443
+server: data.education.gouv.fr/api/v2/catalog/datasets
+↓Default_transaction [transactions.HttpTransaction]: 
+  ↑default: true
+↓JSON_HTTP_transaction [transactions.JsonHttpTransaction]: 
+  subDir: fr-en-calendrier-scolaire/records?select=*&where=annee_scolaire="{annee_scolaire}"
+  ↓Test_Case [core.TestCase]: 
+    ↓annee_scolaire [variables.TestCaseVariable-1664899075412]: 
+      value: 2022-2023
+  ↓annee_scolaire [variables.RequestableHttpVariable-1664898825767]: 
+    httpMethod: POST
