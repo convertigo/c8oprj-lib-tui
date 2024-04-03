@@ -24,24 +24,24 @@
     varValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1663688237548}],"path":"?.in?.vars?.identifier","prefix":"","suffix":"","custom":"","useCustom":false}}
+        - MobileSmartSourceType: source:{"filter":"Action","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1663688237548}],"path":"?.in?.vars?.identifier","prefix":"","suffix":"","custom":"","useCustom":false}}
   ↓scheduleId [ngx.components.UIControlVariable-1663688470150]: 
     varValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1663688237548}],"path":"?.in?.vars?.scheduleId","prefix":"","suffix":"","custom":"","useCustom":false}}
+        - MobileSmartSourceType: source:{"filter":"Action","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1663688237548}],"path":"?.in?.vars?.scheduleId","prefix":"","suffix":"","custom":"","useCustom":false}}
   ↓calendarId [ngx.components.UIControlVariable-1663688471118]: 
     varValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1663688237548}],"path":"?.in?.vars?.calendarId","prefix":"","suffix":"","custom":"","useCustom":false}}
+        - MobileSmartSourceType: source:{"filter":"Action","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1663688237548}],"path":"?.in?.vars?.calendarId","prefix":"","suffix":"","custom":"","useCustom":false}}
   ↓changes [ngx.components.UIControlVariable-1663688472093]: 
     varValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1663688237548}],"path":"?.in?.vars?.changes","prefix":"","suffix":"","custom":"","useCustom":false}}
+        - MobileSmartSourceType: source:{"filter":"Action","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1663688237548}],"path":"?.in?.vars?.changes","prefix":"","suffix":"","custom":"","useCustom":false}}
   ↓silent [ngx.components.UIControlVariable-1663688475715]: 
     varValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1663688237548}],"path":"?.in?.vars?.silent","prefix":"","suffix":"","custom":"","useCustom":false}}
+        - MobileSmartSourceType: source:{"filter":"Action","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1663688237548}],"path":"?.in?.vars?.silent","prefix":"","suffix":"","custom":"","useCustom":false}}

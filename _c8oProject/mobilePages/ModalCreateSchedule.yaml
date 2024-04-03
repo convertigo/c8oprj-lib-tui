@@ -76,7 +76,7 @@ title: Title for ModalCreateSchedule
   beanData: '{"ionBean":"Content"}'
   tagName: ion-content
   ↓Grid [ngx.components.UIDynamicElement-1664896275496]: 
-    beanData: '{"ionBean":"Grid"}'
+    beanData: '{"ionBean":"Grid","Height":"plain:100%"}'
     tagName: ion-grid
     ↓rowContent [ngx.components.UIDynamicElement-1664896275499]: 
       beanData: '{"ionBean":"GridRow"}'
@@ -85,7 +85,7 @@ title: Title for ModalCreateSchedule
         beanData: '{"ionBean":"GridCol"}'
         tagName: ion-col
         ↓Grid [ngx.components.UIDynamicElement-1664896275505]: 
-          beanData: '{"ionBean":"Grid"}'
+          beanData: '{"ionBean":"Grid","Height":"plain:100%"}'
           tagName: ion-grid
           ↓rowInputSubject [ngx.components.UIDynamicElement-1664896275508]: 
             beanData: '{"ionBean":"GridRow","Height":"plain"}'
@@ -182,7 +182,7 @@ title: Title for ModalCreateSchedule
                     directiveSource: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                        - MobileSmartSourceType: source:{"filter":"Sequence","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sequence":"c8oprj_lib_tui.getCalendars","marker":""}],"path":"?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
+                        - MobileSmartSourceType: source:{"filter":"Sequence","project":"lib_TuiPlanner","input":"","model":{"data":[{"sequence":"lib_TuiPlanner.getCalendars","marker":""}],"path":"?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
                     ↓SelectOption [ngx.components.UIDynamicElement-1664896275550]: 
                       beanData: '{"ionBean":"SelectOption","Value":"source:{\"filter\":\"Iteration\",\"project\":\"oneTask\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896275547}],\"path\":\"?.id\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"}'
                       tagName: ion-select-option
@@ -308,7 +308,7 @@ title: Title for ModalCreateSchedule
               beanData: '{"ionBean":"GridCol","Size":"plain:11"}'
               tagName: ion-col
               ↓Grid [ngx.components.UIDynamicElement-1664896275640]: 
-                beanData: '{"ionBean":"Grid"}'
+                beanData: '{"ionBean":"Grid","Height":"plain:100%"}'
                 tagName: ion-grid
                 ↓GridRow [ngx.components.UIDynamicElement-1664896275643]: 
                   beanData: '{"ionBean":"GridRow"}'
@@ -541,7 +541,7 @@ title: Title for ModalCreateSchedule
             		resolve();
             '
   ↓CallSequence [ngx.components.UIDynamicAction-1664975095054]: 
-    beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.getCalendars"}'
+    beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_TuiPlanner.getCalendars"}'
 ↓Footer [ngx.components.UIDynamicElement-1664896275757]: 
   beanData: '{"ionBean":"Footer"}'
   tagName: ion-footer
@@ -650,7 +650,7 @@ title: Title for ModalCreateSchedule
             ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664975225914]: 
               beanData: '{"ionBean":"InvokeAction"}'
               isEnabled: false
-              stack: c8oprj_lib_tui.Application.NgxApp.createSchedules
+              stack: lib_TuiPlanner.Application.NgxApp.createSchedules
               ↓identifier [ngx.components.UIControlVariable-1664975225917]: 
                 varValue: 
                   - xmlizable: 
@@ -668,7 +668,7 @@ title: Title for ModalCreateSchedule
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:[parent.out]
             ↓CallSequence [ngx.components.UIDynamicAction-1664975225926]: 
-              beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.addSchedule"}'
+              beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_TuiPlanner.addSchedule"}'
               ↓schedule [ngx.components.UIControlVariable-1664975225929]: 
                 comment: new variable
                 varValue: 
@@ -680,7 +680,8 @@ title: Title for ModalCreateSchedule
                   '{
                    "ionBean": "ToastAction",
                    "message": "plain:Success",
-                   "position": "plain:top"
+                   "position": "plain:top",
+                   "cssClass": "plain:"
                   }'
                 ↓CloseModal [ngx.components.UIDynamicAction-1664976538516]: 
                   beanData: '{"ionBean":"CloseModalAction","data":"script:stack[''prepareScheduleObject''].out"}'

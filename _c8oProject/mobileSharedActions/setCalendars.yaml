@@ -18,9 +18,9 @@
     varValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1663687227004}],"path":"?.in?.vars?.identifier","prefix":"","suffix":"","custom":"","useCustom":false}}
+        - MobileSmartSourceType: source:{"filter":"Action","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1663687227004}],"path":"?.in?.vars?.identifier","prefix":"","suffix":"","custom":"","useCustom":false}}
   ↓calendars [ngx.components.UIControlVariable-1663687315262]: 
     varValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1663687227004}],"path":"?.in?.vars?.calendars","prefix":"","suffix":"","custom":"","useCustom":false}}
+        - MobileSmartSourceType: source:{"filter":"Action","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1663687227004}],"path":"?.in?.vars?.calendars","prefix":"","suffix":"","custom":"","useCustom":false}}

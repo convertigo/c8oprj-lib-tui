@@ -1,7 +1,7 @@
 comment: Imports french days off
 ↓Call_Transaction [steps.TransactionStep-1664268867528]: 
   output: true
-  sourceTransaction: c8oprj_lib_tui.GouvDaysOff.daysOff
+  sourceTransaction: lib_TuiPlanner.GouvDaysOff.daysOff
   ↓zone [variables.StepVariable-1664269281652]: 
     value: metropole
   ↓annee [variables.StepVariable-1664269281654]: 
@@ -56,6 +56,6 @@ comment: Imports french days off
   ↓prepareScheduleObject [steps.SimpleStep-1664282459619]: 
     expression: var schedule = JSON.stringify(schedules[index])
   ↓Call_Sequence [steps.SequenceStep-1664282190042]: 
-    sourceSequence: c8oprj_lib_tui.addSchedule
+    sourceSequence: lib_TuiPlanner.addSchedule
     ↓schedule [variables.StepVariable-1664282203811]: 
       comment: The Scedule as a stringified JSON strcuture

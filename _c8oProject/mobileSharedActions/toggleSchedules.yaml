@@ -25,19 +25,19 @@ comment: Toggle schedules' visibility by calendar ID
     varValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1664372248418}],"path":"?.in?.vars?.identifier","prefix":"","suffix":"","custom":"","useCustom":false}}
+        - MobileSmartSourceType: source:{"filter":"Action","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1664372248418}],"path":"?.in?.vars?.identifier","prefix":"","suffix":"","custom":"","useCustom":false}}
   ↓calendarId [ngx.components.UIControlVariable-1664372443971]: 
     varValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1664372248418}],"path":"?.in?.vars?.calendarId","prefix":"","suffix":"","custom":"","useCustom":false}}
+        - MobileSmartSourceType: source:{"filter":"Action","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1664372248418}],"path":"?.in?.vars?.calendarId","prefix":"","suffix":"","custom":"","useCustom":false}}
   ↓toHide [ngx.components.UIControlVariable-1664372446015]: 
     varValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1664372248418}],"path":"?.in?.vars?.toHide","prefix":"","suffix":"","custom":"","useCustom":false}}
+        - MobileSmartSourceType: source:{"filter":"Action","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1664372248418}],"path":"?.in?.vars?.toHide","prefix":"","suffix":"","custom":"","useCustom":false}}
   ↓render [ngx.components.UIControlVariable-1664372447147]: 
     varValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1664372248418}],"path":"?.in?.vars?.render","prefix":"","suffix":"","custom":"","useCustom":false}}
+        - MobileSmartSourceType: source:{"filter":"Action","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1664372248418}],"path":"?.in?.vars?.render","prefix":"","suffix":"","custom":"","useCustom":false}}

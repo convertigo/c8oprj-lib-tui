@@ -451,7 +451,7 @@ scriptContent:
                 //]);
                 
                 // this.setDateRange();
-                
+                /*
                 		this.calendar.on(''afterRenderSchedule'', function(event) {
                 			page.actionBeans.EmitEventAction(page, { event: ''afterRenderSchedule'', data: event }, {})
                 		})
@@ -485,59 +485,59 @@ scriptContent:
                 		this.calendar.on(''clickTimezonesCollapseBtn'', function(event) {
                 			page.actionBeans.EmitEventAction(page, { event: ''clickTimezonesCollapseBtn'', data: event }, {})
                 		})
-                
+                */
                 		resolve();
                 '
         ↓containerId [ngx.components.UIControlVariable-1660315727059]: 
           varValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.containerId","prefix":"","suffix":"","custom":"","useCustom":false}}
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.containerId","prefix":"","suffix":"","custom":"","useCustom":false}}
         ↓locale [ngx.components.UIControlVariable-1663749641482]: 
           varValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.locale","prefix":"","suffix":"","custom":"","useCustom":false}}
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.locale","prefix":"","suffix":"","custom":"","useCustom":false}}
         ↓calendars [ngx.components.UIControlVariable-1664378895730]: 
           varValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.calendars","prefix":"","suffix":"","custom":"","useCustom":false}}
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.calendars","prefix":"","suffix":"","custom":"","useCustom":false}}
         ↓view [ngx.components.UIControlVariable-1664378778727]: 
           varValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.view","prefix":"","suffix":"","custom":"","useCustom":false}}
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.view","prefix":"","suffix":"","custom":"","useCustom":false}}
         ↓workWeek [ngx.components.UIControlVariable-1664379032152]: 
           varValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.workWeek","prefix":"","suffix":"","custom":"","useCustom":false}}
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.workWeek","prefix":"","suffix":"","custom":"","useCustom":false}}
         ↓hourStart [ngx.components.UIControlVariable-1664379053381]: 
           varValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.hourStart","prefix":"","suffix":"","custom":"","useCustom":false}}
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.hourStart","prefix":"","suffix":"","custom":"","useCustom":false}}
         ↓hourEnd [ngx.components.UIControlVariable-1664379055047]: 
           varValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.hourEnd","prefix":"","suffix":"","custom":"","useCustom":false}}
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.hourEnd","prefix":"","suffix":"","custom":"","useCustom":false}}
         ↓startDayOfWeek [ngx.components.UIControlVariable-1664379512899]: 
           varValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.startDayOfWeek","prefix":"","suffix":"","custom":"","useCustom":false}}
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.startDayOfWeek","prefix":"","suffix":"","custom":"","useCustom":false}}
         ↓useCreationPopup [ngx.components.UIControlVariable-1664871936022]: 
           varValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.useCreationPopup","prefix":"","suffix":"","custom":"","useCustom":false}}
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.useCreationPopup","prefix":"","suffix":"","custom":"","useCustom":false}}
         ↓useDetailPopup [ngx.components.UIControlVariable-1664872159780]: 
           varValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.useDetailPopup","prefix":"","suffix":"","custom":"","useCustom":false}}
+              - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.useDetailPopup","prefix":"","suffix":"","custom":"","useCustom":false}}
 ↓tuiCalendar [ngx.components.UIStyle-1660138817946]: 
   styleContent: 
     - xmlizable: 
@@ -4769,7 +4769,7 @@ scriptContent:
     attrValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-        - MobileSmartSourceType: source:{"filter":"Shared","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.containerId","prefix":"","suffix":"","custom":"","useCustom":false}}
+        - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1660134716658,"regular":true}],"path":"?.containerId","prefix":"","suffix":"","custom":"","useCustom":false}}
   ↓Event [ngx.components.UIControlEvent-1660316747905]: 
     attrName: (beforeCreateSchedule)
     eventName: (beforeCreateSchedule)
@@ -4793,7 +4793,7 @@ scriptContent:
       beanData: |
         '{
          "ionBean": "EmitEventAction",
-         "event": "plain:c8oprj_lib_tui.Application.NgxApp.tui_calendar.beforeCreateSchedule",
+         "event": "plain:lib_TuiPlanner.Application.NgxApp.tui_calendar.beforeCreateSchedule",
          "data": "script:event"
         }'
 ↓containerId [ngx.components.UICompVariable-1660315688168]: 

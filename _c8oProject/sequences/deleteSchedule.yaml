@@ -1,7 +1,7 @@
 ↓_use_docid [steps.SimpleStep-1664294714374]: 
   expression: var _use_docid = scheduleId
 ↓Call_Transaction [steps.TransactionStep-1664294792655]: 
-  sourceTransaction: c8oprj_lib_tui.tui_calendar.deleteSchedule
+  sourceTransaction: lib_TuiPlanner.tui_calendar.deleteSchedule
   ↓_use_docid [variables.StepVariable-1664294801299]: 
     description: Document ID
 ↓scheduleId [variables.RequestableVariable-1664294629069]: 

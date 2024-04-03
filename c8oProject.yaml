@@ -1,4 +1,4 @@
-↑convertigo: 8.1.0.m006
+↑convertigo: 8.3.0.m006
 ↓lib_TuiPlanner [core.Project]: 
   comment: |
     This is the Planning component for the Convertigo Low Code Platform. This component will enable your apps to have a complete agenda like display and display several calendars. Each calendar will display their schedules on a day,week or month planning. You will be able to add, delete or move calendar schedules.
@@ -20,11 +20,8 @@
   ↓updateSchedule [sequences.GenericSequence]: 🗏 sequences/updateSchedule.yaml
   ↓CouchDb_schema [references.ImportXsdSchemaReference]: 
     urlpath: http://localhost:18080/convertigo/xsd/couchdb/CouchDb.xsd
-  ↓NgxBuilderTemplate [references.ProjectSchemaReference]: 
-    comment: ngx builder template
-    projectName: mobilebuilder_tpl_8_0_0_ngx=https://github.com/convertigo/c8oprj-mobilebuilder-tpl/archive/mobilebuilder_tpl_8_0_0_ngx.zip
-  ↓Project_reference [references.ProjectSchemaReference]: 
-    projectName: c8oprj_lib_tui
+  ↓project [references.ProjectSchemaReference]: 
+    projectName: mobilebuilder_tpl_8_1_0_ngx=https://github.com/convertigo/c8oprj-mobilebuilder-tpl/archive/mobilebuilder_tpl_8_1_0_ngx.zip
   ↓Application [core.MobileApplication]: 
     comment: Describes the mobile application global properties
     splashRemoveMode: beforeUpdate

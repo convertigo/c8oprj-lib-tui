@@ -8,7 +8,7 @@ comment: Adds a Clendar in the database
     })
     '
 ↓Call_Transaction [steps.TransactionStep-1663842227117]: 
-  sourceTransaction: c8oprj_lib_tui.tui_calendar.PostData
+  sourceTransaction: lib_TuiPlanner.tui_calendar.PostData
   ↓_use_json_base [variables.StepVariable-1663842227119]: 
     description: (string) – JSON use as a base for the document (js object). Optional
   ↓_id [variables.StepVariable-1663842227121]: 

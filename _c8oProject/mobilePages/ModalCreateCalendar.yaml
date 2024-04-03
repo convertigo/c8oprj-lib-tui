@@ -75,7 +75,12 @@ title: Title for ModalCreateCalendar
       eventName: onSubmit
       isEnabled: false
       ↓Alert [ngx.components.UIDynamicAction-1664292253109]: 
-        beanData: '{"ionBean":"AlertAction","message":"script:''formSample value is\\\\n'' + JSON.stringify(this?.formSample.value)"}'
+        beanData: |
+          '{
+           "ionBean": "AlertAction",
+           "message": "script:''formSample value is\\\\n'' + JSON.stringify(this?.formSample.value)",
+           "cssClass": "plain:"
+          }'
 ↓Footer [ngx.components.UIDynamicElement-1664292296170]: 
   beanData: '{"ionBean":"Footer"}'
   tagName: ion-footer
@@ -120,14 +125,14 @@ title: Title for ModalCreateCalendar
               varValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                  - MobileSmartSourceType: source:{"filter":"Form","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1664292253081,"identifier":"createCalendar"}],"path":"?.controls['name']?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
+                  - MobileSmartSourceType: source:{"filter":"Form","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1664292253081,"identifier":"createCalendar"}],"path":"?.controls['name']?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
             ↓color [ngx.components.UIControlVariable-1664292830287]: 
               varValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                   - MobileSmartSourceType: script:this.color
             ↓CallSequence [ngx.components.UIDynamicAction-1664293059030]: 
-              beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.addCalendar"}'
+              beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_TuiPlanner.addCalendar"}'
               ↓calendar [ngx.components.UIControlVariable-1664293066927]: 
                 comment: new variable
                 varValue: 

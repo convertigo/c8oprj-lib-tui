@@ -14,7 +14,7 @@ comment: Adds a Schedule attached to a calendar in the database
     // schedule = JSON.parse(schedule)'
 ↓Call_Transaction [steps.TransactionStep-1663765901627]: 
   output: true
-  sourceTransaction: c8oprj_lib_tui.tui_calendar.addSchedule
+  sourceTransaction: lib_TuiPlanner.tui_calendar.addSchedule
   ↓_use_json_base [variables.StepVariable-1663766836317]: 
     description: (string) – JSON use as a base for the document (js object). Optional
   ↓_id [variables.StepVariable-1663766093618]: 

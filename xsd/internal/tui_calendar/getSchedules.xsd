@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:c8oprj_lib_tui_ns="http://www.convertigo.com/convertigo/projects/c8oprj_lib_tui" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.convertigo.com/convertigo/projects/c8oprj_lib_tui">
-    <xsd:element name="tui_calendar__getSchedules" type="c8oprj_lib_tui_ns:tui_calendar__getSchedulesRequestData">
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:lib_TuiPlanner_ns="http://www.convertigo.com/convertigo/projects/lib_TuiPlanner" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.convertigo.com/convertigo/projects/lib_TuiPlanner">
+    <xsd:element name="tui_calendar__getSchedules" type="lib_TuiPlanner_ns:tui_calendar__getSchedulesRequestData">
         <xsd:annotation/>
     </xsd:element>
     <xsd:element name="tui_calendar__getSchedulesResponse">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="response" type="c8oprj_lib_tui_ns:tui_calendar__getSchedulesResponseData"/>
+                <xsd:element name="response" type="lib_TuiPlanner_ns:tui_calendar__getSchedulesResponseData"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
     <xsd:complexType name="tui_calendar__getSchedulesResponseType">
         <xsd:sequence>
-            <xsd:element name="document" type="c8oprj_lib_tui_ns:tui_calendar__getSchedulesResponseData"/>
+            <xsd:element name="document" type="lib_TuiPlanner_ns:tui_calendar__getSchedulesResponseData"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="tui_calendar__getSchedulesRequestData">
@@ -174,35 +174,35 @@
     </xsd:complexType>
     <xsd:complexType name="tui_calendar_getSchedules_document_couchdb_output_rows_item_valueType">
         <xsd:sequence>
-            <xsd:element minOccurs="0" name="id" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_idType"/>
-            <xsd:element minOccurs="0" name="calendarId" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_calendarIdType"/>
-            <xsd:element minOccurs="0" name="title" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_titleType"/>
-            <xsd:element minOccurs="0" name="body" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_bodyType"/>
-            <xsd:element minOccurs="0" name="start" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_startType"/>
-            <xsd:element minOccurs="0" name="end" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_endType"/>
-            <xsd:element minOccurs="0" name="goingDuration" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_goingDurationType"/>
-            <xsd:element minOccurs="0" name="comingDuration" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_comingDurationType"/>
-            <xsd:element minOccurs="0" name="isAllDay" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_isAllDayType"/>
-            <xsd:element minOccurs="0" name="category" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_categoryType"/>
-            <xsd:element minOccurs="0" name="dueDateClass" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_dueDateClassType"/>
-            <xsd:element minOccurs="0" name="location" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_locationType"/>
-            <xsd:element minOccurs="0" name="attendees" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_attendeesType"/>
-            <xsd:element minOccurs="0" name="recurrenceRule" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_recurrenceRuleType"/>
-            <xsd:element minOccurs="0" name="isPending" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_isPendingType"/>
+            <xsd:element minOccurs="0" name="id" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_idType"/>
+            <xsd:element minOccurs="0" name="calendarId" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_calendarIdType"/>
+            <xsd:element minOccurs="0" name="title" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_titleType"/>
+            <xsd:element minOccurs="0" name="body" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_bodyType"/>
+            <xsd:element minOccurs="0" name="start" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_startType"/>
+            <xsd:element minOccurs="0" name="end" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_endType"/>
+            <xsd:element minOccurs="0" name="goingDuration" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_goingDurationType"/>
+            <xsd:element minOccurs="0" name="comingDuration" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_comingDurationType"/>
+            <xsd:element minOccurs="0" name="isAllDay" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_isAllDayType"/>
+            <xsd:element minOccurs="0" name="category" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_categoryType"/>
+            <xsd:element minOccurs="0" name="dueDateClass" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_dueDateClassType"/>
+            <xsd:element minOccurs="0" name="location" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_locationType"/>
+            <xsd:element minOccurs="0" name="attendees" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_attendeesType"/>
+            <xsd:element minOccurs="0" name="recurrenceRule" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_recurrenceRuleType"/>
+            <xsd:element minOccurs="0" name="isPending" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_value_isPendingType"/>
         </xsd:sequence>
         <xsd:attribute default="object" name="type" type="xsd:string"/>
     </xsd:complexType>
     <xsd:complexType name="tui_calendar_getSchedules_document_couchdb_output_rows_itemType">
         <xsd:sequence>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" name="id" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_idType"/>
-            <xsd:element minOccurs="0" name="key" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_keyType"/>
-            <xsd:element minOccurs="0" name="value" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_valueType"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="id" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_idType"/>
+            <xsd:element minOccurs="0" name="key" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_keyType"/>
+            <xsd:element minOccurs="0" name="value" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rows_item_valueType"/>
         </xsd:sequence>
         <xsd:attribute default="object" name="type" type="xsd:string"/>
     </xsd:complexType>
     <xsd:complexType name="tui_calendar_getSchedules_document_couchdb_output_rowsType">
         <xsd:sequence>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" name="item" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rows_itemType"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="item" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rows_itemType"/>
         </xsd:sequence>
         <xsd:attribute name="length" type="xsd:byte"/>
         <xsd:attribute default="array" name="type" type="xsd:string"/>
@@ -284,38 +284,38 @@
     </xsd:complexType>
     <xsd:complexType name="tui_calendar_getSchedules_document_couchdb_output__c8oMeta_headersType">
         <xsd:sequence>
-            <xsd:element minOccurs="0" name="Cache_Control" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_headers_Cache_ControlType"/>
-            <xsd:element minOccurs="0" name="Content_Type" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_headers_Content_TypeType"/>
-            <xsd:element minOccurs="0" name="Date" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_headers_DateType"/>
-            <xsd:element minOccurs="0" name="Server" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_headers_ServerType"/>
-            <xsd:element minOccurs="0" name="Transfer_Encoding" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_headers_Transfer_EncodingType"/>
-            <xsd:element minOccurs="0" name="X_Couch_Request_ID" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_headers_X_Couch_Request_IDType"/>
-            <xsd:element minOccurs="0" name="X_CouchDB_Body_Time" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_headers_X_CouchDB_Body_TimeType"/>
+            <xsd:element minOccurs="0" name="Cache_Control" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_headers_Cache_ControlType"/>
+            <xsd:element minOccurs="0" name="Content_Type" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_headers_Content_TypeType"/>
+            <xsd:element minOccurs="0" name="Date" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_headers_DateType"/>
+            <xsd:element minOccurs="0" name="Server" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_headers_ServerType"/>
+            <xsd:element minOccurs="0" name="Transfer_Encoding" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_headers_Transfer_EncodingType"/>
+            <xsd:element minOccurs="0" name="X_Couch_Request_ID" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_headers_X_Couch_Request_IDType"/>
+            <xsd:element minOccurs="0" name="X_CouchDB_Body_Time" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_headers_X_CouchDB_Body_TimeType"/>
         </xsd:sequence>
         <xsd:attribute default="object" name="type" type="xsd:string"/>
     </xsd:complexType>
     <xsd:complexType name="tui_calendar_getSchedules_document_couchdb_output__c8oMetaType">
         <xsd:sequence>
-            <xsd:element minOccurs="0" name="statusCode" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_statusCodeType"/>
-            <xsd:element minOccurs="0" name="status" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_statusType"/>
-            <xsd:element minOccurs="0" name="reasonPhrase" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_reasonPhraseType"/>
-            <xsd:element minOccurs="0" name="headers" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_headersType"/>
+            <xsd:element minOccurs="0" name="statusCode" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_statusCodeType"/>
+            <xsd:element minOccurs="0" name="status" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_statusType"/>
+            <xsd:element minOccurs="0" name="reasonPhrase" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_reasonPhraseType"/>
+            <xsd:element minOccurs="0" name="headers" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMeta_headersType"/>
         </xsd:sequence>
         <xsd:attribute default="object" name="type" type="xsd:string"/>
     </xsd:complexType>
     <xsd:complexType name="tui_calendar_getSchedules_document_couchdb_outputType">
         <xsd:sequence>
-            <xsd:element minOccurs="0" name="total_rows" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_total_rowsType"/>
-            <xsd:element minOccurs="0" name="offset" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_offsetType"/>
-            <xsd:element minOccurs="0" name="rows" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output_rowsType"/>
-            <xsd:element minOccurs="0" name="_c8oMeta" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMetaType"/>
+            <xsd:element minOccurs="0" name="total_rows" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_total_rowsType"/>
+            <xsd:element minOccurs="0" name="offset" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_offsetType"/>
+            <xsd:element minOccurs="0" name="rows" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output_rowsType"/>
+            <xsd:element minOccurs="0" name="_c8oMeta" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_output__c8oMetaType"/>
         </xsd:sequence>
         <xsd:attribute default="object" name="type" type="xsd:string"/>
     </xsd:complexType>
     <xsd:complexType name="tui_calendar__getSchedulesResponseData">
         <xsd:sequence>
-            <xsd:element minOccurs="0" name="couchdb_output" type="c8oprj_lib_tui_ns:tui_calendar_getSchedules_document_couchdb_outputType"/>
-            <xsd:element minOccurs="0" name="error" type="c8oprj_lib_tui_ns:ConvertigoError"/>
+            <xsd:element minOccurs="0" name="couchdb_output" type="lib_TuiPlanner_ns:tui_calendar_getSchedules_document_couchdb_outputType"/>
+            <xsd:element minOccurs="0" name="error" type="lib_TuiPlanner_ns:ConvertigoError"/>
         </xsd:sequence>
         <xsd:attribute name="connector" type="xsd:string"/>
         <xsd:attribute name="context" type="xsd:string"/>
@@ -337,7 +337,7 @@
     </xsd:complexType>
     <xsd:complexType name="ConvertigoErrorContext">
         <xsd:sequence>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" name="variable" type="c8oprj_lib_tui_ns:ConvertigoErrorContextVariable"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="variable" type="lib_TuiPlanner_ns:ConvertigoErrorContextVariable"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="ConvertigoError">
@@ -345,7 +345,7 @@
             <xsd:element name="code" type="xsd:integer"/>
             <xsd:element name="message" type="xsd:string"/>
             <xsd:element name="details" type="xsd:string"/>
-            <xsd:element name="context" type="c8oprj_lib_tui_ns:ConvertigoErrorContext"/>
+            <xsd:element name="context" type="lib_TuiPlanner_ns:ConvertigoErrorContext"/>
             <xsd:element name="exception" type="xsd:string"/>
             <xsd:element name="stacktrace" type="xsd:string"/>
         </xsd:sequence>

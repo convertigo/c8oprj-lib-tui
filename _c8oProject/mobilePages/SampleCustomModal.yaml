@@ -21,13 +21,13 @@ title: Title for SampleCustomModal
 ↓PageEvent [ngx.components.UIPageEvent-1664896262491]: 
   ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262494]: 
     beanData: '{"ionBean":"InvokeAction"}'
-    stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeStart
+    stack: lib_TuiPlanner.Application.NgxApp.getDateRangeStart
     ↓SetGlobal [ngx.components.UIDynamicAction-1664896262497]: 
       beanData: |
         '{
          "ionBean": "SetGlobalAction",
          "Property": "plain:dateRangeStart",
-         "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262494}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+         "Value": "source:{\"filter\":\"Action\",\"project\":\"lib_TuiPlanner\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262494}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
         }'
     ↓identifier [ngx.components.UIControlVariable-1664896262500]: 
       varValue: 
@@ -36,13 +36,13 @@ title: Title for SampleCustomModal
           - MobileSmartSourceType: script:'calendarCustomPopup'
   ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262503]: 
     beanData: '{"ionBean":"InvokeAction"}'
-    stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeEnd
+    stack: lib_TuiPlanner.Application.NgxApp.getDateRangeEnd
     ↓SetGlobal [ngx.components.UIDynamicAction-1664896262506]: 
       beanData: |
         '{
          "ionBean": "SetGlobalAction",
          "Property": "plain:dateRangeEnd",
-         "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262503}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+         "Value": "source:{\"filter\":\"Action\",\"project\":\"lib_TuiPlanner\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262503}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
         }'
     ↓identifier [ngx.components.UIControlVariable-1664896262509]: 
       varValue: 
@@ -50,11 +50,11 @@ title: Title for SampleCustomModal
           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
           - MobileSmartSourceType: script:'calendarCustomPopup'
   ↓CallSequence [ngx.components.UIDynamicAction-1664896262512]: 
-    beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.getCalendars"}'
+    beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_TuiPlanner.getCalendars"}'
     ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262515]: 
       beanData: '{"ionBean":"InvokeAction"}'
       isEnabled: false
-      stack: c8oprj_lib_tui.Application.NgxApp.setCalendars
+      stack: lib_TuiPlanner.Application.NgxApp.setCalendars
       ↓identifier [ngx.components.UIControlVariable-1664896262518]: 
         varValue: 
           - xmlizable: 
@@ -65,19 +65,19 @@ title: Title for SampleCustomModal
         varValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: source:{"filter":"Sequence","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sequence":"c8oprj_lib_tui.getCalendars","marker":""}],"path":"?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
+            - MobileSmartSourceType: source:{"filter":"Sequence","project":"lib_TuiPlanner","input":"","model":{"data":[{"sequence":"lib_TuiPlanner.getCalendars","marker":""}],"path":"?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
     ↓CallSequence [ngx.components.UIDynamicAction-1664896262524]: 
-      beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.getSchedules"}'
+      beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_TuiPlanner.getSchedules"}'
       ↓calendars [ngx.components.UIDynamicAction-1664896262527]: 
         beanData: |
           '{
            "ionBean": "SetGlobalAction",
            "Property": "plain:calendars",
-           "Value": "source:{\"filter\":\"Sequence\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"sequence\":\"c8oprj_lib_tui.getCalendars\",\"marker\":\"\"}],\"path\":\"?.value\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+           "Value": "source:{\"filter\":\"Sequence\",\"project\":\"lib_TuiPlanner\",\"input\":\"\",\"model\":{\"data\":[{\"sequence\":\"lib_TuiPlanner.getCalendars\",\"marker\":\"\"}],\"path\":\"?.value\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
           }'
         ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262530]: 
           beanData: '{"ionBean":"InvokeAction"}'
-          stack: c8oprj_lib_tui.Application.NgxApp.createSchedules
+          stack: lib_TuiPlanner.Application.NgxApp.createSchedules
           ↓identifier [ngx.components.UIControlVariable-1664896262533]: 
             varValue: 
               - xmlizable: 
@@ -93,10 +93,10 @@ title: Title for SampleCustomModal
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: source:{"filter":"Sequence","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sequence":"c8oprj_lib_tui.getSchedules","marker":""}],"path":"?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
+                - MobileSmartSourceType: source:{"filter":"Sequence","project":"lib_TuiPlanner","input":"","model":{"data":[{"sequence":"lib_TuiPlanner.getSchedules","marker":""}],"path":"?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
           ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262542]: 
             beanData: '{"ionBean":"InvokeAction"}'
-            stack: c8oprj_lib_tui.Application.NgxApp.scrollToNow
+            stack: lib_TuiPlanner.Application.NgxApp.scrollToNow
             ↓identifier [ngx.components.UIControlVariable-1664896262545]: 
               varValue: 
                 - xmlizable: 
@@ -132,16 +132,16 @@ title: Title for SampleCustomModal
         ↓Event [ngx.components.UIControlEvent-1664896262572]: 
           ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262575]: 
             beanData: '{"ionBean":"InvokeAction"}'
-            stack: c8oprj_lib_tui.Application.NgxApp.today
+            stack: lib_TuiPlanner.Application.NgxApp.today
             ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262578]: 
               beanData: '{"ionBean":"InvokeAction"}'
-              stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeStart
+              stack: lib_TuiPlanner.Application.NgxApp.getDateRangeStart
               ↓SetGlobal [ngx.components.UIDynamicAction-1664896262581]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeStart",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262578}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"lib_TuiPlanner\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262578}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
               ↓identifier [ngx.components.UIControlVariable-1664896262584]: 
                 varValue: 
@@ -150,13 +150,13 @@ title: Title for SampleCustomModal
                     - MobileSmartSourceType: script:'calendar'
             ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262587]: 
               beanData: '{"ionBean":"InvokeAction"}'
-              stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeEnd
+              stack: lib_TuiPlanner.Application.NgxApp.getDateRangeEnd
               ↓SetGlobal [ngx.components.UIDynamicAction-1664896262590]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeEnd",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262587}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"lib_TuiPlanner\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262587}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
               ↓identifier [ngx.components.UIControlVariable-1664896262593]: 
                 varValue: 
@@ -179,16 +179,16 @@ title: Title for SampleCustomModal
         ↓Event [ngx.components.UIControlEvent-1664896262605]: 
           ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262608]: 
             beanData: '{"ionBean":"InvokeAction"}'
-            stack: c8oprj_lib_tui.Application.NgxApp.movePrev
+            stack: lib_TuiPlanner.Application.NgxApp.movePrev
             ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262611]: 
               beanData: '{"ionBean":"InvokeAction"}'
-              stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeStart
+              stack: lib_TuiPlanner.Application.NgxApp.getDateRangeStart
               ↓SetGlobal [ngx.components.UIDynamicAction-1664896262614]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeStart",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262611}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"lib_TuiPlanner\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262611}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
               ↓identifier [ngx.components.UIControlVariable-1664896262617]: 
                 varValue: 
@@ -197,13 +197,13 @@ title: Title for SampleCustomModal
                     - MobileSmartSourceType: script:'calendar'
             ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262620]: 
               beanData: '{"ionBean":"InvokeAction"}'
-              stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeEnd
+              stack: lib_TuiPlanner.Application.NgxApp.getDateRangeEnd
               ↓SetGlobal [ngx.components.UIDynamicAction-1664896262623]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeEnd",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262620}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"lib_TuiPlanner\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262620}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
               ↓identifier [ngx.components.UIControlVariable-1664896262626]: 
                 varValue: 
@@ -224,16 +224,16 @@ title: Title for SampleCustomModal
         ↓Event [ngx.components.UIControlEvent-1664896262638]: 
           ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262641]: 
             beanData: '{"ionBean":"InvokeAction"}'
-            stack: c8oprj_lib_tui.Application.NgxApp.moveNext
+            stack: lib_TuiPlanner.Application.NgxApp.moveNext
             ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262644]: 
               beanData: '{"ionBean":"InvokeAction"}'
-              stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeStart
+              stack: lib_TuiPlanner.Application.NgxApp.getDateRangeStart
               ↓SetGlobal [ngx.components.UIDynamicAction-1664896262647]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeStart",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262644}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"lib_TuiPlanner\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262644}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
               ↓identifier [ngx.components.UIControlVariable-1664896262650]: 
                 varValue: 
@@ -242,13 +242,13 @@ title: Title for SampleCustomModal
                     - MobileSmartSourceType: script:'calendar'
             ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262653]: 
               beanData: '{"ionBean":"InvokeAction"}'
-              stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeEnd
+              stack: lib_TuiPlanner.Application.NgxApp.getDateRangeEnd
               ↓SetGlobal [ngx.components.UIDynamicAction-1664896262656]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeEnd",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262653}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"lib_TuiPlanner\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262653}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
               ↓identifier [ngx.components.UIControlVariable-1664896262659]: 
                 varValue: 
@@ -267,7 +267,7 @@ title: Title for SampleCustomModal
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: source:{"filter":"Global","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.dateRangeStart","prefix":"","suffix":"","custom":"","useCustom":false}}
+            - MobileSmartSourceType: source:{"filter":"Global","project":"lib_TuiPlanner","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.dateRangeStart","prefix":"","suffix":"","custom":"","useCustom":false}}
       ↓Text [ngx.components.UIText-1664896262671]: 
         textValue: 
           - xmlizable: 
@@ -277,7 +277,7 @@ title: Title for SampleCustomModal
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: source:{"filter":"Global","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.dateRangeEnd","prefix":"","suffix":"","custom":"","useCustom":false}}
+            - MobileSmartSourceType: source:{"filter":"Global","project":"lib_TuiPlanner","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.dateRangeEnd","prefix":"","suffix":"","custom":"","useCustom":false}}
     ↓ButtonSet [ngx.components.UIDynamicElement-1664896262677]: 
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
       comment: Navigation actions
@@ -335,7 +335,7 @@ title: Title for SampleCustomModal
         ↓Event [ngx.components.UIControlEvent-1664896262713]: 
           ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262716]: 
             beanData: '{"ionBean":"InvokeAction"}'
-            stack: c8oprj_lib_tui.Application.NgxApp.clear
+            stack: lib_TuiPlanner.Application.NgxApp.clear
             ↓identifier [ngx.components.UIControlVariable-1664896262719]: 
               varValue: 
                 - xmlizable: 
@@ -367,7 +367,7 @@ title: Title for SampleCustomModal
               beanData: '{"ionBean":"IfElseAction","condition":"script:this.view == \"2weeks\""}'
               ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262743]: 
                 beanData: '{"ionBean":"InvokeAction"}'
-                stack: c8oprj_lib_tui.Application.NgxApp.setOptions
+                stack: lib_TuiPlanner.Application.NgxApp.setOptions
                 ↓options [ngx.components.UIControlVariable-1664896262746]: 
                   varValue: 
                     - xmlizable: 
@@ -386,7 +386,7 @@ title: Title for SampleCustomModal
               ↓Else_Handler [ngx.components.UIActionElseEvent-1664896262755]: 
                 ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262758]: 
                   beanData: '{"ionBean":"InvokeAction"}'
-                  stack: c8oprj_lib_tui.Application.NgxApp.setOptions
+                  stack: lib_TuiPlanner.Application.NgxApp.setOptions
                   ↓options [ngx.components.UIControlVariable-1664896262761]: 
                     varValue: 
                       - xmlizable: 
@@ -404,7 +404,7 @@ title: Title for SampleCustomModal
                         - MobileSmartSourceType: script:'calendar'
             ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262770]: 
               beanData: '{"ionBean":"InvokeAction"}'
-              stack: c8oprj_lib_tui.Application.NgxApp.setOptions
+              stack: lib_TuiPlanner.Application.NgxApp.setOptions
               ↓options [ngx.components.UIControlVariable-1664896262773]: 
                 varValue: 
                   - xmlizable: 
@@ -422,7 +422,7 @@ title: Title for SampleCustomModal
                     - MobileSmartSourceType: script:'calendar'
             ↓InvokeSharedAction2 [ngx.components.UIDynamicInvoke-1664896262782]: 
               beanData: '{"ionBean":"InvokeAction"}'
-              stack: c8oprj_lib_tui.Application.NgxApp.changeView
+              stack: lib_TuiPlanner.Application.NgxApp.changeView
               ↓newViewName [ngx.components.UIControlVariable-1664896262785]: 
                 varValue: 
                   - xmlizable: 
@@ -443,7 +443,7 @@ title: Title for SampleCustomModal
                 beanData: '{"ionBean":"IfElseAction","condition":"script:this.view == \"2weeks\""}'
                 ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262800]: 
                   beanData: '{"ionBean":"InvokeAction"}'
-                  stack: c8oprj_lib_tui.Application.NgxApp.setOptions
+                  stack: lib_TuiPlanner.Application.NgxApp.setOptions
                   ↓options [ngx.components.UIControlVariable-1664896262803]: 
                     varValue: 
                       - xmlizable: 
@@ -462,7 +462,7 @@ title: Title for SampleCustomModal
                 ↓Else_Handler [ngx.components.UIActionElseEvent-1664896262812]: 
                   ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262815]: 
                     beanData: '{"ionBean":"InvokeAction"}'
-                    stack: c8oprj_lib_tui.Application.NgxApp.setOptions
+                    stack: lib_TuiPlanner.Application.NgxApp.setOptions
                     ↓options [ngx.components.UIControlVariable-1664896262818]: 
                       varValue: 
                         - xmlizable: 
@@ -480,7 +480,7 @@ title: Title for SampleCustomModal
                           - MobileSmartSourceType: script:'calendar'
               ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262827]: 
                 beanData: '{"ionBean":"InvokeAction"}'
-                stack: c8oprj_lib_tui.Application.NgxApp.setOptions
+                stack: lib_TuiPlanner.Application.NgxApp.setOptions
                 ↓options [ngx.components.UIControlVariable-1664896262830]: 
                   varValue: 
                     - xmlizable: 
@@ -498,7 +498,7 @@ title: Title for SampleCustomModal
                       - MobileSmartSourceType: script:'calendar'
               ↓InvokeSharedAction2 [ngx.components.UIDynamicInvoke-1664896262839]: 
                 beanData: '{"ionBean":"InvokeAction"}'
-                stack: c8oprj_lib_tui.Application.NgxApp.changeView
+                stack: lib_TuiPlanner.Application.NgxApp.changeView
                 ↓newViewName [ngx.components.UIControlVariable-1664896262842]: 
                   varValue: 
                     - xmlizable: 
@@ -578,7 +578,7 @@ title: Title for SampleCustomModal
             comment: need to set options before change view
             ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262887]: 
               beanData: '{"ionBean":"InvokeAction"}'
-              stack: c8oprj_lib_tui.Application.NgxApp.setOptions
+              stack: lib_TuiPlanner.Application.NgxApp.setOptions
               ↓options [ngx.components.UIControlVariable-1664896262890]: 
                 varValue: 
                   - xmlizable: 
@@ -591,7 +591,7 @@ title: Title for SampleCustomModal
                     - MobileSmartSourceType: script:true
               ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262896]: 
                 beanData: '{"ionBean":"InvokeAction"}'
-                stack: c8oprj_lib_tui.Application.NgxApp.changeView
+                stack: lib_TuiPlanner.Application.NgxApp.changeView
                 ↓newViewName [ngx.components.UIControlVariable-1664896262899]: 
                   varValue: 
                     - xmlizable: 
@@ -615,7 +615,7 @@ title: Title for SampleCustomModal
             ↓Else_Handler [ngx.components.UIActionElseEvent-1664896262911]: 
               ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262914]: 
                 beanData: '{"ionBean":"InvokeAction"}'
-                stack: c8oprj_lib_tui.Application.NgxApp.setOptions
+                stack: lib_TuiPlanner.Application.NgxApp.setOptions
                 ↓options [ngx.components.UIControlVariable-1664896262917]: 
                   varValue: 
                     - xmlizable: 
@@ -633,7 +633,7 @@ title: Title for SampleCustomModal
                       - MobileSmartSourceType: script:'calendar'
               ↓InvokeSharedAction2 [ngx.components.UIDynamicInvoke-1664896262926]: 
                 beanData: '{"ionBean":"InvokeAction"}'
-                stack: c8oprj_lib_tui.Application.NgxApp.setOptions
+                stack: lib_TuiPlanner.Application.NgxApp.setOptions
                 ↓options [ngx.components.UIControlVariable-1664896262929]: 
                   varValue: 
                     - xmlizable: 
@@ -651,7 +651,7 @@ title: Title for SampleCustomModal
                       - MobileSmartSourceType: script:'calendar'
               ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262938]: 
                 beanData: '{"ionBean":"InvokeAction"}'
-                stack: c8oprj_lib_tui.Application.NgxApp.changeView
+                stack: lib_TuiPlanner.Application.NgxApp.changeView
                 ↓newViewName [ngx.components.UIControlVariable-1664896262941]: 
                   varValue: 
                     - xmlizable: 
@@ -689,16 +689,16 @@ title: Title for SampleCustomModal
         ↓Event [ngx.components.UIControlEvent-1664896262965]: 
           ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262968]: 
             beanData: '{"ionBean":"InvokeAction"}'
-            stack: c8oprj_lib_tui.Application.NgxApp.today
+            stack: lib_TuiPlanner.Application.NgxApp.today
             ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896262971]: 
               beanData: '{"ionBean":"InvokeAction"}'
-              stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeStart
+              stack: lib_TuiPlanner.Application.NgxApp.getDateRangeStart
               ↓SetGlobal [ngx.components.UIDynamicAction-1664896262974]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeStart",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262971}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"lib_TuiPlanner\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262971}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
               ↓identifier [ngx.components.UIControlVariable-1664896262977]: 
                 varValue: 
@@ -707,13 +707,13 @@ title: Title for SampleCustomModal
                     - MobileSmartSourceType: script:'calendar'
             ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896262980]: 
               beanData: '{"ionBean":"InvokeAction"}'
-              stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeEnd
+              stack: lib_TuiPlanner.Application.NgxApp.getDateRangeEnd
               ↓SetGlobal [ngx.components.UIDynamicAction-1664896262983]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeEnd",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262980}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"lib_TuiPlanner\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896262980}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
               ↓identifier [ngx.components.UIControlVariable-1664896262986]: 
                 varValue: 
@@ -736,16 +736,16 @@ title: Title for SampleCustomModal
         ↓Event [ngx.components.UIControlEvent-1664896262998]: 
           ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263001]: 
             beanData: '{"ionBean":"InvokeAction"}'
-            stack: c8oprj_lib_tui.Application.NgxApp.movePrev
+            stack: lib_TuiPlanner.Application.NgxApp.movePrev
             ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263004]: 
               beanData: '{"ionBean":"InvokeAction"}'
-              stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeStart
+              stack: lib_TuiPlanner.Application.NgxApp.getDateRangeStart
               ↓SetGlobal [ngx.components.UIDynamicAction-1664896263007]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeStart",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896263004}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"lib_TuiPlanner\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896263004}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
               ↓identifier [ngx.components.UIControlVariable-1664896263010]: 
                 varValue: 
@@ -754,13 +754,13 @@ title: Title for SampleCustomModal
                     - MobileSmartSourceType: script:'calendar'
             ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896263013]: 
               beanData: '{"ionBean":"InvokeAction"}'
-              stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeEnd
+              stack: lib_TuiPlanner.Application.NgxApp.getDateRangeEnd
               ↓SetGlobal [ngx.components.UIDynamicAction-1664896263016]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeEnd",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896263013}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"lib_TuiPlanner\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896263013}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
               ↓identifier [ngx.components.UIControlVariable-1664896263019]: 
                 varValue: 
@@ -781,16 +781,16 @@ title: Title for SampleCustomModal
         ↓Event [ngx.components.UIControlEvent-1664896263031]: 
           ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263034]: 
             beanData: '{"ionBean":"InvokeAction"}'
-            stack: c8oprj_lib_tui.Application.NgxApp.moveNext
+            stack: lib_TuiPlanner.Application.NgxApp.moveNext
             ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263037]: 
               beanData: '{"ionBean":"InvokeAction"}'
-              stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeStart
+              stack: lib_TuiPlanner.Application.NgxApp.getDateRangeStart
               ↓SetGlobal [ngx.components.UIDynamicAction-1664896263040]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeStart",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896263037}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"lib_TuiPlanner\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896263037}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
               ↓identifier [ngx.components.UIControlVariable-1664896263043]: 
                 varValue: 
@@ -799,13 +799,13 @@ title: Title for SampleCustomModal
                     - MobileSmartSourceType: script:'calendar'
             ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896263046]: 
               beanData: '{"ionBean":"InvokeAction"}'
-              stack: c8oprj_lib_tui.Application.NgxApp.getDateRangeEnd
+              stack: lib_TuiPlanner.Application.NgxApp.getDateRangeEnd
               ↓SetGlobal [ngx.components.UIDynamicAction-1664896263049]: 
                 beanData: |
                   '{
                    "ionBean": "SetGlobalAction",
                    "Property": "plain:dateRangeEnd",
-                   "Value": "source:{\"filter\":\"Action\",\"project\":\"c8oprj_lib_tui\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896263046}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                   "Value": "source:{\"filter\":\"Action\",\"project\":\"lib_TuiPlanner\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664896263046}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                   }'
               ↓identifier [ngx.components.UIControlVariable-1664896263052]: 
                 varValue: 
@@ -824,7 +824,7 @@ title: Title for SampleCustomModal
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: source:{"filter":"Global","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.dateRangeStart","prefix":"","suffix":"","custom":"","useCustom":false}}
+            - MobileSmartSourceType: source:{"filter":"Global","project":"lib_TuiPlanner","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.dateRangeStart","prefix":"","suffix":"","custom":"","useCustom":false}}
       ↓Text [ngx.components.UIText-1664896263064]: 
         textValue: 
           - xmlizable: 
@@ -834,7 +834,7 @@ title: Title for SampleCustomModal
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: source:{"filter":"Global","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.dateRangeEnd","prefix":"","suffix":"","custom":"","useCustom":false}}
+            - MobileSmartSourceType: source:{"filter":"Global","project":"lib_TuiPlanner","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.dateRangeEnd","prefix":"","suffix":"","custom":"","useCustom":false}}
       ↓SelectContainer [ngx.components.UIDynamicElement-1664896263070]: 
         beanData: |
           '{
@@ -892,7 +892,7 @@ title: Title for SampleCustomModal
             comment: need to set options before change view
             ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263103]: 
               beanData: '{"ionBean":"InvokeAction"}'
-              stack: c8oprj_lib_tui.Application.NgxApp.setOptions
+              stack: lib_TuiPlanner.Application.NgxApp.setOptions
               ↓options [ngx.components.UIControlVariable-1664896263106]: 
                 varValue: 
                   - xmlizable: 
@@ -905,7 +905,7 @@ title: Title for SampleCustomModal
                     - MobileSmartSourceType: script:true
               ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263112]: 
                 beanData: '{"ionBean":"InvokeAction"}'
-                stack: c8oprj_lib_tui.Application.NgxApp.changeView
+                stack: lib_TuiPlanner.Application.NgxApp.changeView
                 ↓newViewName [ngx.components.UIControlVariable-1664896263115]: 
                   varValue: 
                     - xmlizable: 
@@ -929,7 +929,7 @@ title: Title for SampleCustomModal
             ↓Else_Handler [ngx.components.UIActionElseEvent-1664896263127]: 
               ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896263130]: 
                 beanData: '{"ionBean":"InvokeAction"}'
-                stack: c8oprj_lib_tui.Application.NgxApp.setOptions
+                stack: lib_TuiPlanner.Application.NgxApp.setOptions
                 ↓options [ngx.components.UIControlVariable-1664896263133]: 
                   varValue: 
                     - xmlizable: 
@@ -947,7 +947,7 @@ title: Title for SampleCustomModal
                       - MobileSmartSourceType: script:'calendar'
               ↓InvokeSharedAction2 [ngx.components.UIDynamicInvoke-1664896263142]: 
                 beanData: '{"ionBean":"InvokeAction"}'
-                stack: c8oprj_lib_tui.Application.NgxApp.setOptions
+                stack: lib_TuiPlanner.Application.NgxApp.setOptions
                 ↓options [ngx.components.UIControlVariable-1664896263145]: 
                   varValue: 
                     - xmlizable: 
@@ -965,7 +965,7 @@ title: Title for SampleCustomModal
                       - MobileSmartSourceType: script:'calendar'
               ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263154]: 
                 beanData: '{"ionBean":"InvokeAction"}'
-                stack: c8oprj_lib_tui.Application.NgxApp.changeView
+                stack: lib_TuiPlanner.Application.NgxApp.changeView
                 ↓newViewName [ngx.components.UIControlVariable-1664896263157]: 
                   varValue: 
                     - xmlizable: 
@@ -1019,7 +1019,7 @@ title: Title for SampleCustomModal
               beanData: '{"ionBean":"IfElseAction","condition":"script:this.view == \"2weeks\""}'
               ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896263196]: 
                 beanData: '{"ionBean":"InvokeAction"}'
-                stack: c8oprj_lib_tui.Application.NgxApp.setOptions
+                stack: lib_TuiPlanner.Application.NgxApp.setOptions
                 ↓options [ngx.components.UIControlVariable-1664896263199]: 
                   varValue: 
                     - xmlizable: 
@@ -1038,7 +1038,7 @@ title: Title for SampleCustomModal
               ↓Else_Handler [ngx.components.UIActionElseEvent-1664896263208]: 
                 ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896263211]: 
                   beanData: '{"ionBean":"InvokeAction"}'
-                  stack: c8oprj_lib_tui.Application.NgxApp.setOptions
+                  stack: lib_TuiPlanner.Application.NgxApp.setOptions
                   ↓options [ngx.components.UIControlVariable-1664896263214]: 
                     varValue: 
                       - xmlizable: 
@@ -1056,7 +1056,7 @@ title: Title for SampleCustomModal
                         - MobileSmartSourceType: script:'calendar'
             ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263223]: 
               beanData: '{"ionBean":"InvokeAction"}'
-              stack: c8oprj_lib_tui.Application.NgxApp.setOptions
+              stack: lib_TuiPlanner.Application.NgxApp.setOptions
               ↓options [ngx.components.UIControlVariable-1664896263226]: 
                 varValue: 
                   - xmlizable: 
@@ -1074,7 +1074,7 @@ title: Title for SampleCustomModal
                     - MobileSmartSourceType: script:'calendar'
             ↓InvokeSharedAction2 [ngx.components.UIDynamicInvoke-1664896263235]: 
               beanData: '{"ionBean":"InvokeAction"}'
-              stack: c8oprj_lib_tui.Application.NgxApp.changeView
+              stack: lib_TuiPlanner.Application.NgxApp.changeView
               ↓newViewName [ngx.components.UIControlVariable-1664896263238]: 
                 varValue: 
                   - xmlizable: 
@@ -1095,7 +1095,7 @@ title: Title for SampleCustomModal
                 beanData: '{"ionBean":"IfElseAction","condition":"script:this.view == \"2weeks\""}'
                 ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896263253]: 
                   beanData: '{"ionBean":"InvokeAction"}'
-                  stack: c8oprj_lib_tui.Application.NgxApp.setOptions
+                  stack: lib_TuiPlanner.Application.NgxApp.setOptions
                   ↓options [ngx.components.UIControlVariable-1664896263256]: 
                     varValue: 
                       - xmlizable: 
@@ -1114,7 +1114,7 @@ title: Title for SampleCustomModal
                 ↓Else_Handler [ngx.components.UIActionElseEvent-1664896263265]: 
                   ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1664896263268]: 
                     beanData: '{"ionBean":"InvokeAction"}'
-                    stack: c8oprj_lib_tui.Application.NgxApp.setOptions
+                    stack: lib_TuiPlanner.Application.NgxApp.setOptions
                     ↓options [ngx.components.UIControlVariable-1664896263271]: 
                       varValue: 
                         - xmlizable: 
@@ -1132,7 +1132,7 @@ title: Title for SampleCustomModal
                           - MobileSmartSourceType: script:'calendar'
               ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263280]: 
                 beanData: '{"ionBean":"InvokeAction"}'
-                stack: c8oprj_lib_tui.Application.NgxApp.setOptions
+                stack: lib_TuiPlanner.Application.NgxApp.setOptions
                 ↓options [ngx.components.UIControlVariable-1664896263283]: 
                   varValue: 
                     - xmlizable: 
@@ -1150,7 +1150,7 @@ title: Title for SampleCustomModal
                       - MobileSmartSourceType: script:'calendar'
               ↓InvokeSharedAction2 [ngx.components.UIDynamicInvoke-1664896263292]: 
                 beanData: '{"ionBean":"InvokeAction"}'
-                stack: c8oprj_lib_tui.Application.NgxApp.changeView
+                stack: lib_TuiPlanner.Application.NgxApp.changeView
                 ↓newViewName [ngx.components.UIControlVariable-1664896263295]: 
                   varValue: 
                     - xmlizable: 
@@ -1186,7 +1186,7 @@ title: Title for SampleCustomModal
       ↓Event [ngx.components.UIControlEvent-1664896263316]: 
         ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263319]: 
           beanData: '{"ionBean":"InvokeAction"}'
-          stack: c8oprj_lib_tui.Application.NgxApp.clear
+          stack: lib_TuiPlanner.Application.NgxApp.clear
           ↓identifier [ngx.components.UIControlVariable-1664896263322]: 
             varValue: 
               - xmlizable: 
@@ -1241,7 +1241,7 @@ title: Title for SampleCustomModal
   comment: Page content
   tagName: ion-content
   ↓Grid [ngx.components.UIDynamicElement-1664896263355]: 
-    beanData: '{"ionBean":"Grid"}'
+    beanData: '{"ionBean":"Grid","Height":"plain:100%"}'
     tagName: ion-grid
     ↓rowCalendar [ngx.components.UIDynamicElement-1664896263358]: 
       beanData: '{"ionBean":"GridRow"}'
@@ -1271,13 +1271,18 @@ title: Title for SampleCustomModal
                   beanData: |
                     '{
                      "ionBean": "ModalAction",
-                     "page": "plain:c8oprj_lib_tui.Application.NgxApp.ModalCreateCalendar",
-                     "blockWhileDisplayed": "plain:true"
+                     "page": "plain:lib_TuiPlanner.Application.NgxApp.ModalCreateCalendar",
+                     "cssClass": "plain:"
                     }'
                   ↓CallSequence [ngx.components.UIDynamicAction-1664896263385]: 
-                    beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.getCalendars"}'
+                    beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_TuiPlanner.getCalendars"}'
                 ↓Popover [ngx.components.UIDynamicAction-1664896263388]: 
-                  beanData: '{"ionBean":"PopoverAction","page":"plain:c8oprj_lib_tui.Application.NgxApp.ModalCreateCalendar"}'
+                  beanData: |
+                    '{
+                     "ionBean": "PopoverAction",
+                     "page": "plain:lib_TuiPlanner.Application.NgxApp.ModalCreateCalendar",
+                     "cssClass": "plain:"
+                    }'
                   isEnabled: false
         ↓rowMyCalendars [ngx.components.UIDynamicElement-1664896263391]: 
           beanData: '{"ionBean":"GridRow","Height":"plain"}'
@@ -1291,7 +1296,7 @@ title: Title for SampleCustomModal
               directiveSource: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                  - MobileSmartSourceType: source:{"filter":"Sequence","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sequence":"c8oprj_lib_tui.getCalendars","marker":""}],"path":"?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
+                  - MobileSmartSourceType: source:{"filter":"Sequence","project":"lib_TuiPlanner","input":"","model":{"data":[{"sequence":"lib_TuiPlanner.getCalendars","marker":""}],"path":"?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
               ↓FormItem [ngx.components.UIDynamicElement-1664896263400]: 
                 beanData: |
                   '{
@@ -1319,7 +1324,7 @@ title: Title for SampleCustomModal
                     eventName: ionChange
                     ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263412]: 
                       beanData: '{"ionBean":"InvokeAction"}'
-                      stack: c8oprj_lib_tui.Application.NgxApp.toggleSchedules
+                      stack: lib_TuiPlanner.Application.NgxApp.toggleSchedules
                       ↓identifier [ngx.components.UIControlVariable-1664896263415]: 
                         varValue: 
                           - xmlizable: 
@@ -1432,7 +1437,7 @@ title: Title for SampleCustomModal
         tagName: ion-col
         ↓UseSharedComponent [ngx.components.UIUseShared-1664896263448]: 
           identifier: calendarCustomPopup
-          sharedcomponent: c8oprj_lib_tui.Application.NgxApp.tui_calendar
+          sharedcomponent: lib_TuiPlanner.Application.NgxApp.tui_calendar
           ↓containerId [ngx.components.UIUseVariable-1664896263451]: 
             varValue: 
               - xmlizable: 
@@ -1532,7 +1537,7 @@ title: Title for SampleCustomModal
               ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263463]: 
                 beanData: '{"ionBean":"InvokeAction"}'
                 isEnabled: false
-                stack: c8oprj_lib_tui.Application.NgxApp.createSchedules
+                stack: lib_TuiPlanner.Application.NgxApp.createSchedules
                 ↓identifier [ngx.components.UIControlVariable-1664896263466]: 
                   varValue: 
                     - xmlizable: 
@@ -1550,7 +1555,7 @@ title: Title for SampleCustomModal
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:[parent.out]
                 ↓CallSequence [ngx.components.UIDynamicAction-1664896263475]: 
-                  beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.addSchedule"}'
+                  beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_TuiPlanner.addSchedule"}'
                   ↓schedule [ngx.components.UIControlVariable-1664896263478]: 
                     comment: new variable
                     varValue: 
@@ -1558,15 +1563,19 @@ title: Title for SampleCustomModal
                         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                         - MobileSmartSourceType: script:JSON.stringify(stack['prepareScheduleObject'].out)
               ↓Popover [ngx.components.UIDynamicAction-1664896263481]: 
-                beanData: '{"ionBean":"PopoverAction","page":"plain:c8oprj_lib_tui.Application.NgxApp.ModalCreateCalendar"}'
+                beanData: |
+                  '{
+                   "ionBean": "PopoverAction",
+                   "page": "plain:lib_TuiPlanner.Application.NgxApp.ModalCreateCalendar",
+                   "cssClass": "plain:"
+                  }'
                 isEnabled: false
             ↓ModalPage [ngx.components.UIDynamicAction-1664896263484]: 
               beanData: |
                 '{
                  "ionBean": "ModalAction",
-                 "page": "plain:c8oprj_lib_tui.Application.NgxApp.ModalCreateSchedule",
+                 "page": "plain:lib_TuiPlanner.Application.NgxApp.ModalCreateSchedule",
                  "data": "script:parent.out",
-                 "blockWhileDisplayed": "plain:true",
                  "cssClass": "plain:modal50"
                 }'
           ↓Event1 [ngx.components.UIControlEvent-1664896263487]: 
@@ -1603,7 +1612,7 @@ title: Title for SampleCustomModal
                     - MobileSmartSourceType: script:parent.out
               ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664896263502]: 
                 beanData: '{"ionBean":"InvokeAction"}'
-                stack: c8oprj_lib_tui.Application.NgxApp.updateSchedule
+                stack: lib_TuiPlanner.Application.NgxApp.updateSchedule
                 ↓identifier [ngx.components.UIControlVariable-1664896263505]: 
                   varValue: 
                     - xmlizable: 
@@ -1631,7 +1640,7 @@ title: Title for SampleCustomModal
                       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                       - MobileSmartSourceType: script:''
                 ↓CallSequence [ngx.components.UIDynamicAction-1664896263520]: 
-                  beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.updateSchedule"}'
+                  beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_TuiPlanner.updateSchedule"}'
                   ↓schedule [ngx.components.UIControlVariable-1664896263523]: 
                     comment: new variable
                     varValue: 
@@ -1677,7 +1686,7 @@ title: Title for SampleCustomModal
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: source:{"filter":"Global","project":"c8oprj_lib_tui","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.calendars","prefix":"","suffix":"","custom":"","useCustom":false}}
+                - MobileSmartSourceType: source:{"filter":"Global","project":"lib_TuiPlanner","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.calendars","prefix":"","suffix":"","custom":"","useCustom":false}}
           ↓view [ngx.components.UIUseVariable-1664896263550]: 
             varValue: 
               - xmlizable: 

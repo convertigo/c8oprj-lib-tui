@@ -85,7 +85,7 @@ title: Title for ModalViewSchedule
   beanData: '{"ionBean":"Content"}'
   tagName: ion-content
   ↓Grid [ngx.components.UIDynamicElement-1665066533153]: 
-    beanData: '{"ionBean":"Grid"}'
+    beanData: '{"ionBean":"Grid","Height":"plain:100%"}'
     tagName: ion-grid
     ↓rowDate [ngx.components.UIDynamicElement-1665066533155]: 
       beanData: |
@@ -274,6 +274,7 @@ title: Title for ModalViewSchedule
               '{
                "ionBean": "AlertAction",
                "message": "plain:Etes vous sur de vouloir supprimer cet évènement ?",
+               "cssClass": "plain:",
                "button1": "plain:Oui",
                "button2": "plain:Non",
                "value1": "plain:true",
@@ -282,9 +283,14 @@ title: Title for ModalViewSchedule
             ↓If [ngx.components.UIDynamicAction-1665068034459]: 
               beanData: '{"ionBean":"IfAction","condition":"script:parent.out.data == true || parent.out.data == \"true\""}'
               ↓Toast [ngx.components.UIDynamicAction-1665068042217]: 
-                beanData: '{"ionBean":"ToastAction","message":"script:this.local.schedule.id"}'
+                beanData: |
+                  '{
+                   "ionBean": "ToastAction",
+                   "message": "script:this.local.schedule.id",
+                   "cssClass": "plain:"
+                  }'
               ↓CallSequence [ngx.components.UIDynamicAction-1665068298255]: 
-                beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:c8oprj_lib_tui.deleteSchedule"}'
+                beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_TuiPlanner.deleteSchedule"}'
                 ↓scheduleId [ngx.components.UIControlVariable-1665068308698]: 
                   comment: new variable
                   varValue: 
@@ -293,7 +299,7 @@ title: Title for ModalViewSchedule
                       - MobileSmartSourceType: script:this.local.schedule.id
                 ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1665068334548]: 
                   beanData: '{"ionBean":"InvokeAction"}'
-                  stack: c8oprj_lib_tui.Application.NgxApp.deleteSchedule
+                  stack: lib_TuiPlanner.Application.NgxApp.deleteSchedule
                   ↓identifier [ngx.components.UIControlVariable-1665068345074]: 
                     varValue: 
                       - xmlizable: 

@@ -19,17 +19,17 @@
     varValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660223678336}],"path":"?.in?.vars?.newViewName","prefix":"","suffix":"","custom":"","useCustom":false}}
+        - MobileSmartSourceType: source:{"filter":"Action","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1660223678336}],"path":"?.in?.vars?.newViewName","prefix":"","suffix":"","custom":"","useCustom":false}}
   ↓force [ngx.components.UIControlVariable-1660228033261]: 
     varValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660223678336}],"path":"?.in?.vars?.force","prefix":"","suffix":"","custom":"","useCustom":false}}
+        - MobileSmartSourceType: source:{"filter":"Action","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1660223678336}],"path":"?.in?.vars?.force","prefix":"","suffix":"","custom":"","useCustom":false}}
   ↓identifier [ngx.components.UIControlVariable-1662993879828]: 
     varValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-        - MobileSmartSourceType: source:{"filter":"Action","project":"c8oprj_lib_tui","input":"","model":{"data":[{"priority":1660223678336}],"path":"?.in?.vars?.identifier","prefix":"","suffix":"","custom":"","useCustom":false}}
+        - MobileSmartSourceType: source:{"filter":"Action","project":"lib_TuiPlanner","input":"","model":{"data":[{"priority":1660223678336}],"path":"?.in?.vars?.identifier","prefix":"","suffix":"","custom":"","useCustom":false}}
 ↓newViewName [ngx.components.UIStackVariable-1660227961255]: 
 ↓force [ngx.components.UIStackVariable-1660227963563]: 
 ↓identifier [ngx.components.UIStackVariable-1662993835350]: 

@@ -1,6 +1,6 @@
 comment: Gets schedules attached to calendar within a timeframe
 ↓Call_Transaction [steps.TransactionStep-1663753698239]: 
-  sourceTransaction: c8oprj_lib_tui.tui_calendar.getSchedules
+  sourceTransaction: lib_TuiPlanner.tui_calendar.getSchedules
   ↓_use_ddoc [variables.StepVariable-1663753793593]: 
     description: Design document name
     value: Design_document

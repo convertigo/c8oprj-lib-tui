@@ -20,7 +20,7 @@ comment: Updates a Schedule in the database
     log.warn(''data'')
     log.warn(_use_json_base)'
 ↓Call_Transaction [steps.TransactionStep-1663771771732]: 
-  sourceTransaction: c8oprj_lib_tui.tui_calendar.updateSchedule
+  sourceTransaction: lib_TuiPlanner.tui_calendar.updateSchedule
   ↓_id [variables.StepVariable-1663771780920]: 
     description: Document id
   ↓_use_json_base [variables.StepVariable-1663772913088]: 

@@ -62,7 +62,7 @@ componentScriptContent:
         /*Begin_c8o_AppFunction*/
         	/*End_c8o_AppFunction*/
         '
-tplProjectName: mobilebuilder_tpl_8_0_0_ngx
+tplProjectName: mobilebuilder_tpl_8_1_0_ngx
 ↓Menu [ngx.components.UIDynamicMenu-1500890597895]: 🗏 mobileMenus/Menu.yaml
 ↓changeView [ngx.components.UIActionStack-1660223678336]: 🗏 mobileSharedActions/changeView.yaml
 ↓clear [ngx.components.UIActionStack-1662996403734]: 🗏 mobileSharedActions/clear.yaml
